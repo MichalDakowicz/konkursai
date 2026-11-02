@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[nazwa] – tryby i pomoc</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="index.html">[nazwa]</a>
+  <nav>
+    <a href="index.html">Przegląd</a>
+    <a href="koncepcja.html">Koncepcja</a>
+    <a href="mapa-umiejetnosci.html">Mapa umiejętności</a>
+    <a href="tryby.html" aria-current="page">Tryby i pomoc</a>
+    <a href="dane-cke.html">Dane CKE</a>
+    <a href="przedmioty.html">Przedmioty</a>
+    <a href="konkurs.html">Konkurs</a>
+    <a href="pytania.html">Do ustalenia</a>
+  </nav>
+</header>
+<main>
+<h1>Tryby i pomoc</h1>
+<p class="sub">Filary 2, 3, 4 i 5 · ustalenia z rozmowy</p>
+
+<h2>Dwa tryby: nauka i egzamin</h2>
+<p class="lead">Nauka to praca z AI, której celem jest powtórzenie materiału. Egzamin to prawdziwy miernik: bez pomocy, jak na maturze. Oba karmią mapę umiejętności, ale egzamin ją weryfikuje.</p>
+
+<figure>
+<svg viewBox="0 0 760 250" role="img" aria-label="Obieg: nauka z AI, egzamin bez pomocy, mapa umiejętności w środku">
+  <defs><marker id="a4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="svg-arrow"/></marker></defs>
+  <rect class="svg-node-alt" x="20" y="30" width="250" height="110" rx="12"/>
+  <text class="svg-t" x="145" y="58" text-anchor="middle">NAUKA</text>
+  <text class="svg-s" x="145" y="80" text-anchor="middle">podpowiedzi, feedback, wyjaśnienia</text>
+  <text class="svg-s" x="145" y="98" text-anchor="middle">ćwiczenia generowane przez AI</text>
+  <text class="svg-s" x="145" y="116" text-anchor="middle">„ćwicz to” z mapy</text>
+
+  <rect class="svg-node-warn" x="490" y="30" width="250" height="110" rx="12"/>
+  <text class="svg-t" x="615" y="58" text-anchor="middle">EGZAMIN</text>
+  <text class="svg-s" x="615" y="80" text-anchor="middle">bez podpowiedzi, timer</text>
+  <text class="svg-s" x="615" y="98" text-anchor="middle">arkusz, którego uczeń nie widział</text>
+  <text class="svg-s" x="615" y="116" text-anchor="middle">AI sprawdza dopiero po oddaniu</text>
+
+  <rect class="svg-node-ok" x="250" y="165" width="260" height="70" rx="12"/>
+  <text class="svg-t" x="380" y="194" text-anchor="middle">Mapa umiejętności</text>
+  <text class="svg-s" x="380" y="214" text-anchor="middle">egzamin ważniejszy niż nauka</text>
+
+  <path class="svg-line" d="M270 85H488" marker-end="url(#a4)"/>
+  <text class="svg-s" x="380" y="76" text-anchor="middle">gotowość</text>
+  <path class="svg-line" d="M145 140V200H248" marker-end="url(#a4)"/>
+  <path class="svg-line" d="M615 140V200H512" marker-end="url(#a4)"/>
+</svg>
+<figcaption>Nauka przygotowuje, egzamin sprawdza, a wyniki obu trafiają do mapy. Waga dowodów z egzaminu jest wyższa.</figcaption>
+</figure>
+
+<div class="tablewrap"><table>
+<thead><tr><th></th><th>Nauka</th><th>Egzamin</th></tr></thead>
+<tbody>
+<tr><td><b>Cel</b></td><td>Powtórzenie i zrozumienie materiału</td><td>Weryfikacja: prawdziwy miernik</td></tr>
+<tr><td><b>Podpowiedzi</b></td><td>Drabina czterech poziomów</td><td>Brak</td></tr>
+<tr><td><b>Sprawdzanie</b></td><td>Natychmiast, ale bez zdradzania za dużo</td><td>Dopiero po oddaniu całości, potem feedback</td></tr>
+<tr><td><b>Materiał</b></td><td>Zadania i ich generowane warianty</td><td>Prawdziwe arkusze CKE, których uczeń jeszcze nie widział</td></tr>
+<tr><td><b>Powtórzenia tych samych zadań</b></td><td>Nie, zawsze nowa wersja</td><td>Nie, każdy arkusz tylko raz</td></tr>
+<tr><td><b>Timer</b></td><td>Opcjonalny</td><td>Jak na egzaminie</td></tr>
+<tr><td><b>Waga w mapie</b></td><td>Niższa</td><td>Wyższa</td></tr>
+</tbody></table></div>
+<p class="note">Arkusze CKE użyte w nauce byłyby „spalone” dla egzaminu. Dlatego trzeba rozdzielić pulę (zob. „Do ustalenia”).</p>
+
+<h2>Drabina podpowiedzi</h2>
+<figure>
+<svg viewBox="0 0 760 240" role="img" aria-label="Schody czterech poziomów podpowiedzi">
+  <rect class="svg-node" x="20" y="150" width="165" height="70" rx="8"/>
+  <text class="svg-t" x="102" y="178" text-anchor="middle">1 · Wskazówka</text>
+  <text class="svg-s" x="102" y="198" text-anchor="middle">na co zwrócić uwagę</text>
+  <rect class="svg-node" x="205" y="115" width="165" height="105" rx="8"/>
+  <text class="svg-t" x="287" y="143" text-anchor="middle">2 · Kierunek</text>
+  <text class="svg-s" x="287" y="163" text-anchor="middle">zawęża pole</text>
+  <text class="svg-s" x="287" y="181" text-anchor="middle">podejścia do zadania</text>
+  <rect class="svg-node-warn" x="390" y="80" width="165" height="140" rx="8"/>
+  <text class="svg-t" x="472" y="108" text-anchor="middle">3 · Krok</text>
+  <text class="svg-s" x="472" y="128" text-anchor="middle">kolejny krok</text>
+  <text class="svg-s" x="472" y="146" text-anchor="middle">z toku ucznia</text>
+  <rect class="svg-node-warn" x="575" y="45" width="165" height="175" rx="8"/>
+  <text class="svg-t" x="657" y="73" text-anchor="middle">4 · Rozwiązanie</text>
+  <text class="svg-s" x="657" y="93" text-anchor="middle">z wyjaśnieniem</text>
+  <text class="svg-s" x="657" y="111" text-anchor="middle">liczy się jak błąd</text>
+  <text class="svg-s" x="20" y="30">pomoc rośnie, wpływ na opanowanie rośnie →</text>
+</svg>
+<figcaption>Wagi wpływu każdego poziomu na wynik opanowania do dostrojenia na danych. Poziom 4 liczymy jak niezaliczone zadanie.</figcaption>
+</figure>
+
+<h3>Zasady podpowiedzi</h3>
+<div class="grid">
+  <div class="card"><span class="tag t-p">ZMIANA</span><h3>Generowane na żywo</h3><p>Podpowiedź powstaje na podstawie tego, co uczeń już napisał. W matematyce nawet zadanie zamknięte można zacząć na kilka sposobów, więc wcześniej przygotowana podpowiedź może nie pasować do jego toku. Podpowiedzi z góry generowane zostają co najwyżej jako optymalizacja tam, gdzie droga rozwiązania jest jedna.</p></div>
+  <div class="card"><span class="tag t-p">ZASADA</span><h3>Bez zdradzania odpowiedzi</h3><p>Poziomy 1–3 są automatycznie sprawdzane, czy nie zawierają odpowiedzi z klucza, zanim trafią do ucznia.</p></div>
+  <div class="card"><span class="tag t-p">ZASADA</span><h3>Jeden wynik</h3><p>Dwa wyniki (egzaminacyjny i „z pomocą”) nie są potrzebne. Podpowiedzi wchodzą do mapy umiejętności, a punkty z klucza zostają punktami z klucza.</p></div>
+  <div class="card"><span class="tag t-p">ZASADA</span><h3>Podpowiedź jako sygnał</h3><p>Poziom użytej podpowiedzi i czas do jej poproszenia wchodzą do dowodów opanowania, a po zadaniu aplikacja proponuje „ćwicz to” albo „to jeszcze musisz opanować”.</p></div>
+</div>
+
+<h2>Sprawdzanie i feedback</h2>
+<div class="grid">
+  <div class="card"><span class="tag t-p">NAUKA</span><h3>Sprawdzanie konieczne</h3><p>Uczeń zawsze dostaje informację, czy odpowiedź jest dobra. AI nie naprowadza od razu za mocno: najpierw wskazuje, gdzie jest problem, bez gotowego rozwiązania.</p></div>
+  <div class="card"><span class="tag t-p">EGZAMIN</span><h3>Feedback po oddaniu</h3><p>AI sprawdza dopiero po napisaniu całości i wtedy daje szczegółowy feedback. Wypowiedzi pisemne: punkty za kryterium z cytatem z odpowiedzi.</p></div>
+</div>
+
+<h2>Ćwiczenia: nigdy te same pytania</h2>
+<p>W sekcjach „ćwicz to” i „to jeszcze musisz opanować” uczeń nie dostaje identycznych zadań, tylko nowe wersje z innymi danymi albo podobną treścią. Chodzi o to, żeby uczył się materiału, a nie zapamiętywał odpowiedzi.</p>
+
+<figure>
+<svg viewBox="0 0 760 130" role="img" aria-label="Potok generowania wariantu zadania">
+  <defs><marker id="a5" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="svg-arrow"/></marker></defs>
+  <rect class="svg-node" x="10" y="30" width="135" height="64" rx="10"/><text class="svg-t" x="77" y="58" text-anchor="middle">Słaba</text><text class="svg-t" x="77" y="76" text-anchor="middle">umiejętność</text>
+  <rect class="svg-node-alt" x="170" y="30" width="145" height="64" rx="10"/><text class="svg-t" x="242" y="58" text-anchor="middle">Wzorzec zadania</text><text class="svg-s" x="242" y="78" text-anchor="middle">z arkuszy CKE</text>
+  <rect class="svg-node-alt" x="340" y="30" width="145" height="64" rx="10"/><text class="svg-t" x="412" y="58" text-anchor="middle">Nowy wariant</text><text class="svg-s" x="412" y="78" text-anchor="middle">inne dane i treść</text>
+  <rect class="svg-node-warn" x="510" y="30" width="115" height="64" rx="10"/><text class="svg-t" x="567" y="58" text-anchor="middle">Weryfikacja</text><text class="svg-s" x="567" y="78" text-anchor="middle">czy klucz jest OK</text>
+  <rect class="svg-node-ok" x="650" y="30" width="100" height="64" rx="10"/><text class="svg-t" x="700" y="68" text-anchor="middle">Uczeń</text>
+  <path class="svg-line" d="M145 62H168" marker-end="url(#a5)"/><path class="svg-line" d="M315 62H338" marker-end="url(#a5)"/><path class="svg-line" d="M485 62H508" marker-end="url(#a5)"/><path class="svg-line" d="M625 62H648" marker-end="url(#a5)"/>
+</svg>
+<figcaption>Najtrudniejszy element to weryfikacja: wygenerowane zadanie musi mieć poprawną odpowiedź.</figcaption>
+</figure>
+
+<div class="tablewrap"><table>
+<thead><tr><th>Przedmiot</th><th>Jak generować warianty</th><th>Jak weryfikować</th></tr></thead>
+<tbody>
+<tr><td>Matematyka, informatyka</td><td>Szablony z parametrami (inne liczby, inne dane) albo AI</td><td>Obliczenie wyniku kodem, uruchomienie rozwiązania wzorcowego</td></tr>
+<tr><td>Angielski</td><td>AI pisze nowy tekst i pytania według wzorca zadania</td><td>Drugi przebieg AI jako recenzent plus ręczna kontrola próbki (do weryfikacji, jak mierzyć jakość)</td></tr>
+</tbody></table></div>
+<p class="note">To propozycje. Dobór metod zależy od przedmiotu startowego.</p>
+</main>
+<div class="pager"><a href="mapa-umiejetnosci.html"><small>Wstecz</small>← Mapa umiejętności</a><a class="next" href="dane-cke.html"><small>Dalej</small>Dane z CKE →</a></div>
+<footer class="f">Zatwierdzone: drabina czterech poziomów, dwa tryby (nauka i egzamin), podpowiedzi na żywo, warianty zadań zamiast powtórek, brak dwóch wyników.</footer>
+</body>
+</html>
