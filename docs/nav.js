@@ -306,6 +306,66 @@
   ]
  },
  {
+  "id": "uczen",
+  "title": "Uczeń uczy AI: projekt",
+  "group": "Produkt",
+  "desc": "Szczegółowy projekt formatu: scenariusz, dwa agenty, ocena, bezpieczeństwo.",
+  "pages": [
+   {
+    "id": "uczen-przyklad",
+    "title": "Pełny przykład rozmowy"
+   },
+   {
+    "id": "uczen-scenariusz",
+    "title": "Scenariusz rundy"
+   },
+   {
+    "id": "uczen-architektura",
+    "title": "Sędzia i Kolega"
+   },
+   {
+    "id": "uczen-dialog",
+    "title": "Przebieg rozmowy"
+   },
+   {
+    "id": "uczen-ocena",
+    "title": "Ocena wyjaśnienia"
+   },
+   {
+    "id": "uczen-bezpieczenstwo",
+    "title": "Zasady bezpieczeństwa i uczciwości"
+   },
+   {
+    "id": "uczen-persona",
+    "title": "Persony kolegi"
+   },
+   {
+    "id": "uczen-rozbior",
+    "title": "Ekran rozbioru"
+   },
+   {
+    "id": "uczen-dobor",
+    "title": "Dobór pojęć i rund"
+   },
+   {
+    "id": "uczen-dowody",
+    "title": "Dowody dla mapy umiejętności"
+   },
+   {
+    "id": "uczen-przedmioty",
+    "title": "Odmiany per przedmiot"
+   },
+   {
+    "id": "uczen-jakosc",
+    "title": "Jakość i testy"
+   },
+   {
+    "id": "uczen-pytania",
+    "title": "Do ustalenia"
+   }
+  ]
+ },
+ {
   "id": "dashboard",
   "title": "Dashboard i nawigacja",
   "group": "Produkt",
