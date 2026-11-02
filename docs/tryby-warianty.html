@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[nazwa] – Ćwiczenia: nigdy te same pytania</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<h1>Ćwiczenia: nigdy te same pytania</h1>
+<p class="sub">Warianty zadań zamiast powtórek.</p>
+<p>W sekcjach „ćwicz to” i „to jeszcze musisz opanować” uczeń nie dostaje identycznych zadań, tylko nowe wersje z innymi danymi albo podobną treścią. Chodzi o to, żeby uczył się materiału, a nie zapamiętywał odpowiedzi.</p>
+
+<figure>
+<svg viewBox="0 0 760 130" role="img" aria-label="Potok generowania wariantu zadania">
+  <defs><marker id="a5" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="svg-arrow"/></marker></defs>
+  <rect class="svg-node" x="10" y="30" width="135" height="64" rx="10"/><text class="svg-t" x="77" y="58" text-anchor="middle">Słaba</text><text class="svg-t" x="77" y="76" text-anchor="middle">umiejętność</text>
+  <rect class="svg-node-alt" x="170" y="30" width="145" height="64" rx="10"/><text class="svg-t" x="242" y="58" text-anchor="middle">Wzorzec zadania</text><text class="svg-s" x="242" y="78" text-anchor="middle">z arkuszy CKE</text>
+  <rect class="svg-node-alt" x="340" y="30" width="145" height="64" rx="10"/><text class="svg-t" x="412" y="58" text-anchor="middle">Nowy wariant</text><text class="svg-s" x="412" y="78" text-anchor="middle">inne dane i treść</text>
+  <rect class="svg-node-warn" x="510" y="30" width="115" height="64" rx="10"/><text class="svg-t" x="567" y="58" text-anchor="middle">Weryfikacja</text><text class="svg-s" x="567" y="78" text-anchor="middle">czy klucz jest OK</text>
+  <rect class="svg-node-ok" x="650" y="30" width="100" height="64" rx="10"/><text class="svg-t" x="700" y="68" text-anchor="middle">Uczeń</text>
+  <path class="svg-line" d="M145 62H168" marker-end="url(#a5)"/><path class="svg-line" d="M315 62H338" marker-end="url(#a5)"/><path class="svg-line" d="M485 62H508" marker-end="url(#a5)"/><path class="svg-line" d="M625 62H648" marker-end="url(#a5)"/>
+</svg>
+<figcaption>Najtrudniejszy element to weryfikacja: wygenerowane zadanie musi mieć poprawną odpowiedź.</figcaption>
+</figure>
+
+<div class="tablewrap"><table>
+<thead><tr><th>Przedmiot</th><th>Jak generować warianty</th><th>Jak weryfikować</th></tr></thead>
+<tbody>
+<tr><td>Matematyka, informatyka</td><td>Szablony z parametrami (inne liczby, inne dane) albo AI</td><td>Obliczenie wyniku kodem, uruchomienie rozwiązania wzorcowego</td></tr>
+<tr><td>Angielski</td><td>AI pisze nowy tekst i pytania według wzorca zadania</td><td>Drugi przebieg AI jako recenzent plus ręczna kontrola próbki (do weryfikacji, jak mierzyć jakość)</td></tr>
+</tbody></table></div>
+<p class="note">To propozycje. Dobór metod zależy od przedmiotu startowego.</p>
+</main>
+<footer class="f">Zatwierdzone: drabina czterech poziomów, dwa tryby (nauka i egzamin), podpowiedzi na żywo, warianty zadań zamiast powtórek, brak dwóch wyników.</footer>
+<script src="nav.js" defer></script>
+</body>
+</html>

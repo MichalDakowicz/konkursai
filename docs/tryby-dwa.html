@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[nazwa] – Dwa tryby: nauka i egzamin</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<h1>Dwa tryby: nauka i egzamin</h1>
+<p class="sub">Nauka przygotowuje, egzamin weryfikuje.</p>
+<p class="lead">Nauka to praca z AI, której celem jest powtórzenie materiału. Egzamin to prawdziwy miernik: bez pomocy, jak na maturze. Oba karmią mapę umiejętności, ale egzamin ją weryfikuje.</p>
+
+<figure>
+<svg viewBox="0 0 760 250" role="img" aria-label="Obieg: nauka z AI, egzamin bez pomocy, mapa umiejętności w środku">
+  <defs><marker id="a4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="svg-arrow"/></marker></defs>
+  <rect class="svg-node-alt" x="20" y="30" width="250" height="110" rx="12"/>
+  <text class="svg-t" x="145" y="58" text-anchor="middle">NAUKA</text>
+  <text class="svg-s" x="145" y="80" text-anchor="middle">podpowiedzi, feedback, wyjaśnienia</text>
+  <text class="svg-s" x="145" y="98" text-anchor="middle">ćwiczenia generowane przez AI</text>
+  <text class="svg-s" x="145" y="116" text-anchor="middle">„ćwicz to” z mapy</text>
+
+  <rect class="svg-node-warn" x="490" y="30" width="250" height="110" rx="12"/>
+  <text class="svg-t" x="615" y="58" text-anchor="middle">EGZAMIN</text>
+  <text class="svg-s" x="615" y="80" text-anchor="middle">bez podpowiedzi, timer</text>
+  <text class="svg-s" x="615" y="98" text-anchor="middle">arkusz, którego uczeń nie widział</text>
+  <text class="svg-s" x="615" y="116" text-anchor="middle">AI sprawdza dopiero po oddaniu</text>
+
+  <rect class="svg-node-ok" x="250" y="165" width="260" height="70" rx="12"/>
+  <text class="svg-t" x="380" y="194" text-anchor="middle">Mapa umiejętności</text>
+  <text class="svg-s" x="380" y="214" text-anchor="middle">egzamin ważniejszy niż nauka</text>
+
+  <path class="svg-line" d="M270 85H488" marker-end="url(#a4)"/>
+  <text class="svg-s" x="380" y="76" text-anchor="middle">gotowość</text>
+  <path class="svg-line" d="M145 140V200H248" marker-end="url(#a4)"/>
+  <path class="svg-line" d="M615 140V200H512" marker-end="url(#a4)"/>
+</svg>
+<figcaption>Nauka przygotowuje, egzamin sprawdza, a wyniki obu trafiają do mapy. Waga dowodów z egzaminu jest wyższa.</figcaption>
+</figure>
+
+<div class="tablewrap"><table>
+<thead><tr><th></th><th>Nauka</th><th>Egzamin</th></tr></thead>
+<tbody>
+<tr><td><b>Cel</b></td><td>Powtórzenie i zrozumienie materiału</td><td>Weryfikacja: prawdziwy miernik</td></tr>
+<tr><td><b>Podpowiedzi</b></td><td>Drabina czterech poziomów</td><td>Brak</td></tr>
+<tr><td><b>Sprawdzanie</b></td><td>Natychmiast, ale bez zdradzania za dużo</td><td>Dopiero po oddaniu całości, potem feedback</td></tr>
+<tr><td><b>Materiał</b></td><td>Zadania i ich generowane warianty</td><td>Prawdziwe arkusze CKE, których uczeń jeszcze nie widział</td></tr>
+<tr><td><b>Powtórzenia tych samych zadań</b></td><td>Nie, zawsze nowa wersja</td><td>Nie, każdy arkusz tylko raz</td></tr>
+<tr><td><b>Timer</b></td><td>Opcjonalny</td><td>Jak na egzaminie</td></tr>
+<tr><td><b>Waga w mapie</b></td><td>Niższa</td><td>Wyższa</td></tr>
+</tbody></table></div>
+<p class="note">Arkusze CKE użyte w nauce byłyby „spalone” dla egzaminu. Dlatego trzeba rozdzielić pulę (zob. „Do ustalenia”).</p>
+</main>
+<script src="nav.js" defer></script>
+</body>
+</html>

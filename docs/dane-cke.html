@@ -2,74 +2,11 @@
 <html lang="pl">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>[nazwa] – dane z CKE</title>
-<link rel="stylesheet" href="style.css">
+<meta http-equiv="refresh" content="0; url=cke-pliki.html">
+<link rel="canonical" href="cke-pliki.html">
+<title>Przekierowanie</title>
 </head>
 <body>
-<main>
-<h1>Dane z CKE</h1>
-<p class="sub">Research z 2 listopada 2026 · sprawdzone na cke.gov.pl i w pobranych PDF-ach</p>
-
-<div class="ok"><b>Wniosek:</b> CKE publikuje wszystko, czego potrzebujemy, w tym oficjalne mapowanie zadanie → wymagania podstawy programowej. Zewnętrzne serwisy z arkuszami nie są potrzebne.</div>
-
-<h2>Co publikuje CKE dla każdej sesji</h2>
-<div class="tablewrap"><table>
-<thead><tr><th>Plik</th><th>Zawartość</th><th>Po co nam</th></tr></thead>
-<tbody>
-<tr><td><code>*-arkusz.pdf</code></td><td>Treść zadań</td><td>Wyświetlanie zadań</td></tr>
-<tr><td><code>*-zasady.pdf</code></td><td>Klucz i zasady oceniania, <b>z kodami wymagań dla każdego zadania</b></td><td>Sprawdzanie i mapa umiejętności</td></tr>
-<tr><td><code>*.mp3</code>, <code>*-transkrypcja.pdf</code></td><td>Nagrania do słuchu i transkrypcja</td><td>Odtwarzacz, podpowiedzi</td></tr>
-<tr><td><code>Dane-*.zip</code></td><td>Pliki danych do informatyki (txt)</td><td>Zadania praktyczne</td></tr>
-<tr><td><code>*-karta.pdf</code></td><td>Pusta karta odpowiedzi (to nie jest klucz)</td><td>Nie potrzebna</td></tr>
-</tbody></table></div>
-<p class="note">Klucze są publikowane po egzaminie (w 2025 – 27 czerwca). Lata w formule 2023: 2023–2026. Starsza formuła 2015 ma inną podstawę programową i nie mieszamy jej.</p>
-
-<h2>Potok przetwarzania</h2>
-<figure>
-<svg viewBox="0 0 760 210" role="img" aria-label="Potok danych od CKE do aplikacji">
-  <defs><marker id="a3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="svg-arrow"/></marker></defs>
-  <rect class="svg-node" x="10" y="20" width="150" height="80" rx="10"/><text class="svg-t" x="85" y="48" text-anchor="middle">cke.gov.pl</text><text class="svg-s" x="85" y="66" text-anchor="middle">arkusz, klucz</text><text class="svg-s" x="85" y="82" text-anchor="middle">mp3, zip</text>
-  <rect class="svg-node" x="200" y="20" width="150" height="80" rx="10"/><text class="svg-t" x="275" y="48" text-anchor="middle">Scraper</text><text class="svg-s" x="275" y="66" text-anchor="middle">lista plików</text><text class="svg-s" x="275" y="82" text-anchor="middle">wg wzorca ścieżek</text>
-  <rect class="svg-node-alt" x="390" y="20" width="150" height="80" rx="10"/><text class="svg-t" x="465" y="48" text-anchor="middle">Parser kluczy</text><text class="svg-s" x="465" y="66" text-anchor="middle">odpowiedzi, punkty</text><text class="svg-s" x="465" y="82" text-anchor="middle">kody wymagań</text>
-  <rect class="svg-node-warn" x="580" y="20" width="170" height="80" rx="10"/><text class="svg-t" x="665" y="48" text-anchor="middle">Kontrola ręczna</text><text class="svg-s" x="665" y="66" text-anchor="middle">tabele w PDF są</text><text class="svg-s" x="665" y="82" text-anchor="middle">nieregularne</text>
-  <rect class="svg-node" x="200" y="130" width="150" height="64" rx="10"/><text class="svg-t" x="275" y="158" text-anchor="middle">JSON</text><text class="svg-s" x="275" y="176" text-anchor="middle">baza zadań</text>
-  <rect class="svg-node-ok" x="480" y="130" width="150" height="64" rx="10"/><text class="svg-t" x="555" y="158" text-anchor="middle">Aplikacja</text><text class="svg-s" x="555" y="176" text-anchor="middle">treść z oryginału CKE</text>
-  <path class="svg-line" d="M160 60H198" marker-end="url(#a3)"/><path class="svg-line" d="M350 60H388" marker-end="url(#a3)"/><path class="svg-line" d="M540 60H578" marker-end="url(#a3)"/>
-  <path class="svg-line" d="M665 100V115H275V128" marker-end="url(#a3)"/><path class="svg-line" d="M350 162H478" marker-end="url(#a3)"/>
-</svg>
-<figcaption>Dane pochodne (kody wymagań, typy zadań, tagi) trzymamy u siebie. Treść zadań pokazujemy z oryginału.</figcaption>
-</figure>
-
-<h2>Przykład: jak wygląda mapowanie w kluczu</h2>
-<div class="tablewrap"><table>
-<thead><tr><th>Egzamin</th><th>Zadanie</th><th>Kod</th><th>Treść wymagania</th></tr></thead>
-<tbody>
-<tr><td>Angielski dwujęzyczny 2025</td><td>1.2</td><td><code>II.5)</code></td><td>znajduje w wypowiedzi określone informacje</td></tr>
-<tr><td>Angielski dwujęzyczny 2025</td><td>1.5</td><td><code>II.2)</code></td><td>określa główną myśl fragmentu wypowiedzi</td></tr>
-<tr><td>Angielski dwujęzyczny 2025</td><td>2.6</td><td><code>II.7)</code></td><td>wyciąga wnioski z informacji zawartych w wypowiedzi</td></tr>
-<tr><td>Informatyka 2025</td><td>1.1</td><td><code>I.4)</code>, <code>I+II.3) b)</code>, <code>P.I.3)</code></td><td>dobór metody algorytmicznej, rekurencja, sprawdzanie poprawności algorytmu</td></tr>
-</tbody></table></div>
-<p class="note">W informatyce prefiks <code>P.</code> oznacza zakres podstawowy, a <code>(SP)</code> szkołę podstawową.</p>
-
-<h2>Prawa autorskie: niepotwierdzone</h2>
-<div class="alert">Zakładaliśmy, że materiały CKE nie mają praw autorskich. <b>Tego nie udało się potwierdzić.</b> Strony z arkuszami nie zawierają noty o licencji ani o ponownym wykorzystaniu. Darmowy dostęp nie jest licencją na redystrybucję. Arkusze mogą zawierać cudze utwory (teksty, mapy, zdjęcia), a sam arkusz ma zastrzeżenie „Układ graficzny © CKE 2022”.</div>
-<div class="card" style="margin-top:12px"><h3>Bezpieczny wariant architektury</h3><ul>
-  <li>Repo i demo nie zawierają kopii PDF-ów ani mp3.</li>
-  <li>Aplikacja pobiera pliki z cke.gov.pl na żądanie albo użytkownik wskazuje je sam.</li>
-  <li>Trzymamy własne dane pochodne: kody, typy zadań, metadane, własne wyjaśnienia.</li>
-  <li>Do rozstrzygnięcia: zapytać CKE (sekretariat@cke.gov.pl) i sprawdzić regulamin konkursu. Jury musi móc uruchomić aplikację bez nas.</li>
-</ul></div>
-
-<h2>Ryzyka techniczne</h2>
-<div class="card"><ul>
-  <li>Układ tabel w kluczach jest nieregularny, kolumny rozbijają się na wiersze.</li>
-  <li>Kody wymagań zależą od wersji podstawy programowej.</li>
-  <li>Nazwy plików nie są w pełni jednolite (formy arkusza -A-/-B-, wersje .docx).</li>
-  <li>Zadania z grafiką, tabelami i kodem trzeba przepisać albo wyświetlać jako obraz z PDF.</li>
-</ul></div>
-</main>
-<footer class="f">Pełna notatka robocza ze ścieżkami plików: <code>notes/cke-zrodla.md</code> w repozytorium.</footer>
-<script src="nav.js" defer></script>
+<a href="cke-pliki.html">Przejdź do nowej strony</a>
 </body>
 </html>

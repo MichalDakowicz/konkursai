@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[nazwa] – Potok przetwarzania</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<h1>Potok przetwarzania</h1>
+<p class="sub">Od cke.gov.pl do aplikacji.</p>
+<figure>
+<svg viewBox="0 0 760 210" role="img" aria-label="Potok danych od CKE do aplikacji">
+  <defs><marker id="a3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="svg-arrow"/></marker></defs>
+  <rect class="svg-node" x="10" y="20" width="150" height="80" rx="10"/><text class="svg-t" x="85" y="48" text-anchor="middle">cke.gov.pl</text><text class="svg-s" x="85" y="66" text-anchor="middle">arkusz, klucz</text><text class="svg-s" x="85" y="82" text-anchor="middle">mp3, zip</text>
+  <rect class="svg-node" x="200" y="20" width="150" height="80" rx="10"/><text class="svg-t" x="275" y="48" text-anchor="middle">Scraper</text><text class="svg-s" x="275" y="66" text-anchor="middle">lista plików</text><text class="svg-s" x="275" y="82" text-anchor="middle">wg wzorca ścieżek</text>
+  <rect class="svg-node-alt" x="390" y="20" width="150" height="80" rx="10"/><text class="svg-t" x="465" y="48" text-anchor="middle">Parser kluczy</text><text class="svg-s" x="465" y="66" text-anchor="middle">odpowiedzi, punkty</text><text class="svg-s" x="465" y="82" text-anchor="middle">kody wymagań</text>
+  <rect class="svg-node-warn" x="580" y="20" width="170" height="80" rx="10"/><text class="svg-t" x="665" y="48" text-anchor="middle">Kontrola ręczna</text><text class="svg-s" x="665" y="66" text-anchor="middle">tabele w PDF są</text><text class="svg-s" x="665" y="82" text-anchor="middle">nieregularne</text>
+  <rect class="svg-node" x="200" y="130" width="150" height="64" rx="10"/><text class="svg-t" x="275" y="158" text-anchor="middle">JSON</text><text class="svg-s" x="275" y="176" text-anchor="middle">baza zadań</text>
+  <rect class="svg-node-ok" x="480" y="130" width="150" height="64" rx="10"/><text class="svg-t" x="555" y="158" text-anchor="middle">Aplikacja</text><text class="svg-s" x="555" y="176" text-anchor="middle">treść z oryginału CKE</text>
+  <path class="svg-line" d="M160 60H198" marker-end="url(#a3)"/><path class="svg-line" d="M350 60H388" marker-end="url(#a3)"/><path class="svg-line" d="M540 60H578" marker-end="url(#a3)"/>
+  <path class="svg-line" d="M665 100V115H275V128" marker-end="url(#a3)"/><path class="svg-line" d="M350 162H478" marker-end="url(#a3)"/>
+</svg>
+<figcaption>Dane pochodne (kody wymagań, typy zadań, tagi) trzymamy u siebie. Treść zadań pokazujemy z oryginału.</figcaption>
+</figure>
+</main>
+<script src="nav.js" defer></script>
+</body>
+</html>

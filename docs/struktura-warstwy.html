@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[nazwa] – Pięć warstw</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<h1>Pięć warstw</h1>
+<p class="sub">Od treści i danych po aplikację ucznia.</p>
+<figure>
+<svg viewBox="0 0 760 420" role="img" aria-label="Warstwy produktu: aplikacja ucznia, moduły przedmiotowe, silnik uczenia, silnik AI, treść i dane">
+  <defs><marker id="s1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="svg-arrow"/></marker></defs>
+  <rect class="svg-node-ok" x="20" y="14" width="720" height="78" rx="6"/>
+  <text class="svg-t" x="36" y="38">D · APLIKACJA UCZNIA</text>
+  <text class="svg-s" x="36" y="60">wybór arkusza · rozwiązywanie · nauka · egzamin · wyniki · mapa i dashboard · powtórki · plan nauki</text>
+  <text class="svg-s" x="36" y="78">konto i profil · eksport raportu</text>
+
+  <rect class="svg-node-warn" x="20" y="112" width="720" height="64" rx="6"/>
+  <text class="svg-t" x="36" y="136">E · MODUŁY PRZEDMIOTOWE (wtyczki)</text>
+  <text class="svg-s" x="36" y="158">angielski: słuchanie, wypracowanie · informatyka: kod, SQL, arkusz · matematyka: płótno · geografia: mapy · historia · nauki przyrodnicze</text>
+
+  <rect class="svg-node-alt" x="20" y="196" width="350" height="92" rx="6"/>
+  <text class="svg-t" x="36" y="220">B · SILNIK UCZENIA</text>
+  <text class="svg-s" x="36" y="242">mapa umiejętności · estymator opanowania</text>
+  <text class="svg-s" x="36" y="260">dobór ćwiczeń · powtórki w czasie</text>
+  <text class="svg-s" x="36" y="278">dowody z prób, podpowiedzi i błędów</text>
+
+  <rect class="svg-node-alt" x="390" y="196" width="350" height="92" rx="6"/>
+  <text class="svg-t" x="406" y="220">C · SILNIK AI</text>
+  <text class="svg-s" x="406" y="242">ocena wg kryteriów · podpowiedzi · diagnoza błędu</text>
+  <text class="svg-s" x="406" y="260">tutor · generator wariantów · strażnicy jakości</text>
+  <text class="svg-s" x="406" y="278">pomiar zgodności z oceną egzaminatora</text>
+
+  <rect class="svg-node" x="20" y="308" width="720" height="98" rx="6"/>
+  <text class="svg-t" x="36" y="332">A · TREŚĆ I DANE</text>
+  <text class="svg-s" x="36" y="354">pozyskiwanie z CKE · parser kluczy · baza zadań · wymagania CKE · mikroumiejętności i tagi</text>
+  <text class="svg-s" x="36" y="372">pliki danych i nagrania · baza wektorowa · pula arkuszy na naukę i na egzamin</text>
+  <text class="svg-s" x="36" y="390">zbiór wzorcowych ocen do pomiaru AI</text>
+
+  <path class="svg-line" d="M380 308V290" marker-end="url(#s1)"/>
+  <path class="svg-line" d="M195 196V178" marker-end="url(#s1)"/>
+  <path class="svg-line" d="M565 196V178" marker-end="url(#s1)"/>
+  <path class="svg-line" d="M380 112V94" marker-end="url(#s1)"/>
+</svg>
+<figcaption>Strzałki pokazują, kto korzysta z czyich danych. Wszystko opiera się na warstwie A, a uczeń widzi tylko warstwę D.</figcaption>
+</figure>
+</main>
+<script src="nav.js" defer></script>
+</body>
+</html>

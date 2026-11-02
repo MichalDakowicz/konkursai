@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[nazwa] – Skąd bierze się mapa</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<h1>Skąd bierze się mapa</h1>
+<p class="sub">Potok od kluczy CKE do aplikacji.</p>
+<figure>
+<svg viewBox="0 0 760 120" role="img" aria-label="Potok: klucze CKE, parser, tagowanie AI i przegląd, JSON, aplikacja">
+  <defs><marker id="a2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="svg-arrow"/></marker></defs>
+  <rect class="svg-node" x="10" y="30" width="125" height="60" rx="10"/><text class="svg-t" x="72" y="58" text-anchor="middle">Klucze CKE</text><text class="svg-s" x="72" y="76" text-anchor="middle">kody wymagań</text>
+  <rect class="svg-node" x="165" y="30" width="125" height="60" rx="10"/><text class="svg-t" x="227" y="58" text-anchor="middle">Parser</text><text class="svg-s" x="227" y="76" text-anchor="middle">PDF → dane</text>
+  <rect class="svg-node-alt" x="320" y="30" width="135" height="60" rx="10"/><text class="svg-t" x="387" y="58" text-anchor="middle">Tagowanie AI</text><text class="svg-s" x="387" y="76" text-anchor="middle">+ przegląd ręczny</text>
+  <rect class="svg-node" x="485" y="30" width="125" height="60" rx="10"/><text class="svg-t" x="547" y="58" text-anchor="middle">JSON</text><text class="svg-s" x="547" y="76" text-anchor="middle">baza zadań</text>
+  <rect class="svg-node-ok" x="640" y="30" width="110" height="60" rx="10"/><text class="svg-t" x="695" y="58" text-anchor="middle">Aplikacja</text><text class="svg-s" x="695" y="76" text-anchor="middle">mapa ucznia</text>
+  <path class="svg-line" d="M135 60H163" marker-end="url(#a2)"/><path class="svg-line" d="M290 60H318" marker-end="url(#a2)"/><path class="svg-line" d="M455 60H483" marker-end="url(#a2)"/><path class="svg-line" d="M610 60H638" marker-end="url(#a2)"/>
+</svg>
+<figcaption>Tagowanie robimy raz offline, więc w działaniu aplikacji nie kosztuje i jest powtarzalne. Szczegóły danych: <a href="cke-pliki.html">Dane z CKE</a>.</figcaption>
+</figure>
+</main>
+<script src="nav.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[nazwa] – Zasada: AI klasyfikuje, kod liczy</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<h1>Zasada: AI klasyfikuje, kod liczy</h1>
+<p class="sub">Podział pracy między AI a zwykłym kodem.</p>
+<p class="lead">Rubryka CKE jest algorytmem: skale, progi, tabele przeliczeniowe i reguły kaskadowe. Nie prosimy AI o „daj od 0 do 15 punktów”. AI rozstrzyga małe pytania z opisami poziomów z CKE, a punkty liczy zwykły kod według tych samych reguł co egzaminator.</p>
+
+<figure>
+<svg viewBox="0 0 760 210" role="img" aria-label="Potok oceny: tekst ucznia, liczenie w kodzie, klasyfikacja przez AI, agregator rubryki CKE, wynik">
+  <defs><marker id="o1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="svg-arrow"/></marker></defs>
+  <rect class="svg-node" x="10" y="70" width="120" height="70" rx="6"/><text class="svg-t" x="70" y="100" text-anchor="middle">Tekst</text><text class="svg-s" x="70" y="120" text-anchor="middle">ucznia</text>
+
+  <rect class="svg-node-ok" x="170" y="14" width="190" height="70" rx="6"/><text class="svg-t" x="265" y="42" text-anchor="middle">KOD liczy</text><text class="svg-s" x="265" y="62" text-anchor="middle">słowa, akapity, długość</text>
+  <rect class="svg-node-alt" x="170" y="126" width="190" height="70" rx="6"/><text class="svg-t" x="265" y="154" text-anchor="middle">AI klasyfikuje</text><text class="svg-s" x="265" y="174" text-anchor="middle">elementy 2-1-0, usterki, błędy</text>
+
+  <rect class="svg-node-warn" x="400" y="70" width="170" height="70" rx="6"/><text class="svg-t" x="485" y="98" text-anchor="middle">Agregator rubryki</text><text class="svg-s" x="485" y="118" text-anchor="middle">tabele i reguły CKE</text>
+
+  <rect class="svg-node" x="610" y="70" width="140" height="70" rx="6"/><text class="svg-t" x="680" y="98" text-anchor="middle">Punkty</text><text class="svg-s" x="680" y="118" text-anchor="middle">zakres, feedback</text>
+
+  <path class="svg-line" d="M130 105H150V49H168" marker-end="url(#o1)"/>
+  <path class="svg-line" d="M130 105H150V161H168" marker-end="url(#o1)"/>
+  <path class="svg-line" d="M360 49H380V95H398" marker-end="url(#o1)"/>
+  <path class="svg-line" d="M360 161H380V115H398" marker-end="url(#o1)"/>
+  <path class="svg-line" d="M570 105H608" marker-end="url(#o1)"/>
+</svg>
+<figcaption>Małe, sprawdzalne decyzje AI są bardziej wiarygodne niż jedna ocena globalna. Każda z nich ma cytat z tekstu jako dowód.</figcaption>
+</figure>
+</main>
+<script src="nav.js" defer></script>
+</body>
+</html>

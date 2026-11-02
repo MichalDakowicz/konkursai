@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[nazwa] – Model danych</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<h1>Model danych</h1>
+<p class="sub">Encje i powiązania w bazie przedmiotowej.</p>
+<p><b>Decyzja:</b> bazy zadań są osobne dla każdego przedmiotu. Nie ma wspólnej bazy zadań ani wariantów. Wspólne są tylko konto ucznia i silniki z warstw B i C. Poniższy model opisuje jedną bazę przedmiotową.</p>
+<div class="tablewrap"><table>
+<thead><tr><th>Encja</th><th>Co zawiera</th><th>Powiązania</th></tr></thead>
+<tbody>
+<tr><td>Przedmiot, poziom</td><td>Nazwa, poziom, wersja podstawy programowej</td><td>ma arkusze i wymagania</td></tr>
+<tr><td>Arkusz</td><td>Rok, termin, symbol, czas, punkty, pula (nauka lub egzamin)</td><td>ma zadania</td></tr>
+<tr><td>Zadanie</td><td>Treść, typ, punkty, klucz, materiały, plik danych</td><td>należy do arkusza, ma wymagania i tagi</td></tr>
+<tr><td>Wymaganie CKE</td><td>Kod, opis, wymaganie ogólne</td><td>wiele zadań, wiele mikroumiejętności</td></tr>
+<tr><td>Mikroumiejętność</td><td>Nazwa dla ucznia, opis, rodzic w kodzie CKE</td><td>wiele zadań, wiele wariantów</td></tr>
+<tr><td>Wariant</td><td>Wygenerowana treść i klucz, wzorzec źródłowy, stan weryfikacji</td><td>pochodzi od zadania</td></tr>
+<tr><td>Uczeń</td><td>Profil, wybrane przedmioty, data matury</td><td>ma sesje i stan umiejętności</td></tr>
+<tr><td>Sesja</td><td>Tryb (nauka lub egzamin), czas, wynik</td><td>zawiera próby</td></tr>
+<tr><td>Próba</td><td>Odpowiedź, punkty, kryteria, typ błędu, czas</td><td>do zadania lub wariantu</td></tr>
+<tr><td>Podpowiedź</td><td>Poziom, treść, moment prośby</td><td>należy do próby</td></tr>
+<tr><td>Dowód</td><td>Waga, kierunek, umiejętność, źródło</td><td>z próby do umiejętności</td></tr>
+<tr><td>Stan umiejętności</td><td>Wynik wytłumaczalny, szacunek, pewność, ostatnia aktualizacja</td><td>uczeń × umiejętność</td></tr>
+</tbody></table></div>
+</main>
+<script src="nav.js" defer></script>
+</body>
+</html>
