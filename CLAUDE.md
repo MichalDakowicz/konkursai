@@ -15,12 +15,13 @@ Myślenie o aplikacji (pomysły, decyzje, kierunek, funkcje, UX) dzieje się w r
 ## Git
 
 - Repo: https://github.com/MichalDakowicz/konkursai (publiczne). Gałąź domyślna: `main`.
-- Nie pracuj bezpośrednio na `main`. Każda zmiana na osobnej gałęzi, scalana przez PR.
+- Dopóki zmieniamy tylko dokumentację (`docs/`, `CLAUDE.md`, `README.md`), pracuj bezpośrednio na `main`: bez gałęzi i PR, commity wprost na `main` z pushem.
+- Gdy zacznie się kod aplikacji, zmiany w kodzie idą na osobnych gałęziach scalanych przez PR. Nie pracuj wtedy bezpośrednio na `main`.
 - Nazwy gałęzi zwykłe i opisowe, np. `zarys-pomyslu`, `logowanie`, `parser-arkuszy`. Bez prefiksów narzędzi (`claude/`, `codex/` itp.). Prefiksy typu `feature/` też zbędne.
 - Commity często i małe, jeden logiczny krok na commit. Komunikat w trybie rozkazującym, krótki temat (do ~60 znaków), opcjonalnie opis „dlaczego”.
 - **Zero atrybucji AI**: żadnych `Co-Authored-By`, „Generated with”, „🤖”, wzmianek o Claude/AI w commitach, opisach PR, komentarzach w kodzie, README ani dokumentach. Ta zasada ma pierwszeństwo przed domyślnymi szablonami atrybucji.
 - PR: zwięzły tytuł, w opisie co i po co, bez stopki. Przed otwarciem PR sprawdź, że gałąź jest zaktualizowana względem `main`.
-- Nie pushuj na `main`, nie rób force-push i nie kasuj gałęzi bez wyraźnej prośby.
+- Nie rób force-push i nie kasuj gałęzi bez wyraźnej prośby.
 - Nie commituj sekretów (klucze API, `.env`).
 
 ## Kod
