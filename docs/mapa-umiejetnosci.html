@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[nazwa] – mapa umiejętności</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="index.html">[nazwa]</a>
+  <nav>
+    <a href="index.html">Przegląd</a>
+    <a href="koncepcja.html">Koncepcja</a>
+    <a href="mapa-umiejetnosci.html" aria-current="page">Mapa umiejętności</a>
+    <a href="dane-cke.html">Dane CKE</a>
+    <a href="przedmioty.html">Przedmioty</a>
+    <a href="konkurs.html">Konkurs</a>
+    <a href="pytania.html">Do ustalenia</a>
+  </nav>
+</header>
+<main>
+<h1>Mapa umiejętności</h1>
+<p class="sub">Filar 1 · propozycja do zatwierdzenia</p>
+
+<h2>Dlaczego dwa poziomy</h2>
+<p>Klucze CKE przypisują każdemu zadaniu kody wymagań, ale kody są grube. W angielskim dwujęzycznym z 2025 kod <code>II.5</code> („znajduje w wypowiedzi określone informacje”) wystąpił w kilku zadaniach o różnym charakterze. Sam kod powie „słabo ci idzie II.5”, ale nie powie dlaczego.</p>
+
+<div class="grid">
+  <div class="card"><span class="tag t-p">POZIOM 1</span><h3>Kody CKE (oficjalne)</h3><p>Brane wprost z kluczy. Dają dashboard „opanowanie wymagań CKE”, który da się obronić, bo każdy kod jest sprawdzalny w dokumencie CKE.</p></div>
+  <div class="card"><span class="tag t-l">POZIOM 2</span><h3>Mikroumiejętności (nasze)</h3><p>Drobniejsze umiejętności pod kodem CKE. Otagowane przez AI raz, offline, i przejrzane ręcznie. Dają odpowiedź „dlaczego”.</p></div>
+</div>
+
+<figure>
+<svg viewBox="0 0 760 330" role="img" aria-label="Drzewo: kod CKE i mikroumiejętności pod nim">
+  <text class="svg-s" x="20" y="22">POZIOM 1: KODY CKE</text>
+  <text class="svg-s" x="440" y="22">POZIOM 2: MIKROUMIEJĘTNOŚCI (propozycja)</text>
+
+  <rect class="svg-node-alt" x="20" y="40" width="320" height="64" rx="10"/>
+  <text class="svg-t" x="36" y="66">II.5)</text>
+  <text class="svg-s" x="36" y="86">znajduje w wypowiedzi określone informacje</text>
+
+  <rect class="svg-node" x="440" y="34" width="300" height="34" rx="8"/>
+  <text class="svg-s" x="454" y="56" style="fill:var(--text)">dopasowanie parafrazy do tekstu</text>
+  <rect class="svg-node" x="440" y="76" width="300" height="34" rx="8"/>
+  <text class="svg-s" x="454" y="98" style="fill:var(--text)">informacje liczbowe, daty, nazwy</text>
+  <rect class="svg-node" x="440" y="118" width="300" height="34" rx="8"/>
+  <text class="svg-s" x="454" y="140" style="fill:var(--text)">odporność na dystraktory</text>
+  <path class="svg-line" d="M340 72H390V51H438M390 72V93H438M390 72V135H438"/>
+
+  <rect class="svg-node-alt" x="20" y="190" width="320" height="64" rx="10"/>
+  <text class="svg-t" x="36" y="216">V.8)</text>
+  <text class="svg-s" x="36" y="236">stawia tezę, przedstawia argumenty, kończy konkluzją</text>
+
+  <rect class="svg-node" x="440" y="184" width="300" height="34" rx="8"/>
+  <text class="svg-s" x="454" y="206" style="fill:var(--text)">teza i struktura rozprawki</text>
+  <rect class="svg-node" x="440" y="226" width="300" height="34" rx="8"/>
+  <text class="svg-s" x="454" y="248" style="fill:var(--text)">spójniki i łączenie akapitów</text>
+  <rect class="svg-node" x="440" y="268" width="300" height="34" rx="8"/>
+  <text class="svg-s" x="454" y="290" style="fill:var(--text)">konkluzja bez nowych argumentów</text>
+  <path class="svg-line" d="M340 222H390V201H438M390 222V243H438M390 222V285H438"/>
+</svg>
+<figcaption>Kody <code>II.5</code> i <code>V.8</code> z kluczy CKE 2025 (angielski dwujęzyczny). Nazwy mikroumiejętności to propozycja ilustracyjna, nie gotowa taksonomia.</figcaption>
+</figure>
+
+<h2>Dowody opanowania</h2>
+<p>Z każdej próby zbieramy sygnały i przypisujemy je wszystkim tagom zadania, z wagą 1/n przy n tagach.</p>
+<div class="grid">
+  <div class="card"><h3>Punkty</h3><p>Odsetek zdobytych punktów w zadaniu, także częściowych.</p></div>
+  <div class="card"><h3>Podpowiedzi</h3><p>Liczba i poziom użytych podpowiedzi obniżają wynik.</p></div>
+  <div class="card"><h3>Typ błędu</h3><p>Luka w wiedzy liczy się inaczej niż pomyłka techniczna.</p></div>
+  <div class="card"><h3>Czas i świeżość</h3><p>Nowsze próby ważą więcej, stare zanikają.</p></div>
+</div>
+<p class="note" style="margin-top:12px">Model: prosta, wytłumaczalna ważona średnia ostatnich prób z karą za podpowiedzi i zanikiem w czasie. Wagi do dostrojenia na danych. Uczeń widzi, z czego wynika każda liczba, np. „85% punktów, 2 podpowiedzi, 3 tygodnie temu”.</p>
+
+<h2>Jak to wygląda dla ucznia</h2>
+<figure>
+<div class="bars">
+  <div class="bar-row"><div class="lbl">V.12) konstruowanie tekstów<small>rozprawka, list</small></div><div class="bar"><i class="hi" style="width:82%"></i></div><div class="pct">82%</div></div>
+  <div class="bar-row"><div class="lbl">II.7) wyciąganie wniosków<small>rozumienie ze słuchu</small></div><div class="bar"><i style="width:64%"></i></div><div class="pct">64%</div></div>
+  <div class="bar-row"><div class="lbl">II.2) główna myśl<small>rozumienie ze słuchu</small></div><div class="bar"><i style="width:58%"></i></div><div class="pct">58%</div></div>
+  <div class="bar-row"><div class="lbl">V.6) opinie i uzasadnianie<small>wypowiedź pisemna</small></div><div class="bar"><i class="lo" style="width:41%"></i></div><div class="pct">41%</div></div>
+  <div class="bar-row"><div class="lbl">II.5) szukanie informacji<small>rozumienie ze słuchu</small></div><div class="bar"><i class="lo" style="width:33%"></i></div><div class="pct">33%</div></div>
+</div>
+<figcaption>Makieta z <b>przykładowymi</b> wartościami, nie prawdziwy uczeń. Opisy kodów wg kluczy CKE 2025.</figcaption>
+</figure>
+
+<div class="ok"><b>Panel „3 najsłabsze umiejętności”.</b> Pod każdym kodem rozwijają się mikroumiejętności (np. „informacje liczbowe, daty: 20%”), a pod nimi konkretne zadania, które do nich prowadzą. Przycisk „ćwicz to” układa sesję ze słabych umiejętności.</div>
+
+<h2>Skąd bierze się mapa</h2>
+<figure>
+<svg viewBox="0 0 760 120" role="img" aria-label="Potok: klucze CKE, parser, tagowanie AI i przegląd, JSON, aplikacja">
+  <defs><marker id="a2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="svg-arrow"/></marker></defs>
+  <rect class="svg-node" x="10" y="30" width="125" height="60" rx="10"/><text class="svg-t" x="72" y="58" text-anchor="middle">Klucze CKE</text><text class="svg-s" x="72" y="76" text-anchor="middle">kody wymagań</text>
+  <rect class="svg-node" x="165" y="30" width="125" height="60" rx="10"/><text class="svg-t" x="227" y="58" text-anchor="middle">Parser</text><text class="svg-s" x="227" y="76" text-anchor="middle">PDF → dane</text>
+  <rect class="svg-node-alt" x="320" y="30" width="135" height="60" rx="10"/><text class="svg-t" x="387" y="58" text-anchor="middle">Tagowanie AI</text><text class="svg-s" x="387" y="76" text-anchor="middle">+ przegląd ręczny</text>
+  <rect class="svg-node" x="485" y="30" width="125" height="60" rx="10"/><text class="svg-t" x="547" y="58" text-anchor="middle">JSON</text><text class="svg-s" x="547" y="76" text-anchor="middle">baza zadań</text>
+  <rect class="svg-node-ok" x="640" y="30" width="110" height="60" rx="10"/><text class="svg-t" x="695" y="58" text-anchor="middle">Aplikacja</text><text class="svg-s" x="695" y="76" text-anchor="middle">mapa ucznia</text>
+  <path class="svg-line" d="M135 60H163" marker-end="url(#a2)"/><path class="svg-line" d="M290 60H318" marker-end="url(#a2)"/><path class="svg-line" d="M455 60H483" marker-end="url(#a2)"/><path class="svg-line" d="M610 60H638" marker-end="url(#a2)"/>
+</svg>
+<figcaption>Tagowanie robimy raz offline, więc w działaniu aplikacji nie kosztuje i jest powtarzalne. Szczegóły danych: <a href="dane-cke.html">Dane z CKE</a>.</figcaption>
+</figure>
+
+<h2>Ryzyka</h2>
+<div class="card"><ul>
+  <li>Nieregularne tabele w PDF-ach kluczy wymagają parsera z ręczną korektą.</li>
+  <li>Kody wymagań zależą od wersji podstawy programowej (w kluczu informatyki 2025: „Podstawa programowa 2025”).</li>
+  <li>Pierwsze uruchomienie: uczeń bez historii wymaga krótkiego testu diagnostycznego.</li>
+  <li>Skala: około 4 sesje po około 50 zadań w angielskim dwujęzycznym, czyli około 200 zadań do otagowania (szacunek do weryfikacji).</li>
+</ul></div>
+</main>
+<div class="pager"><a href="koncepcja.html"><small>Wstecz</small>← Koncepcja</a><a class="next" href="dane-cke.html"><small>Dalej</small>Dane z CKE →</a></div>
+<footer class="f">Propozycja czeka na zatwierdzenie: dwa poziomy umiejętności i prosty model opanowania.</footer>
+</body>
+</html>
