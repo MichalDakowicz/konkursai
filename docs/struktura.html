@@ -64,7 +64,7 @@
 <tr><td>Mikroumiejętności</td><td>Taksonomia i tagowanie zadań przez AI z przeglądem</td><td>1</td></tr>
 <tr><td>Baza wektorowa</td><td>Osadzenia zadań i odpowiedzi: podobne zadania, mapowanie na umiejętności</td><td>1, 5</td></tr>
 <tr><td>Pule arkuszy</td><td>Podział na arkusze do nauki i na egzamin, rejestr „widziałem”</td><td>5</td></tr>
-<tr><td>Wzorcowe oceny</td><td>Zbiór odpowiedzi z ocenami egzaminatorów do kalibracji AI (do weryfikacji, czy CKE udostępnia)</td><td>4</td></tr>
+<tr><td>Wzorce ocen CKE</td><td>Oficjalne odpowiedzi, zasady oceniania i przykłady z kluczy CKE jako wzorzec do kalibracji AI. Do weryfikacji: w sprawdzonym kluczu dla wypracowania są szczegółowe kryteria i przykładowe fragmenty, ale nie widziałem tam całych ocenionych prac</td><td>4</td></tr>
 </tbody></table></div>
 
 <h3 style="margin-top:28px">B · Silnik uczenia</h3>
@@ -105,7 +105,7 @@
 <tr><td>Wyniki arkusza</td><td>Punkty, rozbicie na zadania i umiejętności, feedback AI</td><td>3, 4</td></tr>
 <tr><td>Mapa i dashboard</td><td>Zrozumiałe nazwy, kody CKE drugim planem, „3 najsłabsze i dlaczego”</td><td>1</td></tr>
 <tr><td>Historia i błędy</td><td>Lista rozwiązanych arkuszy, zadań do powtórki</td><td>3</td></tr>
-<tr><td>Konto i profil</td><td>Wybrane przedmioty, data matury, ustawienia</td><td>—</td></tr>
+<tr><td>Konto i profil</td><td>Rejestracja i logowanie, wybrane przedmioty, data matury, ustawienia, pełna historia nauki</td><td>—</td></tr>
 <tr><td>Raport</td><td>Eksport podsumowania postępów do wydruku (propozycja)</td><td>1</td></tr>
 </tbody></table></div>
 
@@ -127,7 +127,7 @@
 <div class="grid">
   <div class="card"><span class="tag t-l">POMYSŁ</span><h3>Notatnik na połączeniach</h3><p>Prywatny dla ucznia i AI. AI łączy tematy, uczeń się do nich odwołuje. Część powstaje z mapy umiejętności i błędów.</p></div>
   <div class="card"><span class="tag t-l">POMYSŁ</span><h3>Część ustna</h3><p>Angielski dwujęzyczny ma osobną część ustną z kryteriami. Wymaga nagrywania i oceny mowy.</p></div>
-  <div class="card"><span class="tag t-q">PROPOZYCJA</span><h3>Panel nauczyciela</h3><p>Zagregowana mapa klasy, bez danych osobowych. Do decyzji, czy w ogóle wchodzi.</p></div>
+  <div class="card"><span class="tag t-p">DECYZJA</span><h3>Wszystko dla ucznia</h3><p>Brak strony nauczyciela. Cała aplikacja jest osobista: konto, historia, mapa i ćwiczenia należą do ucznia.</p></div>
   <div class="card"><span class="tag t-q">PROPOZYCJA</span><h3>Interaktywne ćwiczenia</h3><p>Nauka przez krótkie interaktywne zadania obok arkuszy, zasilająca tę samą mapę.</p></div>
 </div>
 
@@ -144,6 +144,7 @@
 </div>
 
 <h2>Model danych</h2>
+<p><b>Decyzja:</b> bazy zadań są osobne dla każdego przedmiotu. Nie ma wspólnej bazy zadań ani wariantów. Wspólne są tylko konto ucznia i silniki z warstw B i C. Poniższy model opisuje jedną bazę przedmiotową.</p>
 <div class="tablewrap"><table>
 <thead><tr><th>Encja</th><th>Co zawiera</th><th>Powiązania</th></tr></thead>
 <tbody>
@@ -161,9 +162,17 @@
 <tr><td>Stan umiejętności</td><td>Wynik wytłumaczalny, szacunek, pewność, ostatnia aktualizacja</td><td>uczeń × umiejętność</td></tr>
 </tbody></table></div>
 
+<h2>Dane ucznia i personalizacja</h2>
+<p>Zasada: im więcej danych o uczniu, tym lepsze odpowiedzi AI. Wszystko jest osobiste, nikt poza uczniem ich nie widzi.</p>
+<div class="grid">
+  <div class="card"><h3>Co zapisujemy</h3><ul><li>pełne odpowiedzi, nie tylko punkty</li><li>czas, kolejność, zmiany w trakcie pisania</li><li>użyte podpowiedzi i moment prośby</li><li>typy błędów i ich historię</li><li>pytania zadane tutorowi</li></ul></div>
+  <div class="card"><h3>Do czego to służy</h3><ul><li>podpowiedzi dopasowane do toku i błędów ucznia</li><li>feedback do wypracowań z odniesieniem do poprzednich prac</li><li>dobór ćwiczeń z konkretnych, powtarzających się błędów</li><li>kontekst dla tutora bez pytania od nowa</li></ul></div>
+  <div class="card"><h3>Zasady</h3><ul><li>dane należą do ucznia: wgląd i usunięcie konta</li><li>niepełnoletni: zgoda opiekuna przy rejestracji (do ustalenia)</li><li>do modelu AI wysyłamy tylko to, co potrzebne do danej odpowiedzi</li></ul></div>
+</div>
+
 <h2>Jak mierzymy jakość AI</h2>
 <div class="card"><ul>
-  <li>Zbiór odpowiedzi z wzorcowymi ocenami: zgodność oceny AI z oceną egzaminatora jako liczba w aplikacji i w filmie (źródło wzorcowych ocen do weryfikacji).</li>
+  <li>Oficjalne odpowiedzi i zasady oceniania CKE jako wzorzec: zgodność oceny AI z kluczem CKE jako liczba w aplikacji i w filmie. Dla zadań z kluczem (zamknięte, krótkie) to bezpośrednie porównanie, dla wypracowań porównujemy się z kryteriami i przykładami z kluczy.</li>
   <li>Wypracowanie oceniane w czterech kryteriach, więc zgodność liczymy osobno dla każdego.</li>
   <li>Warianty zadań: odsetek wariantów, które przeszły weryfikację klucza.</li>
   <li>Podpowiedzi: odsetek zablokowanych przez strażnika wycieku.</li>
@@ -171,11 +180,13 @@
 
 <h2>Pytania do tej struktury</h2>
 <div class="card"><ul class="q">
-  <li>Które dodatki wchodzą: panel nauczyciela, plan nauki, interaktywne ćwiczenia, raport?</li>
-  <li>Skąd wzorcowe oceny do pomiaru AI?</li>
-  <li>Wspólna baza zadań i wariantów dla wszystkich przedmiotów czy osobna per przedmiot?</li>
-  <li>Konta użytkowników: czy konto jest potrzebne, czy wystarczy lokalny profil?</li>
+  <li>Dodatki do decyzji: plan nauki, interaktywne ćwiczenia, raport do wydruku, notatnik, część ustna.</li>
+  <li>Sposób logowania: e-mail i hasło, konto Google, albo oba.</li>
+  <li>Dostęp jury do demo: konto testowe bez rejestracji, bo jury nie powinno zakładać kont na prawdziwe dane.</li>
+  <li>Dane osobowe niepełnoletnich: zgoda opiekuna, czas przechowywania, hosting danych (konkurs wymaga Klauzuli Informacyjnej).</li>
+  <li>Czy w kluczach CKE lub sprawozdaniach są oceniane przykładowe wypracowania do dokładniejszej kalibracji.</li>
 </ul></div>
+<p class="note" style="margin-top:12px">Rozstrzygnięte: brak strony nauczyciela, osobne bazy per przedmiot, konta wchodzą, wzorce ocen z oficjalnych materiałów CKE.</p>
 </main>
 <footer class="f">Struktura całości. Szczegóły poszczególnych elementów opisują kolejne rozdziały.</footer>
 <script src="nav.js" defer></script>
