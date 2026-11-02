@@ -3,15 +3,40 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>[nazwa] – Niepewność i zakres punktów</title>
+<title>[nazwa] – Punkty i opis</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <main>
-<h1>Niepewność i zakres punktów</h1>
-<p class="sub">Jak niepewność przechodzi do wyniku.</p>
-<p>Każda decyzja AI dostaje miarę pewności (np. rozbieżność między dwoma niezależnymi przebiegami). Niepewność przechodzi przez agregator, więc dostajemy dolną i górną granicę końcowego wyniku zamiast jednej liczby udającej dokładność. Przy zadaniach z kluczem i niezmienną punktacją wynik jest jedną liczbą.</p>
-<div class="alert">Decyzja otwarta: czy ocena otwarta jest pokazywana jako zakres (np. „11–13 z 15”), czy jako jedna liczba z oznaczeniem „szacunek”.</div>
+<h1>Punkty i opis</h1>
+<p class="sub">Wynik kryterium to liczba i słowny opis razem, a niepewność trafia do opisu.</p>
+<p class="lead">Sama liczba mówi uczniowi ile, ale nie dlaczego. Sam opis nie pozwala śledzić postępów. Dlatego każde kryterium dostaje oba: punkty i krótki opis oparty na opisie poziomu z CKE.</p>
+
+<h2>Przykładowa karta wyniku</h2>
+<figure>
+<div class="bars">
+  <div class="bar-row"><div class="lbl">Zgodność z poleceniem<small>0–5</small></div><div class="bar"><i style="width:80%"></i></div><div class="pct">4/5</div></div>
+  <p class="note" style="margin:-4px 0 12px">Teza jasna i zgodna z tematem. Dwa elementy tematu rozwinięte, trzeci tylko wymieniony.</p>
+  <div class="bar-row"><div class="lbl">Spójność i logika<small>0–2</small></div><div class="bar"><i class="lo" style="width:50%"></i></div><div class="pct">1/2</div></div>
+  <p class="note" style="margin:-4px 0 12px">Trzy usterki: przeskoki czasu w drugim akapicie i odwołanie do informacji, której wcześniej nie było.</p>
+  <div class="bar-row"><div class="lbl">Zakres środków językowych<small>0–4</small></div><div class="bar"><i class="lo" style="width:50%"></i></div><div class="pct">2/4</div></div>
+  <p class="note" style="margin:-4px 0 12px">Środki w większości poprawne, ale schematyczne. Brakuje frazeologii i różnorodnych struktur.</p>
+  <div class="bar-row"><div class="lbl">Poprawność środków językowych<small>0–4</small></div><div class="bar"><i style="width:75%"></i></div><div class="pct">3/4</div></div>
+  <p class="note" style="margin:-4px 0 4px">Sporadyczne błędy językowe i kilka błędów zapisu.</p>
+</div>
+<figcaption>Dane wymyślone, tylko do pokazania formatu. Łącznie 10 z 15 (szacunek).</figcaption>
+</figure>
+
+<h2>Niepewność</h2>
+<p>Gdy dwa niezależne przebiegi AI zgadzają się, kryterium dostaje jedną liczbę. Gdy się różnią, rozbieżność trafia do opisu i do zakresu.</p>
+<div class="tablewrap"><table>
+<thead><tr><th>Sytuacja</th><th>Co widzi uczeń</th></tr></thead>
+<tbody>
+<tr><td>Przebiegi zgodne</td><td>„Spójność i logika: 1/2” z opisem usterek</td></tr>
+<tr><td>Przebiegi się różnią</td><td>„Spójność i logika: 1–2/2”, opis wskazuje sporne miejsce</td></tr>
+<tr><td>Suma dla całej pracy</td><td>Łączny wynik z oznaczeniem „szacunek”, a przy rozbieżnościach jako zakres</td></tr>
+<tr><td>Zadania z kluczem</td><td>Zawsze jedna liczba</td></tr>
+</tbody></table></div>
 </main>
 <script src="nav.js" defer></script>
 </body>

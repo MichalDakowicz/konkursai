@@ -9,13 +9,33 @@
 <body>
 <main>
 <h1>Kalibracja i uczciwość</h1>
-<p class="sub">Jak mierzymy i co mówimy uczniowi.</p>
+<p class="sub">Przykłady CKE są świetne, ale zbyt dobre na kalibrację całej skali.</p>
+<p class="lead">CKE podaje czasem oceniane prace jako przykłady dla uczniów. Problem: są bardzo profesjonalne i większość uczniów nie napisze nic takiego. Skalibrowanie AI tylko na nich zepsuje ocenę typowych prac.</p>
+
+<h2>Co dają przykłady CKE, a czego nie</h2>
+<div class="grid">
+  <div class="card"><span class="tag t-p">DAJĄ</span><h3>Górną kotwicę</h3><p>Pokazują, jak wygląda najwyższy poziom według CKE, razem z komentarzem oceniającego. Do weryfikacji, czy w dostępnych materiałach są kompletne prace z punktacją.</p></div>
+  <div class="card"><span class="tag t-q">NIE DAJĄ</span><h3>Typowych poziomów</h3><p>Brakuje prac średnich i słabych oraz typowych błędów uczniów, a to na nich AI będzie pracować najczęściej.</p></div>
+  <div class="card"><span class="tag t-q">RYZYKO</span><h3>Zniekształcona skala</h3><p>AI skalibrowane na wzorowych pracach może zawyżać lub zaniżać przeciętne. Uczeń porównujący się do wzorca traci motywację.</p></div>
+</div>
+
+<h2>Zbiór kontrolny na wszystkich poziomach</h2>
 <div class="card"><ul>
-  <li><b>Wzorzec:</b> oficjalne zasady oceniania CKE. W sprawdzonym kluczu są szczegółowe opisy poziomów i przykładowe fragmenty, ale nie widziałem tam kompletnych, ocenionych prac uczniów (do weryfikacji w informatorach i sprawozdaniach CKE).</li>
-  <li><b>Zbiór kontrolny:</b> prace o znanym poziomie z materiałów CKE, uzupełnione własnymi pracami ocenionymi ręcznie według rubryki. Pomiar „zgodność z oceną wg rubryki CKE”, nie „zgodność z żywym egzaminatorem”.</li>
-  <li><b>Mówimy to w aplikacji:</b> ocena AI jest szacunkiem, nie oficjalnym wynikiem.</li>
-  <li><b>Metryki:</b> zgodność punktowa na poziomie elementu i kryterium, zgodność ±1 punkt, zgodność ważona.</li>
+  <li><b>Górny kraniec:</b> przykłady z materiałów CKE.</li>
+  <li><b>Poziomy pośrednie i niskie:</b> prace o kontrolowanym poziomie, napisane z typowymi błędami uczniów i ocenione ręcznie według rubryki CKE.</li>
+  <li><b>Prace uczniów:</b> za zgodą, gdy aplikacja będzie używana.</li>
 </ul></div>
+
+<h2>Testy ocenianiania</h2>
+<div class="card"><ul>
+  <li><b>Monotoniczność:</b> słabsza praca nie może dostać więcej niż lepsza.</li>
+  <li><b>Odporność na styl:</b> płynny tekst z błędami treści nie dostaje punktów za treść.</li>
+  <li><b>Długość:</b> dłuższy tekst sam z siebie nie dostaje wyższej oceny.</li>
+  <li><b>Metryki:</b> zgodność na poziomie elementu i kryterium, zgodność ±1 punkt, zgodność ważona.</li>
+</ul></div>
+
+<h2>Co mówimy uczniowi</h2>
+<p>Ocena AI jest szacunkiem, nie oficjalnym wynikiem. Nie każemy uczniowi dorównywać wzorcowej pracy. Feedback wskazuje następny próg z opisów poziomów CKE, np. „żeby w zakresie środków dostać 3 zamiast 2, użyj bardziej zróżnicowanej leksyki i struktur”. Przykład CKE jest tylko opcjonalną referencją, z zastrzeżeniem, że to poziom najwyższy.</p>
 </main>
 <script src="nav.js" defer></script>
 </body>
