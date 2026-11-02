@@ -177,12 +177,13 @@
    },
    {
     "id": "ocena-niepewnosc",
-    "title": "Niepewność i zakres punktów"
+    "title": "Punkty i opis"
    },
    {
     "id": "ocena-kalibracja",
     "title": "Kalibracja i uczciwość"
    },
+    { "id": "ocena-feedback", "title": "Poziom szczegółowości feedbacku" },
    {
     "id": "ocena-typy",
     "title": "Sześć typów błędu"
