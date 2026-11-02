@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[nazwa] – zarys pomysłu</title>
+<style>
+:root{
+  --bg:#fafaf7;--surface:#fff;--text:#1d1d1b;--muted:#63635e;--line:#e4e3dc;
+  --accent:#2f5bd8;--accent-soft:#e8eefc;--warn:#b45309;--warn-soft:#fdf1dc;--ok:#1f7a4d;--ok-soft:#e1f3ea;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#141414;--surface:#1d1d1c;--text:#ecebe6;--muted:#a3a29b;--line:#2e2e2b;
+  --accent:#8aa6ff;--accent-soft:#1d2540;--warn:#f0b35a;--warn-soft:#33270f;--ok:#6fd0a0;--ok-soft:#14301f;}
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:920px;margin:0 auto;padding:32px 16px 80px}
+h1{font-size:2rem;margin:0 0 4px}
+h2{font-size:1.35rem;margin:48px 0 12px;padding-top:8px}
+h3{font-size:1.05rem;margin:0 0 6px}
+p{margin:0 0 12px}
+.sub{color:var(--muted);margin-bottom:24px}
+.lead{font-size:1.15rem;background:var(--accent-soft);border-left:4px solid var(--accent);padding:14px 18px;border-radius:6px}
+nav{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0}
+nav a{color:var(--accent);text-decoration:none;border:1px solid var(--line);background:var(--surface);padding:4px 12px;border-radius:99px;font-size:.9rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.card p{color:var(--muted);font-size:.95rem;margin:0}
+.card ul{margin:6px 0 0;padding-left:18px;color:var(--muted);font-size:.95rem}
+.tag{display:inline-block;font-size:.72rem;font-weight:600;padding:2px 8px;border-radius:99px;margin-bottom:8px;letter-spacing:.02em}
+.t-p{background:var(--ok-soft);color:var(--ok)}
+.t-l{background:var(--accent-soft);color:var(--accent)}
+.t-q{background:var(--warn-soft);color:var(--warn)}
+.alert{background:var(--warn-soft);color:var(--text);border-left:4px solid var(--warn);padding:12px 16px;border-radius:6px}
+table{width:100%;border-collapse:collapse;background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden;font-size:.95rem}
+th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:var(--accent-soft);font-weight:600}
+tr:last-child td{border-bottom:0}
+.tablewrap{overflow-x:auto}
+.flow{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px}
+.flow .step{flex:1 1 140px;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 12px;font-size:.92rem;position:relative}
+.flow .step b{display:block;color:var(--accent)}
+.flow .step span{color:var(--muted)}
+.q li{margin-bottom:6px}
+footer{margin-top:56px;color:var(--muted);font-size:.85rem}
+</style>
+</head>
+<body>
+<main>
+<h1>[nazwa]</h1>
+<p class="sub">Zarys pomysłu · konkurs „Sztuczna inteligencja wśród nas” · wersja robocza</p>
+
+<p class="lead">Aplikacja do rozwiązywania prawdziwych arkuszy maturalnych z automatycznym sprawdzaniem, podpowiedziami AI i śledzeniem postępów. Start: angielski dwujęzyczny i informatyka.</p>
+
+<nav>
+  <a href="#konkurs">Konkurs</a>
+  <a href="#przeplyw">Przepływ</a>
+  <a href="#funkcje">Funkcje</a>
+  <a href="#przedmioty">Przedmioty</a>
+  <a href="#ai">Rola AI</a>
+  <a href="#pytania">Do ustalenia</a>
+  <a href="#inne">Inne pomysły</a>
+</nav>
+
+<h2 id="konkurs">Konkurs w skrócie</h2>
+<div class="alert"><b>Termin: 29 listopada 2026.</b> Do tej daty kompletne zgłoszenie z aplikacją, filmem (do 5 min) i opisem (1 strona). Zakres pierwszej wersji musi być dostosowany do tego terminu.</div>
+<p style="margin-top:12px">Jury ocenia: pomysł, użyteczność, kreatywne użycie AI, jakość wykonania. Szczegóły i lista wymaganych plików: <code>docs/konkurs.md</code>.</p>
+
+<h2 id="przeplyw">Przepływ użytkownika</h2>
+<div class="flow">
+  <div class="step"><b>1. Wybór</b><span>przedmiot, rok, poziom, termin</span></div>
+  <div class="step"><b>2. Rozwiązywanie</b><span>zadania, timer, nagrania</span></div>
+  <div class="step"><b>3. Sprawdzanie</b><span>klucz CKE + ocena AI</span></div>
+  <div class="step"><b>4. Pomoc</b><span>podpowiedź, wyjaśnienie, pytanie</span></div>
+  <div class="step"><b>5. Postęp</b><span>błędy, statystyki, powtórki</span></div>
+</div>
+<p style="margin-top:10px;color:var(--muted);font-size:.92rem">Postęp wraca do wyboru: system proponuje następne zadania na podstawie słabych miejsc.</p>
+
+<h2 id="funkcje">Funkcje</h2>
+<div class="grid">
+  <div class="card"><span class="tag t-p">PRIORYTET</span><h3>Wybór arkusza</h3>
+    <ul><li>przedmiot, rok, poziom, termin</li><li>źródła: arkusze.pl, CKE (z kluczami i nagraniami)</li><li>PDF → ustrukturyzowane zadania</li></ul></div>
+  <div class="card"><span class="tag t-p">PRIORYTET</span><h3>Rozwiązywanie</h3>
+    <ul><li>zadanie po zadaniu lub cały arkusz</li><li>zamknięte jako A/B/C/D, otwarte jako pole tekstowe</li><li>odtwarzacz listeningu, opcjonalny timer</li></ul></div>
+  <div class="card"><span class="tag t-p">PRIORYTET</span><h3>Sprawdzanie</h3>
+    <ul><li>porównanie z kluczem jednym przyciskiem</li><li>AI ocenia odpowiedzi otwarte wg kryteriów CKE</li><li>wynik punktowy po arkuszu</li></ul></div>
+  <div class="card"><span class="tag t-p">PRIORYTET</span><h3>Pomoc</h3>
+    <ul><li>podpowiedź bez zdradzania odpowiedzi</li><li>wyjaśnienie po sprawdzeniu</li><li>pytanie do AI o konkretne zadanie</li></ul></div>
+  <div class="card"><span class="tag t-p">PRIORYTET</span><h3>Postęp</h3>
+    <ul><li>historia arkuszy i wyników</li><li>lista błędów do powtórki</li><li>„co muszę powtórzyć”: błędy i zadania, przy których często potrzebna podpowiedź</li><li>poziom opanowania wymagań CKE</li></ul></div>
+  <div class="card"><span class="tag t-q">DO USTALENIA</span><h3>Baza wektorowa</h3>
+    <ul><li>umiejętności, schematy, wzory, zadania</li><li>szukanie podobnych zadań, dobór powtórek</li></ul></div>
+</div>
+
+<h2 id="przedmioty">Przedmioty i ich specyfika</h2>
+<div class="tablewrap"><table>
+<thead><tr><th>Przedmiot</th><th>Co jest inne</th><th>Etap</th></tr></thead>
+<tbody>
+<tr><td><b>Angielski dwujęzyczny</b></td><td>Listening, czytanie, użycie języka, wypowiedź pisemna oceniana przez AI wg kryteriów CKE</td><td>start</td></tr>
+<tr><td><b>Informatyka</b></td><td>Edytor kodu, pliki z danymi, zadania praktyczne (arkusz, baza danych, programowanie), automatyczne sprawdzanie wyniku</td><td>start</td></tr>
+<tr><td>Matematyka</td><td>Płótno na bazie Excalidraw, pamięć wzorów, wskazówka następnego kroku, liczy się tok rozumowania</td><td>później</td></tr>
+<tr><td>Geografia</td><td>Mapy ze skalą, wykresy, przekroje, klimatogramy, „narysuj” / „zaznacz na mapie”</td><td>później</td></tr>
+<tr><td>Historia, WOS</td><td>Źródła (teksty, karykatury, mapy, plakaty), wypowiedź argumentacyjna</td><td>później</td></tr>
+<tr><td>Biologia, chemia, fizyka</td><td>Schematy, wykresy, wzory i równania reakcji, opis doświadczeń</td><td>później</td></tr>
+<tr><td>Polski, filozofia</td><td>Wypracowanie / esej oceniane wg kryteriów, polski także ustny</td><td>później</td></tr>
+</tbody></table></div>
+<p style="margin-top:10px;color:var(--muted);font-size:.92rem">Informacje o specyfice zadań w CKE pochodzą z pamięci autora, nie ze źródeł. Do weryfikacji w materiałach CKE.</p>
+
+<h2 id="ai">Gdzie AI robi różnicę</h2>
+<div class="grid">
+  <div class="card"><h3>Ocena otwartych odpowiedzi</h3><p>Wypowiedzi pisemne oceniane wg kryteriów CKE z uzasadnieniem punktów.</p></div>
+  <div class="card"><h3>Podpowiedzi stopniowane</h3><p>Od lekkiej wskazówki do rozwiązania. Liczba użytych podpowiedzi to sygnał słabego miejsca.</p></div>
+  <div class="card"><h3>Diagnoza luk</h3><p>Powiązanie błędów i podpowiedzi z wymaganiami CKE, żeby wiedzieć, co powtórzyć.</p></div>
+  <div class="card"><h3>Ekstrakcja arkuszy</h3><p>Zamiana PDF-ów na zadania i klucz w ustrukturyzowanej formie.</p></div>
+</div>
+
+<h2 id="pytania">Do ustalenia</h2>
+<div class="card"><ul class="q">
+  <li>Warunki korzystania z arkusze.pl (automatyczne pobieranie, API) i prawa autorskie do arkuszy oraz nagrań.</li>
+  <li>Jak wyciągać zadania i klucz z PDF: ręcznie, OCR/parsowanie, AI.</li>
+  <li>Jak mierzyć zgodność oceny AI z oceną egzaminatora.</li>
+  <li>Gdzie są oficjalne wymagania szczegółowe CKE i jak zmapować je na zadania.</li>
+  <li>Informatyka: języki, środowisko (przeglądarka czy lokalnie), sprawdzanie zadań praktycznych.</li>
+  <li>Matematyka: osobna aplikacja czy moduł, skąd pamięć wzorów, jak AI „widzi” rysunek.</li>
+  <li>Co dokładnie trzyma baza wektorowa i do czego służy.</li>
+  <li>Czym jest „wersja binarna” dla aplikacji webowej według regulaminu konkursu.</li>
+  <li>Zakres pierwszej wersji na termin 29 listopada.</li>
+</ul></div>
+
+<h2 id="inne">Inne pomysły</h2>
+<div class="grid">
+  <div class="card"><h3>Interaktywne platformy nauczania</h3><p>Nauka przez interaktywne zadania.</p></div>
+  <div class="card"><h3>Notatnik oparty na połączeniach</h3><p>Prywatny dla ucznia i dla AI. AI porządkuje materiał i buduje połączenia między tematami, uczeń odwołuje się do nich w każdej chwili.</p></div>
+</div>
+
+<footer>Dokument roboczy. Zmienia się wraz z ustaleniami z rozmów.</footer>
+</main>
+</body>
+</html>
