@@ -5,6 +5,7 @@
     { id: 'struktura', file: 'struktura.html', title: 'Struktura produktu', group: 'Produkt' },
     { id: 'mapa-umiejetnosci', file: 'mapa-umiejetnosci.html', title: 'Mapa umiejętności', group: 'Produkt' },
     { id: 'tryby', file: 'tryby.html', title: 'Tryby i pomoc', group: 'Produkt' },
+    { id: 'ocena-ai', file: 'ocena-ai.html', title: 'Typ błędu i ocena AI', group: 'Produkt' },
     { id: 'dane-cke', file: 'dane-cke.html', title: 'Dane z CKE', group: 'Podstawy' },
     { id: 'przedmioty', file: 'przedmioty.html', title: 'Przedmioty', group: 'Podstawy' },
     { id: 'konkurs', file: 'konkurs.html', title: 'Konkurs', group: 'Projekt' },
