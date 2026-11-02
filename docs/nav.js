@@ -35,6 +35,8 @@
   var heads = [].slice.call(main.querySelectorAll('h2'));
   heads.forEach(function (h) { if (!h.id) h.id = slug(h.textContent); });
 
+  if (location.hash) { var t = document.getElementById(decodeURIComponent(location.hash.slice(1))); if (t) setTimeout(function () { t.scrollIntoView(); }, 0); }
+
   var side = el('aside', 'side');
   side.id = 'side';
   var brand = el('a', 'brand', '[nazwa]<small>zarys projektu</small>');
