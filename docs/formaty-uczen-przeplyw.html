@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[nazwa] – Uczeń uczy AI: przepływ</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<h1>Uczeń uczy AI: przepływ</h1>
+<p class="sub">Rozmowa z AI, które udaje ucznia i się myli.</p>
+<p class="lead">AI gra kolegę z klasy, który ma problem z konkretną umiejętnością. Uczeń musi znaleźć jego błąd i tak go wyjaśnić, żeby kolega zrozumiał.</p>
+
+<h2>Szkic ekranu</h2>
+<figure>
+<svg viewBox="0 0 760 340" role="img" aria-label="Szkic rozmowy z AI-uczniem i panelu elementów wyjaśnienia">
+  <rect class="svg-node" x="10" y="10" width="740" height="320" rx="6"/>
+  <text class="svg-s" x="26" y="34">UCZEŃ UCZY AI · Struktura rozprawki</text>
+  <line x1="10" y1="46" x2="750" y2="46" class="svg-line"/>
+
+  <rect class="svg-node" x="26" y="62" width="400" height="56" rx="8"/>
+  <text class="svg-s" x="38" y="82" style="fill:var(--muted)">Kolega</text>
+  <text class="svg-s" x="38" y="102" style="fill:var(--text)">Moja teza: „W tej pracy opiszę samoloty.” Chyba jest dobra?</text>
+
+  <rect class="svg-node-alt" x="46" y="132" width="380" height="66" rx="8"/>
+  <text class="svg-s" x="58" y="152" style="fill:var(--muted)">Ty</text>
+  <text class="svg-s" x="58" y="172" style="fill:var(--text)">Nie. Teza ma zajmować stanowisko wobec tematu, a nie</text>
+  <text class="svg-s" x="58" y="188" style="fill:var(--text)">zapowiadać, że coś opiszesz.</text>
+
+  <rect class="svg-node" x="26" y="212" width="400" height="56" rx="8"/>
+  <text class="svg-s" x="38" y="232" style="fill:var(--muted)">Kolega</text>
+  <text class="svg-s" x="38" y="252" style="fill:var(--text)">To jak ma wyglądać dobra? Daj mi przykład.</text>
+
+  <rect class="svg-node" x="26" y="282" width="400" height="34" rx="6"/>
+  <text class="svg-s" x="38" y="304">Napisz odpowiedź...</text>
+
+  <rect class="svg-node" x="450" y="62" width="284" height="254" rx="6"/>
+  <text class="svg-t" x="466" y="86">Co wyjaśnienie powinno zawierać</text>
+  <text class="svg-s" x="466" y="112" style="fill:var(--ok)">✓ wskazanie błędu</text>
+  <text class="svg-s" x="466" y="134" style="fill:var(--ok)">✓ stanowisko zamiast opisu</text>
+  <text class="svg-s" x="466" y="156">○ zapowiedź struktury</text>
+  <text class="svg-s" x="466" y="178">○ własny przykład</text>
+  <text class="svg-s" x="466" y="212" style="fill:var(--muted)">Lista jest ukryta, dopóki</text>
+  <text class="svg-s" x="466" y="228" style="fill:var(--muted)">uczeń nie skończy rundy.</text>
+</svg>
+<figcaption>Szkic poglądowy. Lista elementów po prawej na tym szkicu jest widoczna tylko do pokazania zasady. W aplikacji odsłania się dopiero po rundzie.</figcaption>
+</figure>
+
+<h2>Kroki</h2>
+<div class="tablewrap"><table>
+<thead><tr><th>Krok</th><th>Co się dzieje</th></tr></thead>
+<tbody>
+<tr><td>1 · Wybór</td><td>Z dashboardu albo z rekomendacji: umiejętność lub pojęcie do wyjaśnienia</td></tr>
+<tr><td>2 · Kolega pokazuje błąd</td><td>AI mówi albo wykonuje coś z typowym błędem</td></tr>
+<tr><td>3 · Uczeń wyjaśnia</td><td>Wskazuje błąd i tłumaczy zasadę własnymi słowami</td></tr>
+<tr><td>4 · Reakcja kolegi</td><td>Rozumie i poprawia się, dopytuje albo dalej się myli, jeśli wyjaśnienie nie trafiło</td></tr>
+<tr><td>5 · Kolejne rundy</td><td>Dwie lub trzy rundy, każda z innym błędem lub głębszym pytaniem</td></tr>
+<tr><td>6 · Rozbiór</td><td>Ocena wyjaśnienia i ujawnienie elementów, których zabrakło</td></tr>
+<tr><td>7 · Mini-test</td><td>Nowy wariant zadania na tę umiejętność</td></tr>
+</tbody></table></div>
+</main>
+<script src="nav.js" defer></script>
+</body>
+</html>

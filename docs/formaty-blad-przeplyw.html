@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[nazwa] – Napraw błąd: przepływ</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<h1>Napraw błąd: przepływ</h1>
+<p class="sub">Ekran po ekranie, od otwarcia pracy do podsumowania.</p>
+<p class="lead">Uczeń dostaje cudzą pracę z ukrytymi błędami, zaznacza je, nazywa i poprawia. Na końcu AI porównuje to z listą prawdziwych błędów.</p>
+
+<h2>Szkic ekranu</h2>
+<figure>
+<svg viewBox="0 0 760 330" role="img" aria-label="Szkic ekranu Napraw błąd: tekst z zaznaczonymi fragmentami i panel typu błędu">
+  <rect class="svg-node" x="10" y="10" width="740" height="310" rx="6"/>
+  <text class="svg-s" x="26" y="34">NAPRAW BŁĄD · Spójność i logika</text>
+  <text class="svg-s" x="620" y="34">znalezione: 2 · poprawki: 1</text>
+  <line x1="10" y1="46" x2="750" y2="46" class="svg-line"/>
+
+  <rect class="svg-node" x="26" y="60" width="450" height="200" rx="4"/>
+  <text class="svg-s" x="42" y="86" style="fill:var(--text)">Many people think that planes are the best choice.</text>
+  <rect class="svg-node-warn" x="38" y="98" width="420" height="22" rx="3"/>
+  <text class="svg-s" x="42" y="114" style="fill:var(--text)">However, when I travelled last year, I am very tired after the flight.</text>
+  <text class="svg-s" x="42" y="144" style="fill:var(--text)">It also costs much more money that train tickets.</text>
+  <rect class="svg-node-alt" x="38" y="156" width="270" height="22" rx="3"/>
+  <text class="svg-s" x="42" y="172" style="fill:var(--text)">Moreover, the airport was near my house.</text>
+  <text class="svg-s" x="42" y="202" style="fill:var(--text)">In conclusion, I think trains are better.</text>
+
+  <rect class="svg-node" x="494" y="60" width="240" height="200" rx="4"/>
+  <text class="svg-t" x="510" y="84">Zaznaczony fragment</text>
+  <text class="svg-s" x="510" y="104">Typ błędu:</text>
+  <rect class="svg-node" x="510" y="112" width="100" height="22" rx="11"/><text class="svg-s" x="560" y="127" text-anchor="middle">pomyłka tech.</text>
+  <rect class="svg-node-warn" x="618" y="112" width="104" height="22" rx="11"/><text class="svg-s" x="670" y="127" text-anchor="middle">język i forma</text>
+  <rect class="svg-node" x="510" y="140" width="100" height="22" rx="11"/><text class="svg-s" x="560" y="155" text-anchor="middle">luka w wiedzy</text>
+  <rect class="svg-node" x="618" y="140" width="104" height="22" rx="11"/><text class="svg-s" x="670" y="155" text-anchor="middle">rozumowanie</text>
+  <text class="svg-s" x="510" y="186">Twoja poprawka:</text>
+  <rect class="svg-node" x="510" y="194" width="212" height="26" rx="4"/><text class="svg-s" x="518" y="212">I was very tired after the flight.</text>
+
+  <rect class="svg-node-ok" x="26" y="274" width="140" height="32" rx="4"/><text class="svg-t" x="96" y="295" text-anchor="middle">Sprawdź</text>
+  <text class="svg-s" x="190" y="295">Uczeń nie widzi, ile błędów jest w tekście na wyższych poziomach.</text>
+</svg>
+<figcaption>Szkic poglądowy. Teksty przykładowe, dane wymyślone.</figcaption>
+</figure>
+
+<h2>Kroki</h2>
+<div class="tablewrap"><table>
+<thead><tr><th>Krok</th><th>Co robi uczeń</th><th>Co robi AI</th></tr></thead>
+<tbody>
+<tr><td>1 · Kontekst</td><td>Czyta, jaka umiejętność jest ćwiczona i po co</td><td>Wybiera pracę i poziom z mapy i historii błędów</td></tr>
+<tr><td>2 · Przegląd</td><td>Czyta pracę i zaznacza podejrzane fragmenty</td><td>Nic nie mówi: nie zdradza, gdzie są błędy</td></tr>
+<tr><td>3 · Nazwanie</td><td>Wybiera typ błędu z sześciu</td><td>Zapisuje wybór do porównania</td></tr>
+<tr><td>4 · Poprawka</td><td>Pisze własną poprawioną wersję fragmentu</td><td>Zapisuje, jeszcze nie ocenia</td></tr>
+<tr><td>5 · Sprawdzenie</td><td>Klika „Sprawdź”</td><td>Dopasowuje zaznaczenia do listy błędów i ocenia poprawki</td></tr>
+<tr><td>6 · Rozbiór</td><td>Przegląda wynik błąd po błędzie</td><td>Tłumaczy każdy błąd, także pominięty, z odniesieniem do wymagania</td></tr>
+<tr><td>7 · Dalej</td><td>Wybiera kolejną pracę albo mini-test</td><td>Zapisuje dowody do mapy</td></tr>
+</tbody></table></div>
+</main>
+<script src="nav.js" defer></script>
+</body>
+</html>

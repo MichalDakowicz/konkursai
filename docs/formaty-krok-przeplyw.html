@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[nazwa] – Budowanie krok po kroku: przepływ</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<h1>Budowanie krok po kroku: przepływ</h1>
+<p class="sub">Wypracowanie powstaje etapami z listą kontrolną rubryki.</p>
+<p class="lead">Uczeń pisze własną pracę, ale prowadzony etapami. Po prawej żywa lista kontrolna z elementów rubryki CKE pokazuje, co już jest dobrze, a co wymaga pracy.</p>
+
+<h2>Szkic ekranu</h2>
+<figure>
+<svg viewBox="0 0 760 340" role="img" aria-label="Szkic edytora wypracowania z etapami i listą kontrolną">
+  <rect class="svg-node" x="10" y="10" width="740" height="320" rx="6"/>
+  <text class="svg-s" x="26" y="34">KROK PO KROKU · Rozprawka</text>
+  <text class="svg-s" x="610" y="34">stopień pomocy: pełny</text>
+  <line x1="10" y1="46" x2="750" y2="46" class="svg-line"/>
+
+  <rect class="svg-node-ok" x="26" y="58" width="76" height="26" rx="13"/><text class="svg-s" x="64" y="75" text-anchor="middle">Plan</text>
+  <rect class="svg-node-alt" x="108" y="58" width="76" height="26" rx="13"/><text class="svg-s" x="146" y="75" text-anchor="middle">Wstęp</text>
+  <rect class="svg-node" x="190" y="58" width="96" height="26" rx="13"/><text class="svg-s" x="238" y="75" text-anchor="middle">Rozwinięcie</text>
+  <rect class="svg-node" x="292" y="58" width="96" height="26" rx="13"/><text class="svg-s" x="340" y="75" text-anchor="middle">Zakończenie</text>
+  <rect class="svg-node" x="394" y="58" width="76" height="26" rx="13"/><text class="svg-s" x="432" y="75" text-anchor="middle">Przegląd</text>
+
+  <rect class="svg-node" x="26" y="98" width="444" height="170" rx="4"/>
+  <text class="svg-s" x="40" y="122" style="fill:var(--text)">In my opinion, flying less is a good idea because it protects the</text>
+  <text class="svg-s" x="40" y="142" style="fill:var(--text)">environment, but it is not always practical. I will discuss comfort,</text>
+  <text class="svg-s" x="40" y="162" style="fill:var(--text)">safety and ecology.</text>
+  <text class="svg-s" x="40" y="250" style="fill:var(--muted)">Słowa: 41 (wg zasad liczenia CKE)</text>
+
+  <rect class="svg-node" x="490" y="58" width="244" height="262" rx="6"/>
+  <text class="svg-t" x="506" y="82">Lista kontrolna wstępu</text>
+  <text class="svg-s" x="506" y="108" style="fill:var(--ok)">✓ teza jasna i zgodna z tematem</text>
+  <text class="svg-s" x="506" y="130" style="fill:var(--warn)">△ zapowiedź struktury: słabo</text>
+  <text class="svg-s" x="506" y="152" style="fill:var(--ok)">✓ wstęp wprowadza temat</text>
+  <text class="svg-s" x="506" y="188" style="fill:var(--muted)">Podpowiedź (poziom 1):</text>
+  <text class="svg-s" x="506" y="206" style="fill:var(--text)">Czy czytelnik wie, w jakiej</text>
+  <text class="svg-s" x="506" y="222" style="fill:var(--text)">kolejności omówisz argumenty?</text>
+
+  <rect class="svg-node-ok" x="26" y="282" width="160" height="30" rx="4"/><text class="svg-t" x="106" y="302" text-anchor="middle">Dalej: rozwinięcie</text>
+</svg>
+<figcaption>Szkic poglądowy. Teksty przykładowe, dane wymyślone.</figcaption>
+</figure>
+
+<h2>Etapy</h2>
+<div class="tablewrap"><table>
+<thead><tr><th>Etap</th><th>Co robi uczeń</th><th>Elementy z rubryki</th></tr></thead>
+<tbody>
+<tr><td>Plan</td><td>Teza i trzy elementy tematu w punktach</td><td>teza, elementy tematu</td></tr>
+<tr><td>Wstęp</td><td>Pisze wstęp z tezą</td><td>wstęp, teza w miejscu zgodnym z formą</td></tr>
+<tr><td>Rozwinięcie</td><td>Akapity z argumentami</td><td>głębokość realizacji elementów tematu</td></tr>
+<tr><td>Zakończenie</td><td>Podsumowanie bez powtarzania wstępu</td><td>zakończenie</td></tr>
+<tr><td>Przegląd</td><td>Czyta całość, poprawia spójność i język, sprawdza długość</td><td>spójność, forma, długość</td></tr>
+</tbody></table></div>
+</main>
+<script src="nav.js" defer></script>
+</body>
+</html>

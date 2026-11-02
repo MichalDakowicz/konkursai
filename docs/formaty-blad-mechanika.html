@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[nazwa] – Napraw błąd: mechanika i AI</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<h1>Napraw błąd: mechanika i AI</h1>
+<p class="sub">Skąd bierze się praca z błędami i jak AI ją sprawdza. Propozycja.</p>
+<p class="lead">Wiarygodność oceny wynika z tego, że lista błędów jest znana z góry. AI nie zgaduje, gdzie są błędy, tylko dopasowuje do nich odpowiedzi ucznia.</p>
+
+<h2>Skąd bierze się praca</h2>
+<div class="flow">
+  <div class="step"><b>1 · Wzorzec</b><span>poprawna praca i typowy błąd z biblioteki</span></div>
+  <div class="step"><b>2 · Wstrzyknięcie</b><span>AI wprowadza wybrane błędy w kontrolowanych miejscach</span></div>
+  <div class="step"><b>3 · Lista błędów</b><span>pozycja, typ, poprawna wersja, wymaganie</span></div>
+  <div class="step"><b>4 · Weryfikacja</b><span>sprawdzenie, że błąd jest błędem, a reszta tekstu jest poprawna</span></div>
+</div>
+<p class="note">Praca i lista błędów powstają offline, zanim trafią do ucznia. W trakcie sesji AI niczego nie wymyśla.</p>
+
+<h2>Co sprawdza AI w sesji</h2>
+<div class="grid">
+  <div class="card"><h3>Trafienie</h3><p>Czy zaznaczony fragment pokrywa się z którymś błędem z listy.</p></div>
+  <div class="card"><h3>Typ</h3><p>Czy uczeń nazwał błąd tym samym typem co lista.</p></div>
+  <div class="card"><h3>Poprawka</h3><p>Czy poprawna, częściowo poprawna czy błędna. Poprawka inna niż wzorcowa, ale poprawna, jest uznana.</p></div>
+  <div class="card"><h3>Fałszywy alarm</h3><p>Czy uczeń zaznaczył fragment, który błędem nie jest.</p></div>
+</div>
+
+<h2>Zasady</h2>
+<div class="card"><ul>
+  <li>AI nie mówi uczniowi, gdzie są błędy, dopóki on nie kliknie „Sprawdź”.</li>
+  <li>Poprawka jest oceniana pod kątem sensu, nie zgodności ze wzorcem słowo w słowo.</li>
+  <li>Prace i błędy są własne, zbudowane na podstawie typowych błędów ze sprawozdań CKE, a nie kopie cudzych prac.</li>
+  <li>Błędy w pracy wstrzykujemy tylko takie, które da się jednoznacznie uzasadnić wymaganiem lub regułą.</li>
+</ul></div>
+</main>
+<script src="nav.js" defer></script>
+</body>
+</html>
