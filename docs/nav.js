@@ -140,6 +140,10 @@
     "title": "Sprawdzanie i feedback"
    },
    {
+    "id": "tryby-czas",
+    "title": "Czas: jakość przed prędkością"
+   },
+   {
     "id": "tryby-warianty",
     "title": "Ćwiczenia: nigdy te same pytania"
    }
