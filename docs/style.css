@@ -163,3 +163,13 @@ figcaption{color:var(--muted);font-size:.85rem;margin-top:12px;padding-top:10px;
 
 .sub+h2{border-top:0;margin-top:36px;padding-top:0}
 @media (max-width:900px){.side{top:52px}}
+
+/* ---------- scrollbar ---------- */
+html,.side,.tablewrap{scrollbar-width:thin;scrollbar-color:var(--line2) #000}
+::-webkit-scrollbar{width:10px;height:10px}
+::-webkit-scrollbar-track{background:#000;border-left:1px solid var(--line)}
+::-webkit-scrollbar-thumb{background:var(--line2);border:3px solid #000;border-radius:0}
+::-webkit-scrollbar-thumb:hover{background:var(--muted)}
+::-webkit-scrollbar-corner{background:#000}
+.side::-webkit-scrollbar{width:6px}
+.side::-webkit-scrollbar-track{border-left:0}
