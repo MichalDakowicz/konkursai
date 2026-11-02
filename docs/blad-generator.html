@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[nazwa] – Generowanie i weryfikacja prac</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<h1>Generowanie i weryfikacja prac</h1>
+<p class="sub">Offline, zanim praca trafi do ucznia.</p>
+<p class="lead">Praca z błędami powstaje i jest sprawdzana przed sesją. W trakcie sesji AI niczego nie wymyśla. To jest podstawa wiarygodności tego formatu.</p>
+
+<figure>
+<svg viewBox="0 0 760 170" role="img" aria-label="Potok generowania prac z błędami">
+  <defs><marker id="g1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="svg-arrow"/></marker></defs>
+  <rect class="svg-node" x="6" y="40" width="130" height="80" rx="6"/><text class="svg-t" x="71" y="70" text-anchor="middle">1 · Wzorzec</text><text class="svg-s" x="71" y="90" text-anchor="middle">poprawna praca</text><text class="svg-s" x="71" y="106" text-anchor="middle">i temat w stylu CKE</text>
+  <rect class="svg-node-alt" x="156" y="40" width="130" height="80" rx="6"/><text class="svg-t" x="221" y="70" text-anchor="middle">2 · Wstrzyknięcie</text><text class="svg-s" x="221" y="90" text-anchor="middle">wybrane błędy</text><text class="svg-s" x="221" y="106" text-anchor="middle">z biblioteki</text>
+  <rect class="svg-node-warn" x="306" y="40" width="130" height="80" rx="6"/><text class="svg-t" x="371" y="70" text-anchor="middle">3 · Kontrole</text><text class="svg-s" x="371" y="90" text-anchor="middle">błąd jest błędem,</text><text class="svg-s" x="371" y="106" text-anchor="middle">brak dodatkowych</text>
+  <rect class="svg-node-warn" x="456" y="40" width="130" height="80" rx="6"/><text class="svg-t" x="521" y="70" text-anchor="middle">4 · Przegląd</text><text class="svg-s" x="521" y="90" text-anchor="middle">próbka sprawdzana</text><text class="svg-s" x="521" y="106" text-anchor="middle">ręcznie</text>
+  <rect class="svg-node-ok" x="606" y="40" width="140" height="80" rx="6"/><text class="svg-t" x="676" y="70" text-anchor="middle">5 · Baza</text><text class="svg-s" x="676" y="90" text-anchor="middle">zatwierdzona praca</text><text class="svg-s" x="676" y="106" text-anchor="middle">z listą błędów</text>
+  <path class="svg-line" d="M136 80H154" marker-end="url(#g1)"/><path class="svg-line" d="M286 80H304" marker-end="url(#g1)"/><path class="svg-line" d="M436 80H454" marker-end="url(#g1)"/><path class="svg-line" d="M586 80H604" marker-end="url(#g1)"/>
+</svg>
+</figure>
+
+<h2>Kontrole automatyczne</h2>
+<div class="grid">
+  <div class="card"><h3>Czy to jest błąd</h3><p>Niezależny przebieg AI i reguły sprawdzają, że wstrzyknięty błąd rzeczywiście jest błędem według rubryki lub reguły, a nie kwestią gustu.</p></div>
+  <div class="card"><h3>Brak błędów dodatkowych</h3><p>Reszta tekstu jest sprawdzana, żeby nie zawierała nieplanowanych błędów. Takie błędy odrzucają pracę albo trafiają na listę.</p></div>
+  <div class="card"><h3>Jednoznaczność</h3><p>Każdy błąd da się uzasadnić jednym wymaganiem lub regułą z materiałów CKE. Błędy sporne są odrzucane.</p></div>
+  <div class="card"><h3>Różnorodność</h3><p>Prace w puli różnią się tematem, formą i zestawem błędów, żeby uczeń nie rozpoznawał schematu.</p></div>
+</div>
+
+<h2>Skąd bierzemy błędy do wstrzykiwania</h2>
+<div class="card"><ul>
+  <li><b>Typowe błędy ze sprawozdań CKE</b>, np. przeskoki czasu, argument niezwiązany z tezą, zakończenie powtarzające wstęp.</li>
+  <li><b>Opisy poziomów z rubryk</b>: co obniża punktację w poszczególnych kryteriach.</li>
+  <li><b>Dystraktory zadań zamkniętych</b> z przypisanymi przyczynami.</li>
+</ul></div>
+<p class="note" style="margin-top:12px">Własne prace powstają od zera, nie kopiują cudzych prac uczniów, więc nie dotyczy ich niepewność praw autorskich do materiałów CKE.</p>
+</main>
+<script src="nav.js" defer></script>
+</body>
+</html>

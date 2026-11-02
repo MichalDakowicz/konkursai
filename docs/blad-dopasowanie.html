@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[nazwa] – Dopasowanie i wynik</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<h1>Dopasowanie i wynik</h1>
+<p class="sub">Jak zaznaczenia ucznia łączą się z listą błędów i jak liczymy wynik.</p>
+<p class="lead">Po kliknięciu „Sprawdź” aplikacja dopasowuje zaznaczenia do listy błędów i liczy wynik. Dopasowanie jest zwykłym kodem, tylko ocena poprawek używa AI.</p>
+
+<h2>Dopasowanie zaznaczeń</h2>
+<div class="card"><ul>
+  <li><b>Trafienie:</b> zaznaczenie pokrywa co najmniej połowę zakresu błędu albo mieści się w zdaniu z błędem, gdy błąd jest na poziomie zdania.</li>
+  <li><b>Jedno zaznaczenie, jeden błąd:</b> zaznaczenie liczy się tylko do jednego błędu. Kilka zaznaczeń tego samego błędu liczy się raz.</li>
+  <li><b>Fałszywy alarm:</b> zaznaczenie bez dopasowania do żadnego błędu.</li>
+  <li><b>Fałszywy trop:</b> zaznaczenie fragmentu z listy tropów, liczone jako fałszywy alarm z osobnym oznaczeniem w rozbiorze.</li>
+  <li><b>Pominięty błąd:</b> błąd bez żadnego trafienia.</li>
+</ul></div>
+
+<h2>Wynik za błąd</h2>
+<div class="tablewrap"><table>
+<thead><tr><th>Element</th><th>Zakres</th></tr></thead>
+<tbody>
+<tr><td>Znalezienie</td><td>0 lub 1</td></tr>
+<tr><td>Kategoria zgodna z kryterium</td><td>0 lub 1</td></tr>
+<tr><td>Poprawka</td><td>0, 1 lub 2</td></tr>
+</tbody></table></div>
+<p class="note">Wynik z całej pracy to suma po błędach, pokazywana razem z liczbą fałszywych alarmów, nie jako jedna liczba. Wartości punktów to propozycja do dostrojenia.</p>
+
+<h2>Co widzi uczeń na końcu</h2>
+<div class="flow">
+  <div class="step"><b>Znalezione</b><span>4 z 5 błędów</span></div>
+  <div class="step"><b>Kategorie</b><span>3 z 4 trafnych</span></div>
+  <div class="step"><b>Poprawki</b><span>średnio 1,5 z 2</span></div>
+  <div class="step"><b>Fałszywe alarmy</b><span>1, w tym 1 trop</span></div>
+</div>
+<p class="note" style="margin-top:12px">Liczby w ostatnim wierszu są przykładowe.</p>
+</main>
+<script src="nav.js" defer></script>
+</body>
+</html>

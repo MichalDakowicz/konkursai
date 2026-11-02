@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[nazwa] – Poprawki i ich ocena</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<h1>Poprawki i ich ocena</h1>
+<p class="sub">Jak AI ocenia własną poprawkę ucznia.</p>
+<p class="lead">Poprawka jest swobodnym tekstem. AI nie porównuje jej ze wzorcem słowo w słowo, tylko odpowiada na trzy małe pytania.</p>
+
+<h2>Trzy pytania</h2>
+<div class="tablewrap"><table>
+<thead><tr><th>Pytanie</th><th>Odpowiedź</th></tr></thead>
+<tbody>
+<tr><td>Czy poprawka usuwa błąd?</td><td>tak, częściowo, nie</td></tr>
+<tr><td>Czy nie wprowadza nowego błędu?</td><td>tak, nie</td></tr>
+<tr><td>Czy zachowuje sens i styl zdania?</td><td>tak, nie</td></tr>
+</tbody></table></div>
+
+<h2>Wynik poprawki</h2>
+<div class="tablewrap"><table>
+<thead><tr><th>Punkty</th><th>Warunek</th></tr></thead>
+<tbody>
+<tr><td><b>2</b></td><td>Błąd usunięty, brak nowych błędów, sens zachowany</td></tr>
+<tr><td><b>1</b></td><td>Błąd usunięty, ale nowy błąd albo zmieniony sens. Albo błąd usunięty częściowo</td></tr>
+<tr><td><b>0</b></td><td>Błąd nie usunięty lub poprawka bez związku</td></tr>
+</tbody></table></div>
+<p class="note">Skala 2-1-0 jest taka sama jak w rubryce CKE, więc uczeń przyzwyczaja się do jej logiki.</p>
+
+<h2>Zasady</h2>
+<div class="card"><ul>
+  <li>Akceptujemy każdą merytorycznie poprawną poprawkę, nie tylko wzorcową (jak w kluczach CKE: „akceptowane są wszystkie poprawne odpowiedzi nieujęte w zasadach”).</li>
+  <li>AI dostaje: zdanie oryginalne, opis błędu, poprawki wzorcowe i poprawkę ucznia.</li>
+  <li>Tekst ucznia jest traktowany jako dane, nie jako polecenie dla modelu.</li>
+  <li>Każda ocena ma krótkie uzasadnienie z cytatem z poprawki ucznia.</li>
+  <li>Wątpliwe przypadki (np. dwie poprawki o różnym sensie) oznaczamy jako niepewne i pokazujemy uczniowi przykład, nie samą liczbę.</li>
+</ul></div>
+</main>
+<script src="nav.js" defer></script>
+</body>
+</html>

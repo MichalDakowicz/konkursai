@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[nazwa] – Dobór prac i poziomów</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<h1>Dobór prac i poziomów</h1>
+<p class="sub">Jak aplikacja wybiera, którą pracę pokazać.</p>
+<p class="lead">Aplikacja dobiera pracę z mapy umiejętności i historii błędów ucznia. Sesja to kilka krótkich prac, nie jedna długa.</p>
+
+<h2>Sesja</h2>
+<div class="flow">
+  <div class="step"><b>1 · Cel</b><span>najsłabsza umiejętność z dashboardu</span></div>
+  <div class="step"><b>2 · Praca 1</b><span>poziom dobrany do dotychczasowych wyników</span></div>
+  <div class="step"><b>3 · Praca 2</b><span>ten sam typ błędu w innym kontekście</span></div>
+  <div class="step"><b>4 · Praca 3</b><span>trudniej: kolejny poziom lub fałszywy trop</span></div>
+  <div class="step"><b>5 · Mini-test</b><span>nowy wariant zadania</span></div>
+</div>
+
+<h2>Reguły doboru</h2>
+<div class="card"><ul>
+  <li><b>Z mapy:</b> praca zawiera błędy powiązane z wybraną słabą umiejętnością.</li>
+  <li><b>Z historii:</b> uwzględniamy przyczyny błędów, które uczeń popełnia własnych pracach (np. przeskoki czasu).</li>
+  <li><b>Poziom w górę:</b> po dobrym wyniku (np. znalezione większość błędów i dobre poprawki) następna praca jest o poziom wyżej.</li>
+  <li><b>Poziom w dół:</b> po słabym wyniku następna praca jest łatwiejsza, z jednym błędem na początek.</li>
+  <li><b>Bez powtórek:</b> praca raz widziana nie wraca. Rejestr „widziane” prowadzimy per uczeń.</li>
+  <li><b>Różnorodność:</b> kolejne prace mają inny temat i formę, żeby uczeń nie uczył się schematu.</li>
+</ul></div>
+
+<h2>Wskazówka w trakcie</h2>
+<div class="tablewrap"><table>
+<thead><tr><th>Poziom pomocy</th><th>Co pokazuje</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Ile błędów jest w pracy</td></tr>
+<tr><td>2</td><td>W którym akapicie lub zdaniach jest następny nieznaleziony błąd</td></tr>
+<tr><td>3</td><td>Jakiego kryterium dotyczy następny nieznaleziony błąd</td></tr>
+<tr><td>4</td><td>Pokazuje błąd i kończy sesję tej pracy</td></tr>
+</tbody></table></div>
+<p class="note">To ta sama drabina co w trybie nauki, dostosowana do formatu. Użyte poziomy wchodzą do dowodów.</p>
+</main>
+<script src="nav.js" defer></script>
+</body>
+</html>

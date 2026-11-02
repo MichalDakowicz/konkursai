@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[nazwa] – Jakość i testy</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<h1>Jakość i testy</h1>
+<p class="sub">Jak sprawdzamy, że format działa i ocenia uczciwie.</p>
+<p class="lead">Format jest wiarygodny tylko wtedy, gdy praca ma dokładnie te błędy, które zapisano, a AI poprawnie ocenia poprawki. Trzeba to mierzyć, nie zakładać.</p>
+
+<h2>Co testujemy</h2>
+<div class="tablewrap"><table>
+<thead><tr><th>Element</th><th>Test</th><th>Miara</th></tr></thead>
+<tbody>
+<tr><td>Generator prac</td><td>Czy błąd jest błędem, czy tekst nie ma błędów dodatkowych (drugi niezależny przegląd i ręczna próbka)</td><td>odsetek prac zatwierdzonych bez ręcznych poprawek</td></tr>
+<tr><td>Dopasowanie zaznaczeń</td><td>Zbiór zaznaczeń (także symulowanych) z oczekiwanym dopasowaniem</td><td>zgodność z oczekiwanym wynikiem</td></tr>
+<tr><td>Ocena poprawek</td><td>Zbiór poprawek poprawnych, częściowych i błędnych, ocenionych ręcznie</td><td>zgodność punktowa i ±1 punkt</td></tr>
+<tr><td>Rozbiór</td><td>Czy wyjaśnienia są zgodne ze źródłem i zrozumiałe</td><td>przegląd ręczny próbki</td></tr>
+<tr><td>Skuteczność</td><td>Wynik mini-testu po sesji względem przed sesją</td><td>wzrost opanowania</td></tr>
+</tbody></table></div>
+
+<h2>Koszt</h2>
+<div class="card"><ul>
+  <li>Prace i błędy powstają offline, więc nie kosztują nic w trakcie sesji.</li>
+  <li>W sesji AI ocenia tylko poprawki: jedno wywołanie na pracę, nie na każdy ruch ucznia.</li>
+  <li>Dopasowanie i wynik liczy zwykły kod.</li>
+</ul></div>
+
+<h2>Ryzyka</h2>
+<div class="card"><ul>
+  <li>Praca zawiera nieplanowany błąd: dodatkowa kontrola i przegląd próbki.</li>
+  <li>Uczeń rozwiązuje przez zgadywanie (zaznacza wszystko): precyzja obniża wynik.</li>
+  <li>Poprawka poprawna, ale inna niż wzorcowa: oceniana pod kątem sensu, nie zgodności ze wzorcem.</li>
+  <li>Pula prac się kończy: stały dopływ nowych prac z generatora.</li>
+</ul></div>
+</main>
+<script src="nav.js" defer></script>
+</body>
+</html>

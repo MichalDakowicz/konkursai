@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[nazwa] – Ekran rozbioru</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<h1>Ekran rozbioru</h1>
+<p class="sub">Co uczeń widzi po „Sprawdź” i skąd wyjaśnienia.</p>
+<p class="lead">Rozbiór jest najcenniejszą częścią formatu: to tu uczeń uczy się, dlaczego coś jest błędem. Pokazuje każdy błąd osobno, także pominięty.</p>
+
+<figure>
+<svg viewBox="0 0 760 340" role="img" aria-label="Szkic ekranu rozbioru: tekst ze znacznikami i panel szczegółów błędu">
+  <rect class="svg-node" x="10" y="10" width="740" height="320" rx="6"/>
+  <text class="svg-s" x="26" y="34">ROZBIÓR · Spójność i logika</text>
+  <text class="svg-s" x="540" y="34">znalezione: 4/5 · fałszywe alarmy: 1</text>
+  <line x1="10" y1="46" x2="750" y2="46" class="svg-line"/>
+
+  <rect class="svg-node" x="26" y="60" width="430" height="260" rx="4"/>
+  <text class="svg-s" x="40" y="84" style="fill:var(--muted)">5.</text><text class="svg-s" x="56" y="84" style="fill:var(--text)">I think this argument is weak, because every school have...</text>
+  <rect class="svg-node-ok" x="36" y="92" width="410" height="22" rx="3"/><text class="svg-s" x="46" y="107" style="fill:var(--text)">6. Moreover, phones also help students, so we should not ban...</text>
+  <rect class="svg-node-ok" x="36" y="122" width="410" height="22" rx="3"/><text class="svg-s" x="46" y="137" style="fill:var(--text)">7. When I was in primary school, I am always checking...</text>
+  <rect class="svg-node-warn" x="36" y="152" width="410" height="22" rx="3"/><text class="svg-s" x="46" y="167" style="fill:var(--text)">8. To sum up, phones should be banned because they are...</text>
+  <rect class="svg-node" x="36" y="182" width="410" height="22" rx="3" style="stroke:var(--bad)"/><text class="svg-s" x="46" y="197" style="fill:var(--text)">9. In conclusion, I think banning phones in school is a good idea.</text>
+  <rect class="svg-node" x="36" y="212" width="410" height="22" rx="3" style="stroke-dasharray:4 3"/><text class="svg-s" x="46" y="227" style="fill:var(--text)">3. Last year my school introduced a ban and the results...</text>
+  <text class="svg-s" x="40" y="264" style="fill:var(--ok)">■ znaleziony z dobrą poprawką</text>
+  <text class="svg-s" x="40" y="282" style="fill:var(--warn)">■ znaleziony, poprawka częściowa</text>
+  <text class="svg-s" x="40" y="300" style="fill:var(--bad)">■ pominięty</text>
+  <text class="svg-s" x="250" y="264" style="fill:var(--muted)">┄ fałszywy alarm (zdanie 3, poprawny)</text>
+
+  <rect class="svg-node" x="474" y="60" width="262" height="260" rx="6"/>
+  <text class="svg-t" x="490" y="84">Zdanie 9: pominięty</text>
+  <text class="svg-s" x="490" y="108">Kryterium: zgodność z poleceniem</text>
+  <text class="svg-s" x="490" y="132" style="fill:var(--muted)">Dlaczego to błąd:</text>
+  <text class="svg-s" x="490" y="150" style="fill:var(--text)">Zakończenie powtarza wstęp</text>
+  <text class="svg-s" x="490" y="166" style="fill:var(--text)">prawie tymi samymi słowami.</text>
+  <text class="svg-s" x="490" y="196" style="fill:var(--muted)">Najczęściej zdający:</text>
+  <text class="svg-s" x="490" y="214" style="fill:var(--text)">kopiują wstęp zamiast</text>
+  <text class="svg-s" x="490" y="230" style="fill:var(--text)">podsumować argumenty.</text>
+  <text class="svg-s" x="490" y="262" style="fill:var(--muted)">Źródło: kryteria CKE, zakończenie</text>
+  <rect class="svg-node-alt" x="490" y="276" width="110" height="28" rx="4"/><text class="svg-s" x="545" y="294" text-anchor="middle">Ćwicz to</text>
+</svg>
+<figcaption>Szkic poglądowy, dane wymyślone. Kolorów używamy tylko jako obrysów, tło zostaje czarne.</figcaption>
+</figure>
+
+<h2>Co zawiera opis błędu</h2>
+<div class="tablewrap"><table>
+<thead><tr><th>Element</th><th>Źródło</th></tr></thead>
+<tbody>
+<tr><td>Dlaczego to błąd</td><td>Pole <code>wyjasnienie</code> z listy błędów, oparte na regule lub kryterium CKE</td></tr>
+<tr><td>Kryterium rubryki</td><td>Pole <code>kryterium</code></td></tr>
+<tr><td>Poprawki</td><td>Poprawka ucznia z oceną i poprawki wzorcowe</td></tr>
+<tr><td>Najczęściej zdający…</td><td>Opis typowego błędu ze sprawozdań CKE (jeśli dotyczy)</td></tr>
+<tr><td>Źródło</td><td>Odniesienie do materiału CKE</td></tr>
+<tr><td>Ćwicz to</td><td>Przejście do formatu pasującego do przyczyny błędu</td></tr>
+</tbody></table></div>
+</main>
+<script src="nav.js" defer></script>
+</body>
+</html>

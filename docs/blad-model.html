@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[nazwa] – Model danych pracy</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<h1>Model danych pracy</h1>
+<p class="sub">Jak zapisujemy pracę z błędami. Propozycja.</p>
+<p class="lead">Praca jest zapisana jako dane z listą błędów, fałszywych tropów i metadanymi. Dzięki temu sesja nie wymaga zgadywania, a zmiana pracy nie wymaga zmiany kodu.</p>
+
+<h2>Schemat</h2>
+<pre><code>{
+  "id": "eng-roz-0042",
+  "przedmiot": "angielski-dwujezyczny",
+  "forma": "rozprawka",
+  "temat": "Niektóre szkoły chcą zakazać telefonów...",
+  "mikroumiejetnosci": ["eng.spojnosc.czasy", "eng.logika.argument"],
+  "wymagania_cke": ["V.8", "V.12"],
+  "zdania": [
+    { "id": "s1", "tekst": "In my opinion, banning phones..." },
+    { "id": "s5", "tekst": "I think this argument is weak, because every school have a phone at the reception." }
+  ],
+  "bledy": [
+    {
+      "id": "b1",
+      "zdanie": "s5",
+      "zakres": [39, 56],
+      "fragment": "every school have",
+      "kryterium": "poprawnosc_jezykowa",
+      "przyczyna": "pomylka_techniczna",
+      "poprawki_wzorcowe": ["every school has"],
+      "wyjasnienie": "Podmiot w liczbie pojedynczej wymaga formy has.",
+      "trudnosc": 1
+    }
+  ],
+  "falszywe_tropy": [
+    { "zdanie": "s3", "dlaczego_kusi": "anegdotyczny przykład, ale poprawny" }
+  ],
+  "weryfikacja": { "status": "zatwierdzona", "wersja": 1 }
+}</code></pre>
+
+<h2>Pola, które mają znaczenie</h2>
+<div class="tablewrap"><table>
+<thead><tr><th>Pole</th><th>Po co</th></tr></thead>
+<tbody>
+<tr><td><code>zakres</code></td><td>Dokładne miejsce błędu w zdaniu, do dopasowania zaznaczenia ucznia</td></tr>
+<tr><td><code>kryterium</code></td><td>Kategoria wg rubryki CKE, którą uczeń wybiera przy nazywaniu błędu</td></tr>
+<tr><td><code>przyczyna</code></td><td>Jeden z sześciu typów błędu: do diagnozy, nie do wyboru przez ucznia</td></tr>
+<tr><td><code>poprawki_wzorcowe</code></td><td>Przykłady dobrych poprawek, nie jedyne dopuszczone</td></tr>
+<tr><td><code>falszywe_tropy</code></td><td>Poprawne fragmenty, które wyglądają podejrzanie (poziom 4)</td></tr>
+<tr><td><code>mikroumiejetnosci</code>, <code>wymagania_cke</code></td><td>Do mapy umiejętności</td></tr>
+<tr><td><code>weryfikacja</code></td><td>Czy praca przeszła kontrolę jakości</td></tr>
+</tbody></table></div>
+</main>
+<script src="nav.js" defer></script>
+</body>
+</html>
