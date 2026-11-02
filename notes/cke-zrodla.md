@@ -69,3 +69,10 @@ Użytkownik zakłada, że materiały CKE nie mają praw autorskich. **Tego nie u
 - Podstawa programowa zmieniła się (nazwa nagłówka "Podstawa programowa 2025" w kluczu informatyki). Kody wymagań zależą od roku, trzeba mapować wersje.
 - Ścieżki plików nie są w pełni jednolite (np. `-A-`/`-B-` formy arkuszy, `.docx` dla wersji 660). Scraper musi to znosić.
 - Zadania z grafiką, tabelami i kodem trzeba przepisać lub wyświetlać jako obraz z PDF.
+
+## Sprawozdania z egzaminu: typowe błędy (dodane 2 XI 2026)
+
+- Strona: `.../egzamin-maturalny-w-formule-2023/wyniki-sprawozdania/` -> podstrony `sprawozdanie-z-egzaminu-maturalnego-w-<rok>-r/` (2023-2026), na nich PDF per przedmiot.
+- Wzorzec pliku: `.../Informacje_o_wynikach/2024/sprawozdanie/sprawozdanie_matura_2025_<przedmiot>.pdf` (angielski, francuski, niemiecki i inne języki mają przyrostek `_F23`; dla 2026 ścieżka bez `/2024/sprawozdanie`).
+- Zawartość (sprawdzone próbkowo dla 2025): opis najtrudniejszych zadań i najczęstszych błędów zdających, numerowane przykłady rozwiązań uczniów. Angielski: konkretne błędne frazy w tekście. Matematyka, chemia, historia: przykłady rozwiązań w większości jako obrazy (pdftotext zwraca tylko podpisy "Przykład N").
+- Do zrobienia: ekstrakcja z użyciem modelu rozumiejącego obraz, kontrola ręczna, sprawdzenie biologii, fizyki, geografii; status praw autorskich do prac uczniów.
