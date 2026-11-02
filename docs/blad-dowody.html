@@ -18,14 +18,14 @@
 <tbody>
 <tr><td>Czułość</td><td>znalezione błędy / wszystkie błędy</td><td>czy uczeń widzi błąd</td></tr>
 <tr><td>Precyzja</td><td>trafne zaznaczenia / wszystkie zaznaczenia</td><td>czy nie widzi błędu tam, gdzie go nie ma</td></tr>
-<tr><td>Trafność kategorii</td><td>poprawne kategorie / znalezione błędy</td><td>czy rozumie, za co traci punkty</td></tr>
+<tr><td>Trafność typu błędu</td><td>poprawne typy / znalezione błędy</td><td>czy rozpoznaje przyczynę błędu</td></tr>
 <tr><td>Jakość poprawek</td><td>suma punktów poprawek / maksimum</td><td>czy umie zastosować zasadę</td></tr>
 </tbody></table></div>
 
 <h2>Przypisanie do mapy</h2>
 <div class="card"><ul>
   <li>Dowód dla każdego błędu trafia do mikroumiejętności z pola <code>mikroumiejetnosci</code> i do kodu CKE w <code>wymagania_cke</code>.</li>
-  <li>Znalezienie i poprawka liczą się do tej umiejętności z równą wagą, kategoria z mniejszą.</li>
+  <li>Znalezienie i poprawka liczą się do tej umiejętności z równą wagą, typ błędu z mniejszą.</li>
   <li>Fałszywe alarmy nie obniżają konkretnej umiejętności, ale zmniejszają pewność wyniku i zasilają osobny sygnał „ocena własnej pracy”.</li>
   <li>Użyte podpowiedzi obniżają wagę dowodu, jak w drabinie podpowiedzi.</li>
 </ul></div>
@@ -36,7 +36,7 @@
 <tbody>
 <tr><td>Znalezienie</td><td>0,4</td></tr>
 <tr><td>Poprawka</td><td>0,4</td></tr>
-<tr><td>Kategoria</td><td>0,2</td></tr>
+<tr><td>Typ błędu</td><td>0,2</td></tr>
 <tr><td>Cały format względem egzaminu</td><td>niższa</td></tr>
 </tbody></table></div>
 <p class="note">Wartości są wyjściowe i mają być dostrojone na danych.</p>
