@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[nazwa] – Widget mapy umiejętności</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<h1>Widget mapy umiejętności</h1>
+<p class="sub">Jak mapa wygląda na dashboardzie i co robi po kliknięciu.</p>
+<p class="lead">Widget pokazuje kilka najważniejszych umiejętności ze zrozumiałymi nazwami. Kody CKE są drugim planem, widoczne po najechaniu lub w pełnej mapie.</p>
+
+<h2>Widok skrócony</h2>
+<figure>
+<div class="bars">
+  <div class="bar-row"><div class="lbl">Spójność i logika<small>V.8 · wypowiedź pisemna</small></div><div class="bar"><i class="lo" style="width:41%"></i></div><div class="pct">41%</div></div>
+  <div class="bar-row"><div class="lbl">Szukanie informacji<small>II.5 · rozumienie ze słuchu</small></div><div class="bar"><i class="lo" style="width:33%"></i></div><div class="pct">33%</div></div>
+  <div class="bar-row"><div class="lbl">Opinie i uzasadnianie<small>V.6 · wypowiedź pisemna</small></div><div class="bar"><i style="width:58%"></i></div><div class="pct">58%</div></div>
+  <div class="bar-row"><div class="lbl">Budowa tekstu<small>V.12 · wypowiedź pisemna</small></div><div class="bar"><i class="hi" style="width:82%"></i></div><div class="pct">82%</div></div>
+</div>
+<figcaption>Dane wymyślone. Nazwy zrozumiałe dla ucznia, kod CKE pod spodem.</figcaption>
+</figure>
+
+<h2>Zachowanie</h2>
+<div class="tablewrap"><table>
+<thead><tr><th>Akcja</th><th>Efekt</th></tr></thead>
+<tbody>
+<tr><td>Najechanie na pasek</td><td>Opis umiejętności, z czego wynika wynik (np. „85% punktów, 2 podpowiedzi, 3 tygodnie temu”)</td></tr>
+<tr><td>Kliknięcie na umiejętność</td><td>Rozwija mikroumiejętności i wejścia do nauki dla tej umiejętności</td></tr>
+<tr><td>„Pełna mapa”</td><td>Przejście do sekcji Mapa umiejętności z kodami CKE i historią</td></tr>
+<tr><td>Przełącznik widoku</td><td>Zrozumiałe nazwy lub kody CKE (dla uczniów, którzy chcą widzieć oficjalny podział)</td></tr>
+</tbody></table></div>
+
+<h2>Stany</h2>
+<div class="card"><ul>
+  <li><b>Za mało danych:</b> zamiast paska „za mało danych” i zachęta do krótkiej diagnozy.</li>
+  <li><b>Pewność:</b> przy niskiej pewności szacunku pasek jest kreskowany, nie pełny.</li>
+  <li><b>Trend:</b> strzałka w górę lub w dół względem ostatniego tygodnia, bez dramatyzowania.</li>
+  <li><b>Wybór widoku:</b> radar, paski, albo tabela, zależnie od preferencji i rozmiaru widgetu.</li>
+</ul></div>
+</main>
+<script src="nav.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[nazwa] – Dostosowanie układu</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<h1>Dostosowanie układu</h1>
+<p class="sub">Tryb edycji, katalog widgetów, rozmiary i gotowe układy.</p>
+<p class="lead">Dashboard jest dostosowywalny. Uczeń układa go w trybie edycji, a układ zapisuje się na koncie.</p>
+
+<figure>
+<svg viewBox="0 0 760 270" role="img" aria-label="Szkic trybu edycji dashboardu">
+  <rect class="svg-node" x="10" y="10" width="740" height="250" rx="6"/>
+  <text class="svg-s" x="26" y="34">TRYB EDYCJI</text>
+  <rect class="svg-node-ok" x="590" y="18" width="150" height="26" rx="4"/><text class="svg-s" x="665" y="35" text-anchor="middle" style="fill:var(--text)">Gotowe · Zapisz</text>
+  <line x1="10" y1="52" x2="750" y2="52" class="svg-line"/>
+
+  <rect class="svg-node-alt" x="26" y="66" width="300" height="100" rx="6" style="stroke-dasharray:5 3"/><text class="svg-t" x="42" y="96">Dziś warto</text><text class="svg-s" x="42" y="116">przeciągnij, zmień rozmiar</text><text class="svg-s" x="270" y="86">S M L</text>
+  <rect class="svg-node" x="340" y="66" width="150" height="100" rx="6" style="stroke-dasharray:5 3"/><text class="svg-t" x="356" y="96">Powtórki</text><text class="svg-s" x="440" y="86">✕ ukryj</text>
+  <rect class="svg-node" x="26" y="180" width="200" height="70" rx="6" style="stroke-dasharray:5 3"/><text class="svg-t" x="42" y="210">Mapa umiejętności</text>
+
+  <rect class="svg-node" x="520" y="66" width="220" height="184" rx="6"/>
+  <text class="svg-t" x="536" y="90">Dodaj widget</text>
+  <text class="svg-s" x="536" y="114">＋ Kontynuuj</text><text class="svg-s" x="536" y="134">＋ Wybierz temat</text><text class="svg-s" x="536" y="154">＋ Arkusze</text><text class="svg-s" x="536" y="174">＋ Do matury</text><text class="svg-s" x="536" y="194">＋ Mapa wiedzy</text>
+  <text class="svg-s" x="536" y="230" style="fill:var(--accent)">Gotowe układy ▾</text>
+</svg>
+<figcaption>Szkic poglądowy.</figcaption>
+</figure>
+
+<h2>Możliwości</h2>
+<div class="tablewrap"><table>
+<thead><tr><th>Akcja</th><th>Zachowanie</th></tr></thead>
+<tbody>
+<tr><td>Przeciąganie</td><td>Zmiana kolejności i miejsca w siatce</td></tr>
+<tr><td>Rozmiar</td><td>Mały, średni, duży (każdy widget ma swoje warianty widoku)</td></tr>
+<tr><td>Ukrywanie i dodawanie</td><td>Z katalogu widgetów, bez utraty ich danych</td></tr>
+<tr><td>Gotowe układy</td><td>Nauka, przed maturą, minimalny. Można zmienić i zapisać własny</td></tr>
+<tr><td>Układ per przedmiot</td><td>Każdy przedmiot może mieć własny układ (do ustalenia)</td></tr>
+<tr><td>Reset</td><td>Powrót do układu domyślnego</td></tr>
+</tbody></table></div>
+
+<h2>Zasady</h2>
+<div class="card"><ul>
+  <li>Siatka dwunastokolumnowa, widgety zajmują całe kolumny. Na telefonie siatka zwija się do jednej kolumny.</li>
+  <li>Układ zapisuje się na koncie, więc działa na każdym urządzeniu.</li>
+  <li>Żaden widget nie jest obowiązkowy, ale pusty dashboard proponuje powrót do gotowego układu.</li>
+</ul></div>
+</main>
+<script src="nav.js" defer></script>
+</body>
+</html>

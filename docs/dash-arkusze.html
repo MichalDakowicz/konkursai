@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[nazwa] – Widget arkuszy i egzaminu</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<h1>Widget arkuszy i egzaminu</h1>
+<p class="sub">Skrót do trybu egzaminu i podgląd ostatnich wyników.</p>
+<p class="lead">Widget pokazuje ostatnie arkusze, dostępną pulę i prowadzi do trybu egzaminu. Egzamin to miernik, więc widget przypomina, kiedy warto go użyć.</p>
+
+<h2>Zawartość</h2>
+<div class="tablewrap"><table>
+<thead><tr><th>Element</th><th>Zawartość</th></tr></thead>
+<tbody>
+<tr><td>Ostatni wynik</td><td>Punkty i podział: w czasie, po czasie, łącznie</td></tr>
+<tr><td>Pula</td><td>Ile arkuszy do egzaminu zostało nieużytych</td></tr>
+<tr><td>Wskazówka gotowości</td><td>Propozycja arkusza, gdy kluczowe umiejętności są opanowane lub uczeń osiągnął stopień „Samodzielny” w pisaniu</td></tr>
+<tr><td>Skrót</td><td>„Rozpocznij egzamin” z wyborem timera (domyślnie włączony)</td></tr>
+<tr><td>Historia</td><td>Lista arkuszy ze zmianą wyniku w czasie</td></tr>
+</tbody></table></div>
+
+<h2>Zasady</h2>
+<div class="card"><ul>
+  <li>Arkusz w trybie egzaminu jest jednorazowy: raz użyty, nie wraca.</li>
+  <li>Widget nie namawia do egzaminu, dopóki mapa nie ma dość danych, żeby wynik miał sens.</li>
+  <li>Wynik „w czasie” jest porównywalny z prawdziwą maturą, łączny pokazuje umiejętność bez presji czasu.</li>
+</ul></div>
+<p class="note">Rozdzielenie arkuszy na pulę do nauki i do egzaminu jest decyzją otwartą.</p>
+</main>
+<script src="nav.js" defer></script>
+</body>
+</html>

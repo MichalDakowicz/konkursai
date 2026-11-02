@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[nazwa] – Widget „Dziś warto”</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<h1>Widget „Dziś warto”</h1>
+<p class="sub">Jak aplikacja wybiera, co zaproponować. Propozycja.</p>
+<p class="lead">To najważniejszy widget: zamienia mapę umiejętności w jedną konkretną propozycję z uzasadnieniem. Uczeń nie musi sam analizować mapy.</p>
+
+<h2>Karta rekomendacji</h2>
+<figure>
+<svg viewBox="0 0 760 190" role="img" aria-label="Szkic karty rekomendacji Dziś warto">
+  <rect class="svg-node-alt" x="10" y="10" width="740" height="170" rx="6"/>
+  <text class="svg-s" x="28" y="36" style="fill:var(--muted)">DZIŚ WARTO</text>
+  <text class="svg-t" x="28" y="62">Spójność i logika</text>
+  <text class="svg-s" x="28" y="86">Dlaczego: opanowanie 41%, ostatnio ćwiczone 12 dni temu, trzy ostatnie błędy to przeskoki czasu</text>
+  <text class="svg-s" x="28" y="104">To kryterium daje do 2 z 15 punktów za wypracowanie (do weryfikacji)</text>
+  <rect class="svg-node-ok" x="28" y="122" width="190" height="34" rx="4"/><text class="svg-t" x="123" y="144" text-anchor="middle">Napraw błąd · ok. 8 min</text>
+  <text class="svg-s" x="240" y="144">Inna propozycja</text><text class="svg-s" x="360" y="144">Wybierz temat</text>
+</svg>
+<figcaption>Szkic poglądowy, dane wymyślone.</figcaption>
+</figure>
+
+<h2>Skąd rekomendacja</h2>
+<div class="tablewrap"><table>
+<thead><tr><th>Sygnał</th><th>Wpływ</th></tr></thead>
+<tbody>
+<tr><td>Niskie opanowanie umiejętności</td><td>podnosi priorytet</td></tr>
+<tr><td>Zanikanie (długo niećwiczona)</td><td>podnosi priorytet</td></tr>
+<tr><td>Waga na maturze: ile punktów daje umiejętność w arkuszach (z kluczy CKE)</td><td>podnosi priorytet</td></tr>
+<tr><td>Powtarzające się typy błędów ucznia</td><td>wybór formatu i umiejętności</td></tr>
+<tr><td>Data matury</td><td>zmienia wagi: bliżej egzaminu rośnie waga umiejętności o największym udziale w punktach</td></tr>
+<tr><td>Niedawne ćwiczenie tej samej umiejętności</td><td>obniża priorytet</td></tr>
+<tr><td>Preferencje ucznia (formaty, długość)</td><td>dopasowanie formatu</td></tr>
+</tbody></table></div>
+<p class="note">Wagi sygnałów do dostrojenia. „Waga na maturze” da się policzyć z kluczy CKE, bo każde zadanie ma przypisane wymagania i punkty (do zrobienia).</p>
+
+<h2>Dobór formatu</h2>
+<div class="tablewrap"><table>
+<thead><tr><th>Dominujący typ błędu</th><th>Proponowany format</th></tr></thead>
+<tbody>
+<tr><td>Luka w wiedzy</td><td>Uczeń uczy AI albo tutor</td></tr>
+<tr><td>Błąd rozumowania</td><td>Napraw błąd</td></tr>
+<tr><td>Źle zrozumiane polecenie</td><td>Napraw błąd na poleceniach albo krok po kroku z listą kontrolną</td></tr>
+<tr><td>Pomyłka techniczna</td><td>Szybkie rundy</td></tr>
+<tr><td>Język i forma</td><td>Krok po kroku</td></tr>
+</tbody></table></div>
+
+<h2>Zasady</h2>
+<div class="card"><ul>
+  <li>Jedna główna propozycja i do dwóch alternatyw pod „Inna propozycja”.</li>
+  <li>Każda ma uzasadnienie w jednym zdaniu, zrozumiałe bez znajomości mapy.</li>
+  <li>Format zmienia się z dnia na dzień: nie ten sam format dwa razy z rzędu bez powodu.</li>
+  <li>Uczeń może zawsze wybrać własny temat.</li>
+</ul></div>
+</main>
+<script src="nav.js" defer></script>
+</body>
+</html>
