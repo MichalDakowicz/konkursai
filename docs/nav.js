@@ -2,6 +2,7 @@
   var PAGES = [
     { id: 'index', file: 'index.html', title: 'Okładka', group: 'Start' },
     { id: 'koncepcja', file: 'koncepcja.html', title: 'Koncepcja', group: 'Produkt' },
+    { id: 'struktura', file: 'struktura.html', title: 'Struktura produktu', group: 'Produkt' },
     { id: 'mapa-umiejetnosci', file: 'mapa-umiejetnosci.html', title: 'Mapa umiejętności', group: 'Produkt' },
     { id: 'tryby', file: 'tryby.html', title: 'Tryby i pomoc', group: 'Produkt' },
     { id: 'dane-cke', file: 'dane-cke.html', title: 'Dane z CKE', group: 'Podstawy' },
