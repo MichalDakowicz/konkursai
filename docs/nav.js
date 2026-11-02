@@ -458,6 +458,78 @@
   ]
  },
  {
+  "id": "dash",
+  "title": "Dashboard: projekt",
+  "group": "Produkt",
+  "desc": "Szczegółowy projekt: ekran, widgety, rekomendacje, układ, stany, demo.",
+  "pages": [
+   {
+    "id": "dash-ekran",
+    "title": "Ekran główny"
+   },
+   {
+    "id": "dash-start",
+    "title": "Pierwsze uruchomienie"
+   },
+   {
+    "id": "dash-dzis",
+    "title": "Widget „Dziś warto”"
+   },
+   {
+    "id": "dash-mapa",
+    "title": "Widget mapy umiejętności"
+   },
+   {
+    "id": "dash-powtorki",
+    "title": "Powtórki i „Kontynuuj”"
+   },
+   {
+    "id": "dash-arkusze",
+    "title": "Widget arkuszy i egzaminu"
+   },
+   {
+    "id": "dash-matura",
+    "title": "Widget „Do matury”"
+   },
+   {
+    "id": "dash-temat",
+    "title": "Wybierz temat i mapa wiedzy"
+   },
+   {
+    "id": "dash-uklad",
+    "title": "Dostosowanie układu"
+   },
+   {
+    "id": "dash-szukaj",
+    "title": "Wyszukiwanie i szybkie akcje"
+   },
+   {
+    "id": "dash-stany",
+    "title": "Stany ekranu"
+   },
+   {
+    "id": "dash-telefon",
+    "title": "Dashboard na telefonie"
+   },
+   {
+    "id": "dash-dostepnosc",
+    "title": "Dostępność i język"
+   },
+   {
+    "id": "dash-dane",
+    "title": "Dane dashboardu"
+   },
+   {
+    "id": "dash-demo",
+    "title": "Konto demo i ścieżka pokazowa"
+   },
+   {
+    "id": "dash-pytania",
+    "title": "Do ustalenia"
+   }
+  ]
+ },
+ {
   "id": "ocena",
   "title": "Typ błędu i ocena AI",
   "group": "Produkt",
