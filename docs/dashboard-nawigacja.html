@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[nazwa] – Nawigacja i sekcje</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<h1>Nawigacja i sekcje</h1>
+<p class="sub">Co leży na dashboardzie, a co w sekcjach.</p>
+<p class="lead">Dashboard pokazuje to, czego uczeń używa najczęściej. Reszta jest w sekcjach dostępnych z paska nawigacji.</p>
+
+<h2>Układ przykładowy</h2>
+<figure>
+<svg viewBox="0 0 760 330" role="img" aria-label="Szkic układu dashboardu: pasek boczny i siatka widgetów">
+  <rect class="svg-node" x="10" y="10" width="740" height="310" rx="6"/>
+  <rect class="svg-node" x="10" y="10" width="140" height="310" rx="6"/>
+  <text class="svg-t" x="26" y="38">[nazwa]</text>
+  <text class="svg-s" x="26" y="70">Dashboard</text>
+  <text class="svg-s" x="26" y="94">Nauka</text>
+  <text class="svg-s" x="26" y="118">Arkusze</text>
+  <text class="svg-s" x="26" y="142">Egzamin</text>
+  <text class="svg-s" x="26" y="166">Mapa umiejętności</text>
+  <text class="svg-s" x="26" y="190">Powtórki</text>
+  <text class="svg-s" x="26" y="214">Mapa wiedzy</text>
+  <text class="svg-s" x="26" y="250">Ustawienia</text>
+  <text class="svg-s" x="26" y="274">Profil</text>
+
+  <rect class="svg-node-alt" x="170" y="26" width="360" height="110" rx="6"/><text class="svg-t" x="186" y="54">Dziś warto</text><text class="svg-s" x="186" y="76">rekomendacje z mapy umiejętności</text>
+  <rect class="svg-node" x="550" y="26" width="185" height="110" rx="6"/><text class="svg-t" x="566" y="54">Powtórki</text><text class="svg-s" x="566" y="76">zanikające umiejętności</text>
+  <rect class="svg-node" x="170" y="150" width="240" height="160" rx="6"/><text class="svg-t" x="186" y="178">Mapa umiejętności</text><text class="svg-s" x="186" y="200">3 najsłabsze i dlaczego</text>
+  <rect class="svg-node" x="430" y="150" width="145" height="75" rx="6"/><text class="svg-t" x="446" y="178">Kontynuuj</text>
+  <rect class="svg-node" x="590" y="150" width="145" height="75" rx="6"/><text class="svg-t" x="606" y="178">Wybierz temat</text>
+  <rect class="svg-node" x="430" y="235" width="145" height="75" rx="6"/><text class="svg-t" x="446" y="263">Do matury</text>
+  <rect class="svg-node" x="590" y="235" width="145" height="75" rx="6"/><text class="svg-t" x="606" y="263">Arkusze</text>
+</svg>
+<figcaption>Szkic poglądowy. Układ jest dostosowywalny, a to tylko przykład domyślny.</figcaption>
+</figure>
+
+<h2>Co gdzie</h2>
+<div class="tablewrap"><table>
+<thead><tr><th>Sekcja</th><th>Zawartość</th></tr></thead>
+<tbody>
+<tr><td>Nauka</td><td>Wszystkie ścieżki umiejętności, siedem formatów, wolny wybór tematu</td></tr>
+<tr><td>Arkusze</td><td>Lista arkuszy, wybór przedmiotu, roku i terminu</td></tr>
+<tr><td>Egzamin</td><td>Tryb egzaminu, wyniki, feedback</td></tr>
+<tr><td>Mapa umiejętności</td><td>Pełna mapa, kody CKE jako drugi plan, historia</td></tr>
+<tr><td>Powtórki</td><td>Lista powtórek i błędów do przećwiczenia</td></tr>
+<tr><td>Mapa wiedzy</td><td>Notatnik na połączeniach</td></tr>
+<tr><td>Ustawienia, profil</td><td>Przedmioty, data matury, poziom feedbacku, układ dashboardu</td></tr>
+</tbody></table></div>
+</main>
+<script src="nav.js" defer></script>
+</body>
+</html>
