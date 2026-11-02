@@ -366,6 +366,66 @@
   ]
  },
  {
+  "id": "krok",
+  "title": "Krok po kroku: projekt",
+  "group": "Produkt",
+  "desc": "Szczegółowy projekt formatu: etapy, lista kontrolna z rubryki, wygaszanie pomocy.",
+  "pages": [
+   {
+    "id": "krok-przyklad",
+    "title": "Pełny przykład sesji"
+   },
+   {
+    "id": "krok-lista",
+    "title": "Skąd lista kontrolna"
+   },
+   {
+    "id": "krok-etapy",
+    "title": "Etapy i przejścia"
+   },
+   {
+    "id": "krok-pomoc",
+    "title": "Podpowiedzi w tym formacie"
+   },
+   {
+    "id": "krok-ocena",
+    "title": "Ocena elementów na żywo"
+   },
+   {
+    "id": "krok-wygaszanie-projekt",
+    "title": "Wygaszanie pomocy"
+   },
+   {
+    "id": "krok-ekran",
+    "title": "Ekran przeglądu i oddania"
+   },
+   {
+    "id": "krok-oddanie",
+    "title": "Oddanie i ocena końcowa"
+   },
+   {
+    "id": "krok-dowody",
+    "title": "Dowody dla mapy umiejętności"
+   },
+   {
+    "id": "krok-tematy",
+    "title": "Tematy i formy"
+   },
+   {
+    "id": "krok-przedmioty",
+    "title": "Odmiany per przedmiot"
+   },
+   {
+    "id": "krok-jakosc",
+    "title": "Jakość i testy"
+   },
+   {
+    "id": "krok-pytania",
+    "title": "Do ustalenia"
+   }
+  ]
+ },
+ {
   "id": "dashboard",
   "title": "Dashboard i nawigacja",
   "group": "Produkt",
