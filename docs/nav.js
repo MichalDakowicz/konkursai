@@ -216,6 +216,7 @@
     "id": "cke-mapowanie",
     "title": "Mapowanie w kluczu"
    },
+    { "id": "cke-bledy", "title": "Typowe błędy ze sprawozdań CKE" },
    {
     "id": "cke-prawa",
     "title": "Prawa autorskie"
