@@ -9,33 +9,45 @@
 <body>
 <main>
 <h1>Kalibracja i uczciwość</h1>
-<p class="sub">Przykłady CKE są świetne, ale zbyt dobre na kalibrację całej skali.</p>
-<p class="lead">CKE podaje czasem oceniane prace jako przykłady dla uczniów. Problem: są bardzo profesjonalne i większość uczniów nie napisze nic takiego. Skalibrowanie AI tylko na nich zepsuje ocenę typowych prac.</p>
+<p class="sub">Skala od przykładów CKE po typowe błędy zdających, i co z tego wynika dla oceny.</p>
+<p class="lead">CKE podaje czasem oceniane prace jako przykłady dla uczniów, ale są bardzo profesjonalne. Przeciętne i słabe prace znajdziemy w sprawozdaniach z egzaminu, gdzie CKE pokazuje rozwiązania zdających razem z opisem typowych błędów. Razem dają skalę od najwyższego poziomu do typowych błędów.</p>
 
-<h2>Co dają przykłady CKE, a czego nie</h2>
+<h2>Trzy źródła, każde z inną rolą</h2>
 <div class="grid">
-  <div class="card"><span class="tag t-p">DAJĄ</span><h3>Górną kotwicę</h3><p>Pokazują, jak wygląda najwyższy poziom według CKE, razem z komentarzem oceniającego. Do weryfikacji, czy w dostępnych materiałach są kompletne prace z punktacją.</p></div>
-  <div class="card"><span class="tag t-q">NIE DAJĄ</span><h3>Typowych poziomów</h3><p>Brakuje prac średnich i słabych oraz typowych błędów uczniów, a to na nich AI będzie pracować najczęściej.</p></div>
-  <div class="card"><span class="tag t-q">RYZYKO</span><h3>Zniekształcona skala</h3><p>AI skalibrowane na wzorowych pracach może zawyżać lub zaniżać przeciętne. Uczeń porównujący się do wzorca traci motywację.</p></div>
+  <div class="card"><span class="tag t-l">GÓRA SKALI</span><h3>Przykłady CKE dla uczniów</h3><p>Pokazują najwyższy poziom według CKE, z komentarzem oceniającego. Za dobre, żeby kalibrować na nich całą skalę: AI nauczy się oczekiwać pracy, jakiej typowy uczeń nie napisze.</p></div>
+  <div class="card"><span class="tag t-p">ŚRODEK I DÓŁ</span><h3>Sprawozdania z egzaminu</h3><p>Prace i rozwiązania prawdziwych zdających razem z opisem, co poszło źle. Dostępne dla wszystkich przedmiotów (<a href="cke-bledy.html">zob. Typowe błędy ze sprawozdań CKE</a>). Wiele przykładów jest w PDF-ach jako obrazy, więc potrzebna ekstrakcja.</p></div>
+  <div class="card"><span class="tag t-q">UZUPEŁNIENIE</span><h3>Prace własne o znanym poziomie</h3><p>Napisane z typowymi błędami uczniów i ocenione ręcznie według rubryki. Wypełniają luki, gdzie brakuje prac z CKE.</p></div>
 </div>
 
-<h2>Zbiór kontrolny na wszystkich poziomach</h2>
+<h2>Dlaczego sama góra skali nie wystarcza</h2>
 <div class="card"><ul>
-  <li><b>Górny kraniec:</b> przykłady z materiałów CKE.</li>
-  <li><b>Poziomy pośrednie i niskie:</b> prace o kontrolowanym poziomie, napisane z typowymi błędami uczniów i ocenione ręcznie według rubryki CKE.</li>
-  <li><b>Prace uczniów:</b> za zgodą, gdy aplikacja będzie używana.</li>
+  <li>AI skalibrowane na wzorowych pracach zawyża albo zaniża typowe.</li>
+  <li>Uczeń porównujący się do wzorca traci motywację, więc nie każemy mu dorównywać wzorcowi.</li>
+  <li>Dolna część skali jest najważniejsza dla ucznia: tam jest najwięcej do poprawy.</li>
 </ul></div>
+
+<h2>Zbiór kontrolny</h2>
+<div class="tablewrap"><table>
+<thead><tr><th>Poziom pracy</th><th>Źródło</th><th>Stan</th></tr></thead>
+<tbody>
+<tr><td>Najwyższy</td><td>Przykłady CKE dla uczniów</td><td>do weryfikacji, czy są kompletne prace z punktacją</td></tr>
+<tr><td>Średni i niski</td><td>Sprawozdania z egzaminu (przykłady zdających z opisem błędów)</td><td>źródło potwierdzone, ekstrakcja do zrobienia</td></tr>
+<tr><td>Luki w skali</td><td>Prace własne ocenione ręcznie według rubryki</td><td>do zrobienia</td></tr>
+<tr><td>Prace użytkowników</td><td>Za zgodą, gdy aplikacja będzie używana</td><td>później</td></tr>
+</tbody></table></div>
+<p class="note">Prace uczniów w materiałach CKE mają ten sam status praw autorskich co reszta materiałów (do weryfikacji).</p>
 
 <h2>Testy ocenianiania</h2>
 <div class="card"><ul>
   <li><b>Monotoniczność:</b> słabsza praca nie może dostać więcej niż lepsza.</li>
   <li><b>Odporność na styl:</b> płynny tekst z błędami treści nie dostaje punktów za treść.</li>
   <li><b>Długość:</b> dłuższy tekst sam z siebie nie dostaje wyższej oceny.</li>
+  <li><b>Typowe błędy:</b> błędy opisane w sprawozdaniach są rozpoznawane i oznaczane zgodnie z opisem.</li>
   <li><b>Metryki:</b> zgodność na poziomie elementu i kryterium, zgodność ±1 punkt, zgodność ważona.</li>
 </ul></div>
 
 <h2>Co mówimy uczniowi</h2>
-<p>Ocena AI jest szacunkiem, nie oficjalnym wynikiem. Nie każemy uczniowi dorównywać wzorcowej pracy. Feedback wskazuje następny próg z opisów poziomów CKE, np. „żeby w zakresie środków dostać 3 zamiast 2, użyj bardziej zróżnicowanej leksyki i struktur”. Przykład CKE jest tylko opcjonalną referencją, z zastrzeżeniem, że to poziom najwyższy.</p>
+<p>Ocena AI jest szacunkiem, nie oficjalnym wynikiem. Feedback wskazuje następny próg z opisów poziomów CKE, np. „żeby w zakresie środków dostać 3 zamiast 2, użyj bardziej zróżnicowanej leksyki i struktur”. Przykład CKE jest tylko opcjonalną referencją, z zastrzeżeniem, że to poziom najwyższy.</p>
 </main>
 <script src="nav.js" defer></script>
 </body>
