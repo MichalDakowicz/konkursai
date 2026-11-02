@@ -6,7 +6,10 @@ Aplikacja edukacyjna z AI na konkurs „Sztuczna inteligencja wśród nas” (Wy
 
 Myślenie o aplikacji (pomysły, decyzje, kierunek, funkcje, UX) dzieje się w rozmowie z agentem, nie w plikach `.md`. Wnioski trafiają do dokumentów wizualnych w HTML w `docs/`, które publikujemy przez GitHub Pages i pokazujemy jury lub znajomym.
 
-- Nie twórz plików `.md` do planowania, notatek ani „design docs”. Wyjątki: `CLAUDE.md`, `README.md`, `docs/konkurs.md` (dane o konkursie).
+- Teoretyzowanie o aplikacji (pomysł, funkcje, UX, decyzje produktowe) nie trafia do plików `.md`, tylko do rozmowy i wizualnych HTML w `docs/`.
+- Pliki `.md` wolno prowadzić jako robocze wsparcie agenta, żeby się nie pogubić: notatki z researchu, listy ustaleń, stan prac. Trzymaj je w `notes/`. Aktualizuj je na bieżąco i usuwaj nieaktualne treści.
+- Gdy powstanie kod, dokumentacja od strony kodu (architektura, API, schematy danych, instrukcje uruchomienia) jest w `.md` i może być używana przez samą aplikację. To dokumentacja implementacji, nie teoria.
+- Inne pliki `.md` w repo: `CLAUDE.md`, `README.md`, `docs/konkurs.md` (dane o konkursie).
 - Dokument wizualny = samodzielny plik `.html` (inline CSS/JS, bez builda), czytelny na telefonie, jasny i ciemny motyw. Diagramy jako inline SVG.
 - `docs/index.html` to główny zarys pomysłu. Kolejne dokumenty (np. architektura, makiety, plan) jako osobne pliki w `docs/` linkowane z `index.html`.
 - Gdy decyzja z rozmowy zmienia zarys, zaktualizuj odpowiedni HTML w tym samym PR.
@@ -15,7 +18,7 @@ Myślenie o aplikacji (pomysły, decyzje, kierunek, funkcje, UX) dzieje się w r
 ## Git
 
 - Repo: https://github.com/MichalDakowicz/konkursai (publiczne). Gałąź domyślna: `main`.
-- Dopóki zmieniamy tylko dokumentację (`docs/`, `CLAUDE.md`, `README.md`), pracuj bezpośrednio na `main`: bez gałęzi i PR, commity wprost na `main` z pushem.
+- Dopóki zmieniamy tylko dokumentację (`docs/`, `notes/`, `CLAUDE.md`, `README.md`), pracuj bezpośrednio na `main`: bez gałęzi i PR, commity wprost na `main` z pushem.
 - Gdy zacznie się kod aplikacji, zmiany w kodzie idą na osobnych gałęziach scalanych przez PR. Nie pracuj wtedy bezpośrednio na `main`.
 - Nazwy gałęzi zwykłe i opisowe, np. `zarys-pomyslu`, `logowanie`, `parser-arkuszy`. Bez prefiksów narzędzi (`claude/`, `codex/` itp.). Prefiksy typu `feature/` też zbędne.
 - Commity często i małe, jeden logiczny krok na commit. Komunikat w trybie rozkazującym, krótki temat (do ~60 znaków), opcjonalnie opis „dlaczego”.
