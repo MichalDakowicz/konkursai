@@ -33,3 +33,11 @@ Myślenie o aplikacji (pomysły, decyzje, kierunek, funkcje, UX) dzieje się w r
 ## Terminy konkursu
 
 Zgłoszenie kompletne do **29 listopada 2026**. Pełna lista wymagań i artefaktów w `docs/konkurs.md`. Przy planowaniu pracy zawsze patrz wstecz od tej daty.
+
+## Brief
+
+Lista rzeczy do zrobienia i luźnych myśli o projekcie jest w Brief, projekt „konkurs ai”, id `9d7c9229-2524-4ff3-89ce-913ab972ce7f`. To narzędzie prywatne dla właściciela, nie część repo ani aplikacji.
+
+- Na początku pracy wywołaj `brief_orient` z bieżącym katalogiem i sprawdź, czy w projekcie są otwarte wpisy.
+- Wpis bierz przez `brief_claim_entry` przed pracą, raportuj `brief_append_line`, zamykaj `brief_finish_entry`. Jeden wpis naraz.
+- Nie odwołuj się do Brief w commitach, PR ani dokumentach w `docs/`.
