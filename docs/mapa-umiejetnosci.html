@@ -21,7 +21,7 @@
 </header>
 <main>
 <h1>Mapa umiejętności</h1>
-<p class="sub">Filar 1 · propozycja do zatwierdzenia</p>
+<p class="sub">Filar 1 · zatwierdzone: dwa poziomy umiejętności, uczeń widzi je zrozumiałym językiem, a kody CKE są drugim planem</p>
 
 <h2>Dlaczego dwa poziomy</h2>
 <p>Klucze CKE przypisują każdemu zadaniu kody wymagań, ale kody są grube. W angielskim dwujęzycznym z 2025 kod <code>II.5</code> („znajduje w wypowiedzi określone informacje”) wystąpił w kilku zadaniach o różnym charakterze. Sam kod powie „słabo ci idzie II.5”, ale nie powie dlaczego.</p>
@@ -71,18 +71,23 @@
   <div class="card"><h3>Typ błędu</h3><p>Luka w wiedzy liczy się inaczej niż pomyłka techniczna.</p></div>
   <div class="card"><h3>Czas i świeżość</h3><p>Nowsze próby ważą więcej, stare zanikają.</p></div>
 </div>
-<p class="note" style="margin-top:12px">Model: prosta, wytłumaczalna ważona średnia ostatnich prób z karą za podpowiedzi i zanikiem w czasie. Wagi do dostrojenia na danych. Uczeń widzi, z czego wynika każda liczba, np. „85% punktów, 2 podpowiedzi, 3 tygodnie temu”.</p>
+<h3 style="margin-top:20px">Dwie warstwy modelu: wytłumaczalna i precyzyjna</h3>
+<div class="grid">
+  <div class="card"><span class="tag t-p">POKAZYWANA UCZNIOWI</span><h3>Wytłumaczalny wynik</h3><p>Ważona średnia ostatnich prób z karą za podpowiedzi i zanikiem w czasie. Uczeń widzi, z czego wynika liczba, np. „85% punktów, 2 podpowiedzi, 3 tygodnie temu”. To jest wynik z dashboardu.</p></div>
+  <div class="card"><span class="tag t-l">WEWNĘTRZNA</span><h3>Estymator statystyczny</h3><p>Probabilistyczny szacunek opanowania z miarą pewności. Decyduje, co ćwiczyć dalej i kiedy jest za mało danych, żeby cokolwiek twierdzić. Wybór metody (np. rozkład Beta lub Elo na umiejętność) do ustalenia na danych.</p></div>
+</div>
+<p class="note" style="margin-top:12px">Obie warstwy żyją obok siebie: uczeń widzi wynik, który rozumie, a dobór ćwiczeń korzysta z dokładniejszego szacunku. Gdy dowodów jest mało, panel pokazuje „za mało danych” zamiast pewnej liczby. Wagi do dostrojenia na danych.</p>
 
 <h2>Jak to wygląda dla ucznia</h2>
 <figure>
 <div class="bars">
-  <div class="bar-row"><div class="lbl">V.12) konstruowanie tekstów<small>rozprawka, list</small></div><div class="bar"><i class="hi" style="width:82%"></i></div><div class="pct">82%</div></div>
-  <div class="bar-row"><div class="lbl">II.7) wyciąganie wniosków<small>rozumienie ze słuchu</small></div><div class="bar"><i style="width:64%"></i></div><div class="pct">64%</div></div>
-  <div class="bar-row"><div class="lbl">II.2) główna myśl<small>rozumienie ze słuchu</small></div><div class="bar"><i style="width:58%"></i></div><div class="pct">58%</div></div>
-  <div class="bar-row"><div class="lbl">V.6) opinie i uzasadnianie<small>wypowiedź pisemna</small></div><div class="bar"><i class="lo" style="width:41%"></i></div><div class="pct">41%</div></div>
-  <div class="bar-row"><div class="lbl">II.5) szukanie informacji<small>rozumienie ze słuchu</small></div><div class="bar"><i class="lo" style="width:33%"></i></div><div class="pct">33%</div></div>
+  <div class="bar-row"><div class="lbl">Budowa tekstu: rozprawka i list<small>V.12 · wypowiedź pisemna</small></div><div class="bar"><i class="hi" style="width:82%"></i></div><div class="pct">82%</div></div>
+  <div class="bar-row"><div class="lbl">Wyciąganie wniosków ze słuchanego tekstu<small>II.7 · rozumienie ze słuchu</small></div><div class="bar"><i style="width:64%"></i></div><div class="pct">64%</div></div>
+  <div class="bar-row"><div class="lbl">Rozumienie głównej myśli<small>II.2 · rozumienie ze słuchu</small></div><div class="bar"><i style="width:58%"></i></div><div class="pct">58%</div></div>
+  <div class="bar-row"><div class="lbl">Wyrażanie i uzasadnianie opinii<small>V.6 · wypowiedź pisemna</small></div><div class="bar"><i class="lo" style="width:41%"></i></div><div class="pct">41%</div></div>
+  <div class="bar-row"><div class="lbl">Szukanie konkretnych informacji<small>II.5 · rozumienie ze słuchu</small></div><div class="bar"><i class="lo" style="width:33%"></i></div><div class="pct">33%</div></div>
 </div>
-<figcaption>Makieta z <b>przykładowymi</b> wartościami, nie prawdziwy uczeń. Opisy kodów wg kluczy CKE 2025.</figcaption>
+<figcaption>Makieta z <b>przykładowymi</b> wartościami, nie prawdziwy uczeń. Uczeń widzi zrozumiałe nazwy, a kod CKE jest szarym drugim planem. Opisy kodów wg kluczy CKE 2025.</figcaption>
 </figure>
 
 <div class="ok"><b>Panel „3 najsłabsze umiejętności”.</b> Pod każdym kodem rozwijają się mikroumiejętności (np. „informacje liczbowe, daty: 20%”), a pod nimi konkretne zadania, które do nich prowadzą. Przycisk „ćwicz to” układa sesję ze słabych umiejętności.</div>
@@ -110,6 +115,6 @@
 </ul></div>
 </main>
 <div class="pager"><a href="koncepcja.html"><small>Wstecz</small>← Koncepcja</a><a class="next" href="dane-cke.html"><small>Dalej</small>Dane z CKE →</a></div>
-<footer class="f">Propozycja czeka na zatwierdzenie: dwa poziomy umiejętności i prosty model opanowania.</footer>
+<footer class="f">Zatwierdzone: dwa poziomy umiejętności, zrozumiałe nazwy na wierzchu, kody CKE jako drugi plan, wytłumaczalny wynik razem z estymatorem statystycznym.</footer>
 </body>
 </html>
