@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[nazwa] – Ekran przeglądu i oddania</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<h1>Ekran przeglądu i oddania</h1>
+<p class="sub">Ostatni etap przed oceną. Szkic.</p>
+<p class="lead">Na etapie przeglądu uczeń widzi całą pracę, sprawdza spójność, długość i segmentację i decyduje, czy oddać.</p>
+
+<figure>
+<svg viewBox="0 0 760 340" role="img" aria-label="Szkic ekranu przeglądu: tekst z podkreślonymi usterkami i lista kontrolna">
+  <rect class="svg-node" x="10" y="10" width="740" height="320" rx="6"/>
+  <text class="svg-s" x="26" y="34">KROK PO KROKU · Przegląd</text>
+  <text class="svg-s" x="620" y="34">stopień pomocy: ograniczony</text>
+  <line x1="10" y1="46" x2="750" y2="46" class="svg-line"/>
+
+  <rect class="svg-node" x="26" y="58" width="450" height="212" rx="4"/>
+  <text class="svg-s" x="40" y="82" style="fill:var(--muted)">Akapit 1</text>
+  <text class="svg-s" x="40" y="100" style="fill:var(--text)">In my opinion, banning phones during lessons is a good idea.</text>
+  <text class="svg-s" x="40" y="116" style="fill:var(--text)">I will discuss learning, safety and relationships.</text>
+  <text class="svg-s" x="40" y="146" style="fill:var(--muted)">Akapit 2</text>
+  <text class="svg-s" x="40" y="164" style="fill:var(--text)">Firstly, phones distract students. Last year my friend</text>
+  <rect class="svg-node-warn" x="36" y="170" width="310" height="20" rx="3"/>
+  <text class="svg-s" x="40" y="184" style="fill:var(--text)">gets a bad mark because she was texting in class.</text>
+  <text class="svg-s" x="40" y="214" style="fill:var(--muted)">Akapit 3</text>
+  <text class="svg-s" x="40" y="232" style="fill:var(--text)">Secondly, safety is also important...</text>
+  <text class="svg-s" x="40" y="254" style="fill:var(--warn)">▲ możliwa usterka spójności: przeskok czasu</text>
+
+  <rect class="svg-node" x="494" y="58" width="240" height="212" rx="6"/>
+  <text class="svg-t" x="510" y="82">Lista kontrolna</text>
+  <text class="svg-s" x="510" y="108" style="fill:var(--ok)">✓ spójność: jedna usterka</text>
+  <text class="svg-s" x="510" y="130" style="fill:var(--warn)">△ długość: 238 słów (próg 240)</text>
+  <text class="svg-s" x="510" y="152" style="fill:var(--ok)">✓ segmentacja: 4 akapity</text>
+  <text class="svg-s" x="510" y="174" style="fill:var(--ok)">✓ zakończenie nowe</text>
+  <text class="svg-s" x="510" y="206" style="fill:var(--muted)">Podpowiedź (poziom 1):</text>
+  <text class="svg-s" x="510" y="224" style="fill:var(--text)">Czy wszystkie czasy w tym</text>
+  <text class="svg-s" x="510" y="240" style="fill:var(--text)">akapicie pasują do siebie?</text>
+
+  <rect class="svg-node-ok" x="26" y="284" width="150" height="30" rx="4"/><text class="svg-t" x="101" y="304" text-anchor="middle">Oddaj do oceny</text>
+  <text class="svg-s" x="196" y="304">Można oddać, mimo ostrzeżeń. Czas nie blokuje.</text>
+</svg>
+<figcaption>Szkic poglądowy. Teksty przykładowe, dane wymyślone. Licznik słów liczy wg zasad CKE.</figcaption>
+</figure>
+
+<h2>Elementy ekranu</h2>
+<div class="tablewrap"><table>
+<thead><tr><th>Element</th><th>Rola</th></tr></thead>
+<tbody>
+<tr><td>Tekst z oznaczeniami</td><td>Możliwe usterki spójności są zaznaczone, ale bez wyjaśnienia (poziom 1)</td></tr>
+<tr><td>Lista kontrolna</td><td>Długość, segmentacja, spójność, zakończenie</td></tr>
+<tr><td>Licznik słów</td><td>Zasady CKE, z progiem 240 i widełkami 270–390</td></tr>
+<tr><td>Oddanie</td><td>Zawsze dostępne, z ostrzeżeniem, nie z blokadą</td></tr>
+</tbody></table></div>
+</main>
+<script src="nav.js" defer></script>
+</body>
+</html>

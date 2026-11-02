@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[nazwa] – Etapy i przejścia</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<h1>Etapy i przejścia</h1>
+<p class="sub">Jak uczeń przechodzi przez pracę i co aplikacja zapisuje.</p>
+<p class="lead">Etapy prowadzą ucznia, ale go nie zamykają. Nic nie blokuje przejścia dalej, a wszystko jest zapisywane automatycznie.</p>
+
+<figure>
+<svg viewBox="0 0 760 130" role="img" aria-label="Etapy: plan, wstęp, rozwinięcie, zakończenie, przegląd, oddanie">
+  <defs><marker id="k1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="svg-arrow"/></marker></defs>
+  <rect class="svg-node-ok" x="6" y="30" width="108" height="66" rx="6"/><text class="svg-t" x="60" y="60" text-anchor="middle">Plan</text><text class="svg-s" x="60" y="80" text-anchor="middle">teza, punkty</text>
+  <rect class="svg-node" x="134" y="30" width="108" height="66" rx="6"/><text class="svg-t" x="188" y="60" text-anchor="middle">Wstęp</text><text class="svg-s" x="188" y="80" text-anchor="middle">teza, zapowiedź</text>
+  <rect class="svg-node" x="262" y="30" width="118" height="66" rx="6"/><text class="svg-t" x="321" y="60" text-anchor="middle">Rozwinięcie</text><text class="svg-s" x="321" y="80" text-anchor="middle">akapit po akapicie</text>
+  <rect class="svg-node" x="400" y="30" width="118" height="66" rx="6"/><text class="svg-t" x="459" y="60" text-anchor="middle">Zakończenie</text><text class="svg-s" x="459" y="80" text-anchor="middle">podsumowanie</text>
+  <rect class="svg-node-alt" x="538" y="30" width="108" height="66" rx="6"/><text class="svg-t" x="592" y="60" text-anchor="middle">Przegląd</text><text class="svg-s" x="592" y="80" text-anchor="middle">spójność, długość</text>
+  <rect class="svg-node-warn" x="666" y="30" width="86" height="66" rx="6"/><text class="svg-t" x="709" y="60" text-anchor="middle">Oddanie</text><text class="svg-s" x="709" y="80" text-anchor="middle">ocena</text>
+  <path class="svg-line" d="M114 63H132" marker-end="url(#k1)"/><path class="svg-line" d="M242 63H260" marker-end="url(#k1)"/><path class="svg-line" d="M380 63H398" marker-end="url(#k1)"/><path class="svg-line" d="M518 63H536" marker-end="url(#k1)"/><path class="svg-line" d="M646 63H664" marker-end="url(#k1)"/>
+</svg>
+</figure>
+
+<h2>Zasady przejść</h2>
+<div class="card"><ul>
+  <li><b>Miękkie przejścia:</b> uczeń może przejść do kolejnego etapu bez spełnienia listy. Aplikacja tylko pokazuje, co jeszcze jest do zrobienia.</li>
+  <li><b>Powrót:</b> można wrócić do dowolnego etapu. Zmiana wcześniejszego tekstu przelicza statusy późniejszych etapów.</li>
+  <li><b>Zapis:</b> tekst i statusy zapisują się automatycznie, praca może być dokończona później.</li>
+  <li><b>Zwarta praca:</b> uczeń może pominąć etapy i od razu napisać całość. Wtedy lista kontrolna sprawdza wszystko na etapie przeglądu.</li>
+  <li><b>Czas niczego nie blokuje</b> (zasada jakość przed prędkością).</li>
+</ul></div>
+
+<h2>Co aplikacja zapisuje</h2>
+<div class="tablewrap"><table>
+<thead><tr><th>Dana</th><th>Do czego</th></tr></thead>
+<tbody>
+<tr><td>Wersje tekstu po każdym etapie</td><td>Pokazanie postępu w rozbiorze, dowody dla mapy</td></tr>
+<tr><td>Statusy elementów w czasie</td><td>Ile razy uczeń poprawiał dany element</td></tr>
+<tr><td>Użyte podpowiedzi</td><td>Waga dowodów i awans stopnia pomocy</td></tr>
+<tr><td>Czas na etapach</td><td>Tylko informacja dla ucznia</td></tr>
+</tbody></table></div>
+</main>
+<script src="nav.js" defer></script>
+</body>
+</html>

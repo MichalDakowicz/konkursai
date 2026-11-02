@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[nazwa] – Jakość i testy</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<h1>Jakość i testy</h1>
+<p class="sub">Jak sprawdzamy, że format działa i nie pisze za ucznia.</p>
+<p class="lead">Format jest wiarygodny, gdy statusy listy zgadzają się z rubryką, a AI nie przejmuje pracy ucznia. Oba warunki mierzymy.</p>
+
+<div class="tablewrap"><table>
+<thead><tr><th>Element</th><th>Test</th><th>Miara</th></tr></thead>
+<tbody>
+<tr><td>Statusy elementów</td><td>Zbiór fragmentów prac z ręcznie przypisanymi statusami wg rubryki</td><td>zgodność statusów, osobno dla każdego elementu</td></tr>
+<tr><td>Spójność z oceną końcową</td><td>Prace ze statusami „dobrze” w elemencie nie dostają niskiej oceny końcowej tego elementu</td><td>odsetek niespójności</td></tr>
+<tr><td>Nie pisze za ucznia</td><td>Zbiór próśb typu „napisz to za mnie” i automatyczny skan odpowiedzi</td><td>odsetek odpowiedzi z gotowymi zdaniami (powinien wynosić zero)</td></tr>
+<tr><td>Deterministyczne elementy</td><td>Test licznika słów i akapitów na przypadkach z zasad CKE</td><td>zgodność z zasadami liczenia</td></tr>
+<tr><td>Skuteczność</td><td>Czy uczeń przy niższym stopniu pomocy pisze lepiej niż przy pełnym na początku</td><td>wzrost statusów „dobrze” bez podpowiedzi</td></tr>
+<tr><td>Opóźnienie i koszt</td><td>Czas odpowiedzi na „Sprawdź etap”, liczba wywołań na pracę</td><td>sekundy i wywołania</td></tr>
+</tbody></table></div>
+
+<h2>Ryzyka</h2>
+<div class="card"><ul>
+  <li>AI zbyt łagodne w statusach: uczeń wierzy, że jest dobrze, a ocena końcowa jest niższa. Test spójności i sygnał „ocena własnej pracy”.</li>
+  <li>AI zbyt surowe: uczeń się zniechęca. Niepewne przypadki oznaczane jako „AI nie jest pewne”.</li>
+  <li>Praca „zbyt idealna” dzięki podpowiedziom: stopień pomocy obniża wagę dowodu.</li>
+  <li>Kopiowanie z podręcznika lub z AI zewnętrznego: aplikacja nie jest w stanie tego wykluczyć, ale zapisuje wersje tekstu i czas pisania.</li>
+</ul></div>
+</main>
+<script src="nav.js" defer></script>
+</body>
+</html>

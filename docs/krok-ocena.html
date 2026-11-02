@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[nazwa] – Ocena elementów na żywo</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<h1>Ocena elementów na żywo</h1>
+<p class="sub">Jak AI sprawdza elementy, kiedy i z jaką pewnością.</p>
+<p class="lead">Statusy powstają tym samym potokiem co późniejsza pełna ocena. Dzięki temu lista kontrolna jest prognozą tego, co zobaczy uczeń po oddaniu pracy.</p>
+
+<h2>Mapowanie skali</h2>
+<div class="tablewrap"><table>
+<thead><tr><th>Skala rubryki</th><th>Status dla ucznia</th></tr></thead>
+<tbody>
+<tr><td>2 (lub 1 w skali 1-0)</td><td>dobrze</td></tr>
+<tr><td>1</td><td>słabo</td></tr>
+<tr><td>0</td><td>do zrobienia</td></tr>
+<tr><td>niepewne</td><td>„AI nie jest pewne”: bez statusu, z pytaniem pomocniczym</td></tr>
+</tbody></table></div>
+<p class="note">W nauce uczeń widzi status słowny, nie punkty. Decyzja o liczbach w tej liście jest pytaniem otwartym.</p>
+
+<h2>Kiedy AI ocenia</h2>
+<div class="card"><ul>
+  <li>Po kliknięciu „Sprawdź etap” lub po dłuższej przerwie w pisaniu, a nie na każdy znak.</li>
+  <li>Sprawdzane są tylko pozycje listy dotyczące danego etapu (koszt i skupienie ucznia).</li>
+  <li>Elementy deterministyczne (liczba słów, akapity, podobieństwo zakończenia do wstępu) liczy zwykły kod i aktualizuje na bieżąco.</li>
+</ul></div>
+
+<h2>Spójność z oceną końcową</h2>
+<div class="card"><ul>
+  <li>Ten sam opis rubryki i te same atomowe pytania do AI co w ocenie końcowej.</li>
+  <li>Ocena końcowa jest niezależnym przebiegiem, więc statusy w trakcie pisania nie determinują wyniku.</li>
+  <li>Test jakości: sprawdzamy, że praca z samymi statusami „dobrze” nie dostaje niskiej oceny końcowej w tym samym kryterium.</li>
+</ul></div>
+</main>
+<script src="nav.js" defer></script>
+</body>
+</html>

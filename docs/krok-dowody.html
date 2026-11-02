@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[nazwa] – Dowody dla mapy umiejętności</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<h1>Dowody dla mapy umiejętności</h1>
+<p class="sub">Per element rubryki, z wagą zależną od pomocy. Propozycja.</p>
+<p class="lead">Ten format daje najdrobniejsze dowody w całej aplikacji: ocenę każdego elementu rubryki osobno, a nie jedną ocenę pracy.</p>
+
+<h2>Sygnały</h2>
+<div class="tablewrap"><table>
+<thead><tr><th>Sygnał</th><th>Jak liczony</th><th>Mówi o</th></tr></thead>
+<tbody>
+<tr><td>Element od razu dobrze</td><td>status „dobrze” bez podpowiedzi przy pierwszym sprawdzeniu</td><td>samodzielne opanowanie</td></tr>
+<tr><td>Element po podpowiedzi</td><td>status „dobrze” po podpowiedzi poziomu 1–3</td><td>opanowanie z pomocą</td></tr>
+<tr><td>Liczba poprawek</td><td>ile razy uczeń poprawiał element</td><td>wytrwałość i trudność</td></tr>
+<tr><td>Element słaby w ocenie końcowej</td><td>ocena końcowa niższa niż prognoza</td><td>przecenianie siebie</td></tr>
+<tr><td>Stopień pomocy</td><td>poziom, na którym uczeń pisał</td><td>waga dowodu</td></tr>
+</tbody></table></div>
+
+<h2>Przypisanie do mapy</h2>
+<div class="card"><ul>
+  <li>Każdy element rubryki ma przypisaną mikroumiejętność, np. „teza”, „rozwinięcie argumentu”, „zakończenie”, „spójność”.</li>
+  <li>Element dobry bez pomocy waży więcej niż dobry po podpowiedzi poziomu 3.</li>
+  <li>Waga rośnie wraz ze stopniem samodzielności: „Samodzielny” zbliża się do dowodu z egzaminu.</li>
+  <li>Różnica między prognozą a oceną końcową zasila osobny sygnał „ocena własnej pracy”.</li>
+</ul></div>
+
+<h2>Wagi startowe (do dostrojenia)</h2>
+<div class="tablewrap"><table>
+<thead><tr><th>Warunek</th><th>Waga</th></tr></thead>
+<tbody>
+<tr><td>Element dobrze, stopień samodzielny</td><td>1,0</td></tr>
+<tr><td>Element dobrze, bez podpowiedzi, stopień pełny</td><td>0,7</td></tr>
+<tr><td>Element dobrze po podpowiedzi poziomu 1–2</td><td>0,4</td></tr>
+<tr><td>Element dobrze po podpowiedzi poziomu 3</td><td>0,2</td></tr>
+</tbody></table></div>
+<p class="note">Wartości są wyjściowe i mają być dostrojone na danych.</p>
+</main>
+<script src="nav.js" defer></script>
+</body>
+</html>
