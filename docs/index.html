@@ -3,43 +3,67 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>[nazwa] – przegląd</title>
+<title>[nazwa] – okładka</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="top">
-  <a class="brand" href="index.html">[nazwa]</a>
-  <nav>
-    <a href="index.html" aria-current="page">Przegląd</a>
-    <a href="koncepcja.html">Koncepcja</a>
-    <a href="mapa-umiejetnosci.html">Mapa umiejętności</a>
-    <a href="tryby.html">Tryby i pomoc</a>
-    <a href="dane-cke.html">Dane CKE</a>
-    <a href="przedmioty.html">Przedmioty</a>
-    <a href="konkurs.html">Konkurs</a>
-    <a href="pytania.html">Do ustalenia</a>
-  </nav>
-</header>
 <main>
-<h1>[nazwa]</h1>
-<p class="sub">Dokument roboczy · konkurs „Sztuczna inteligencja wśród nas” · zmienia się wraz z ustaleniami</p>
+<div class="eyebrow">Konkurs „Sztuczna inteligencja wśród nas” · Wydział Informatyki UwB</div>
+<section class="hero">
+  <div>
+    <h1>[nazwa]</h1>
+    <p class="tagline">Aplikacja do rozwiązywania prawdziwych arkuszy maturalnych, która nie tylko sprawdza odpowiedzi, ale mówi, <b>czego uczeń nie umie i dlaczego</b>, i układa z tego ćwiczenia.</p>
+    <a class="cta" href="koncepcja.html">Zacznij od koncepcji →</a>
+  </div>
+  <figure style="border:0;padding:0;margin:0">
+    <svg viewBox="0 0 440 400" role="img" aria-label="Wykres radarowy opanowania sześciu umiejętności, dane przykładowe">
+      <g fill="none" stroke="#26262a" stroke-width="1">
+        <polygon points="220,50 349.9,125 349.9,275 220,350 90.1,275 90.1,125"/>
+        <polygon points="220,100 306.6,150 306.6,250 220,300 133.4,250 133.4,150"/>
+        <polygon points="220,150 263.3,175 263.3,225 220,250 176.7,225 176.7,175"/>
+        <path d="M220 200L220 50M220 200L349.9 125M220 200L349.9 275M220 200L220 350M220 200L90.1 275M220 200L90.1 125"/>
+      </g>
+      <polygon points="220,77 303.1,152 295.3,243.5 220,261.5 177.1,224.75 129.1,147.5" fill="none" stroke="#ececee" stroke-width="2"/>
+      <g fill="#000" stroke="#ececee" stroke-width="2">
+        <circle cx="220" cy="77" r="4"/><circle cx="303.1" cy="152" r="4"/><circle cx="295.3" cy="243.5" r="4"/><circle cx="220" cy="261.5" r="4"/><circle cx="129.1" cy="147.5" r="4"/>
+      </g>
+      <circle cx="177.1" cy="224.75" r="7" fill="#000" stroke="#f0b35a" stroke-width="2"/>
+      <g fill="#8a8a92" font-family="system-ui,sans-serif" font-size="12">
+        <text x="220" y="28" text-anchor="middle">Budowa tekstu</text>
+        <text x="362" y="118">Wnioski</text>
+        <text x="362" y="290">Główna myśl</text>
+        <text x="220" y="376" text-anchor="middle">Szukanie informacji</text>
+        <text x="78" y="290" text-anchor="end">Opinie</text>
+        <text x="78" y="118" text-anchor="end">Spójność</text>
+      </g>
+      <text x="177" y="247" fill="#f0b35a" font-family="system-ui,sans-serif" font-size="11" text-anchor="middle">najsłabsze</text>
+    </svg>
+    <figcaption style="border:0;text-align:center">Mapa umiejętności ucznia. Dane przykładowe.</figcaption>
+  </figure>
+</section>
 
-<p class="lead">Aplikacja do rozwiązywania prawdziwych arkuszy maturalnych, która nie tylko sprawdza odpowiedzi, ale diagnozuje, <b>czego uczeń nie umie i dlaczego</b>, i układa z tego ćwiczenia.</p>
+<section class="stats">
+  <div><b>5</b><span>filarów wyróżnienia</span></div>
+  <div><b>2</b><span>tryby: nauka i egzamin</span></div>
+  <div><b>2</b><span>poziomy umiejętności</span></div>
+  <div><b>29 XI</b><span>termin zgłoszenia 2026</span></div>
+</section>
 
-<div class="alert" style="margin-top:16px"><b>Termin zgłoszenia: 29 listopada 2026.</b> Szczegóły na stronie <a href="konkurs.html">Konkurs</a>.</div>
-
-<h2>Spis</h2>
-<div class="grid">
-  <a class="card" href="koncepcja.html"><span class="tag t-p">RDZEŃ</span><h3>Koncepcja</h3><p>Teza, pętla główna, pięć filarów wyróżnienia i funkcje.</p></a>
-  <a class="card" href="mapa-umiejetnosci.html"><span class="tag t-p">RDZEŃ</span><h3>Mapa umiejętności</h3><p>Dwa poziomy umiejętności, dowody opanowania i wygląd panelu.</p></a>
-  <a class="card" href="tryby.html"><span class="tag t-p">RDZEŃ</span><h3>Tryby i pomoc</h3><p>Nauka z AI i egzamin bez pomocy, drabina podpowiedzi, warianty zadań.</p></a>
-  <a class="card" href="dane-cke.html"><span class="tag t-p">RDZEŃ</span><h3>Dane z CKE</h3><p>Skąd bierzemy arkusze i klucze, jak je przetwarzamy, prawa autorskie.</p></a>
-  <a class="card" href="przedmioty.html"><span class="tag t-l">ZAKRES</span><h3>Przedmioty</h3><p>Specyfika przedmiotów i proponowana kolejność.</p></a>
-  <a class="card" href="konkurs.html"><span class="tag t-l">KONTEKST</span><h3>Konkurs</h3><p>Zasady, wymagane pliki, oś czasu.</p></a>
-  <a class="card" href="pytania.html"><span class="tag t-q">OTWARTE</span><h3>Do ustalenia</h3><p>Pytania bez odpowiedzi i inne pomysły.</p></a>
+<h2>Spis rozdziałów</h2>
+<div class="contents">
+  <div class="grp2">Produkt</div>
+  <a href="koncepcja.html"><span class="n">01</span><span><b>Koncepcja</b><span class="d">Teza, pętla główna, pięć filarów i funkcje.</span></span><span class="ar">→</span></a>
+  <a href="mapa-umiejetnosci.html"><span class="n">02</span><span><b>Mapa umiejętności</b><span class="d">Dwa poziomy umiejętności, dowody opanowania, wygląd panelu.</span></span><span class="ar">→</span></a>
+  <a href="tryby.html"><span class="n">03</span><span><b>Tryby i pomoc</b><span class="d">Nauka z AI i egzamin bez pomocy, drabina podpowiedzi, warianty zadań.</span></span><span class="ar">→</span></a>
+  <div class="grp2">Podstawy</div>
+  <a href="dane-cke.html"><span class="n">04</span><span><b>Dane z CKE</b><span class="d">Skąd bierzemy arkusze i klucze, potok przetwarzania, prawa autorskie.</span></span><span class="ar">→</span></a>
+  <a href="przedmioty.html"><span class="n">05</span><span><b>Przedmioty</b><span class="d">Specyfika przedmiotów i kandydaci na start.</span></span><span class="ar">→</span></a>
+  <div class="grp2">Projekt</div>
+  <a href="konkurs.html"><span class="n">06</span><span><b>Konkurs</b><span class="d">Zasady, wymagane pliki, oś czasu.</span></span><span class="ar">→</span></a>
+  <a href="pytania.html"><span class="n">07</span><span><b>Do ustalenia</b><span class="d">Otwarte pytania i inne pomysły.</span></span><span class="ar">→</span></a>
 </div>
 </main>
-<div class="pager"><span></span><a class="next" href="koncepcja.html"><small>Dalej</small>Koncepcja →</a></div>
-<footer class="f">Rzeczy niezweryfikowane są oznaczone jako „do weryfikacji”.</footer>
+<footer class="f">Dokument roboczy. Rzeczy niezweryfikowane są oznaczone jako „do weryfikacji”.</footer>
+<script src="nav.js" defer></script>
 </body>
 </html>
