@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[nazwa] – Trening zamiast sprawdzianu</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<h1>Trening zamiast sprawdzianu</h1>
+<p class="sub">Interaktywna nauka jest główną wartością aplikacji.</p>
+<p class="lead">Arkusze są sprawdzianem. Interaktywna nauka jest treningiem. Dziś uczeń uczy się gdzie indziej, a sprawdza się na arkuszach. U nas jedno prowadzi do drugiego przez mapę umiejętności.</p>
+
+<div class="alert"><b>Decyzja:</b> interaktywna nauka, nie oparta na arkuszach, ma być kluczową, przyciągającą wartością aplikacji. Arkusze zostają jako mierzenie postępu.</div>
+
+<h2>Pętla nauki</h2>
+<figure>
+<svg viewBox="0 0 760 200" role="img" aria-label="Pętla: mapa umiejętności, lekcja interaktywna, mini-test, powrót do mapy">
+  <defs><marker id="n1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="svg-arrow"/></marker></defs>
+  <rect class="svg-node" x="10" y="50" width="150" height="70" rx="6"/><text class="svg-t" x="85" y="80" text-anchor="middle">Mapa</text><text class="svg-s" x="85" y="100" text-anchor="middle">słaba umiejętność</text>
+  <rect class="svg-node-alt" x="210" y="50" width="170" height="70" rx="6"/><text class="svg-t" x="295" y="80" text-anchor="middle">Lekcja interaktywna</text><text class="svg-s" x="295" y="100" text-anchor="middle">jeden z siedmiu formatów</text>
+  <rect class="svg-node-warn" x="430" y="50" width="150" height="70" rx="6"/><text class="svg-t" x="505" y="80" text-anchor="middle">Mini-test</text><text class="svg-s" x="505" y="100" text-anchor="middle">nowy wariant zadania</text>
+  <rect class="svg-node-ok" x="610" y="50" width="140" height="70" rx="6"/><text class="svg-t" x="680" y="80" text-anchor="middle">Mapa</text><text class="svg-s" x="680" y="100" text-anchor="middle">wzrost opanowania</text>
+  <path class="svg-line" d="M160 85H208" marker-end="url(#n1)"/><path class="svg-line" d="M380 85H428" marker-end="url(#n1)"/><path class="svg-line" d="M580 85H608" marker-end="url(#n1)"/>
+  <path class="svg-line" d="M680 120V165H85V122" marker-end="url(#n1)"/>
+  <text class="svg-s" x="380" y="158" text-anchor="middle">kolejna umiejętność albo powtórka za kilka dni</text>
+</svg>
+</figure>
+
+<h2>Dwa światy, jedna mapa</h2>
+<div class="grid">
+  <div class="card"><span class="tag t-l">NAUKA</span><h3>Interaktywna</h3><p>Lekcje, rozmowa z tutorem, naprawianie błędów, wizualizacje. Uczeń rozumie.</p></div>
+  <div class="card"><span class="tag t-q">MIERZENIE</span><h3>Arkusze</h3><p>Prawdziwe arkusze CKE w trybie egzaminu. Uczeń sprawdza, czy umie.</p></div>
+</div>
+</main>
+<script src="nav.js" defer></script>
+</body>
+</html>
