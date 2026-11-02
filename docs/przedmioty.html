@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[nazwa] – przedmioty</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="index.html">[nazwa]</a>
+  <nav>
+    <a href="index.html">Przegląd</a>
+    <a href="koncepcja.html">Koncepcja</a>
+    <a href="mapa-umiejetnosci.html">Mapa umiejętności</a>
+    <a href="dane-cke.html">Dane CKE</a>
+    <a href="przedmioty.html" aria-current="page">Przedmioty</a>
+    <a href="konkurs.html">Konkurs</a>
+    <a href="pytania.html">Do ustalenia</a>
+  </nav>
+</header>
+<main>
+<h1>Przedmioty</h1>
+<p class="sub">Architektura jest ogólna, w demo pokazujemy jeden przedmiot głęboko. Wybór przedmiotu startowego: do ustalenia.</p>
+
+<h2>Dwa kandydaci na start</h2>
+<div class="grid">
+  <div class="card"><span class="tag t-p">KANDYDAT</span><h3>Angielski dwujęzyczny</h3>
+    <ul>
+      <li>Arkusz: 180 min, 60 pkt, 10 zadań (2025)</li>
+      <li>Zadania zamknięte A–D, otwarte krótkie, wypracowanie</li>
+      <li>Nagrania mp3 i transkrypcje od CKE</li>
+      <li>Wypracowanie oceniane w 4 kryteriach: dobry teren dla AI</li>
+      <li>Osobna część ustna poza arkuszem: do ustalenia, czy obsługujemy</li>
+      <li>Dane regularne, tańszy start</li>
+    </ul></div>
+  <div class="card"><span class="tag t-p">KANDYDAT</span><h3>Informatyka (rozszerzenie)</h3>
+    <ul>
+      <li>Arkusz: 210 min, 50 pkt, przedmiot dodatkowy, tylko poziom rozszerzony</li>
+      <li>Około 60% punktów za algorytmikę i programowanie</li>
+      <li>Zadania praktyczne: program, arkusz kalkulacyjny, baza danych</li>
+      <li>Ocenia się rzeczywiste wyniki, nie sam kod</li>
+      <li>Pliki danych w zipie od CKE</li>
+      <li>Wymaga uruchamiania kodu: droższe technicznie</li>
+    </ul></div>
+</div>
+
+<h2>Pozostałe przedmioty</h2>
+<p class="note">Poniższe opisy specyfiki pochodzą z pierwotnych notatek, nie ze źródeł CKE. Do weryfikacji.</p>
+<div class="tablewrap"><table>
+<thead><tr><th>Przedmiot</th><th>Co jest inne</th><th>Etap</th></tr></thead>
+<tbody>
+<tr><td>Matematyka</td><td>Płótno na bazie Excalidraw, pamięć wzorów, wskazówka następnego kroku, liczy się tok rozumowania</td><td>później</td></tr>
+<tr><td>Geografia</td><td>Mapy ze skalą, wykresy, przekroje, klimatogramy, „narysuj” / „zaznacz na mapie”</td><td>później</td></tr>
+<tr><td>Historia, WOS</td><td>Źródła (teksty, karykatury, mapy, plakaty), wypowiedź argumentacyjna</td><td>później</td></tr>
+<tr><td>Biologia, chemia, fizyka</td><td>Schematy, wykresy, wzory i równania reakcji, opis doświadczeń</td><td>później</td></tr>
+<tr><td>Polski, filozofia</td><td>Wypracowanie / esej oceniane wg kryteriów, polski także ustny</td><td>później</td></tr>
+</tbody></table></div>
+
+<h2>Zależności od danych</h2>
+<p>Każdy przedmiot ma w kluczu CKE kody wymagań, więc mapa umiejętności działa wszędzie tam, gdzie da się sparsować klucz. Różnice dotyczą sposobu rozwiązywania i oceniania: edytor kodu, płótno do rysowania, mapy, ocena eseju.</p>
+</main>
+<div class="pager"><a href="dane-cke.html"><small>Wstecz</small>← Dane z CKE</a><a class="next" href="konkurs.html"><small>Dalej</small>Konkurs →</a></div>
+<footer class="f">Liczby dla angielskiego i informatyki z kluczy i informatorów CKE (sesja 2025).</footer>
+</body>
+</html>
