@@ -173,3 +173,7 @@ html,.side,.tablewrap{scrollbar-width:thin;scrollbar-color:var(--line2) #000}
 ::-webkit-scrollbar-corner{background:#000}
 .side::-webkit-scrollbar{width:6px}
 .side::-webkit-scrollbar-track{border-left:0}
+
+/* spis podstron w rozwiniętym rozdziale */
+.toc .pn{font:.7rem var(--mono);color:var(--line2);margin-right:10px}
+.toc a.on .pn{color:var(--text)}
