@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[nazwa] – typ błędu i ocena AI</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<h1>Typ błędu i ocena AI</h1>
+<p class="sub">Filary 3 i 4 · oparte na analizie oficjalnych zasad oceniania CKE (angielski dwujęzyczny, termin główny 2025)</p>
+
+<h2>Ustalone</h2>
+<div class="grid">
+  <div class="card"><span class="tag t-p">DECYZJA</span><h3>Sześć typów błędu</h3><p>Luka w wiedzy, błąd rozumowania, źle zrozumiane polecenie, pomyłka techniczna, język i forma, brak czasu. Sposoby rozpoznawania zatwierdzone.</p></div>
+  <div class="card"><span class="tag t-p">DECYZJA</span><h3>Punktacja zależna od matury</h3><p>Każda matura ma własne kryteria i punktację. Ocena AI nie może być jedną ogólną promptą, musi wynikać z rubryki konkretnego egzaminu.</p></div>
+  <div class="card"><span class="tag t-l">PÓŹNIEJ</span><h3>Sprawdzanie kodu</h3><p>Ocena zadań z informatyki to osobny problem. Rozwiązujemy go oddzielnie, po rdzeniu.</p></div>
+</div>
+
+<h2>Zasada: AI klasyfikuje, kod liczy</h2>
+<p class="lead">Rubryka CKE jest algorytmem: skale, progi, tabele przeliczeniowe i reguły kaskadowe. Nie prosimy AI o „daj od 0 do 15 punktów”. AI rozstrzyga małe pytania z opisami poziomów z CKE, a punkty liczy zwykły kod według tych samych reguł co egzaminator.</p>
+
+<figure>
+<svg viewBox="0 0 760 210" role="img" aria-label="Potok oceny: tekst ucznia, liczenie w kodzie, klasyfikacja przez AI, agregator rubryki CKE, wynik">
+  <defs><marker id="o1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="svg-arrow"/></marker></defs>
+  <rect class="svg-node" x="10" y="70" width="120" height="70" rx="6"/><text class="svg-t" x="70" y="100" text-anchor="middle">Tekst</text><text class="svg-s" x="70" y="120" text-anchor="middle">ucznia</text>
+
+  <rect class="svg-node-ok" x="170" y="14" width="190" height="70" rx="6"/><text class="svg-t" x="265" y="42" text-anchor="middle">KOD liczy</text><text class="svg-s" x="265" y="62" text-anchor="middle">słowa, akapity, długość</text>
+  <rect class="svg-node-alt" x="170" y="126" width="190" height="70" rx="6"/><text class="svg-t" x="265" y="154" text-anchor="middle">AI klasyfikuje</text><text class="svg-s" x="265" y="174" text-anchor="middle">elementy 2-1-0, usterki, błędy</text>
+
+  <rect class="svg-node-warn" x="400" y="70" width="170" height="70" rx="6"/><text class="svg-t" x="485" y="98" text-anchor="middle">Agregator rubryki</text><text class="svg-s" x="485" y="118" text-anchor="middle">tabele i reguły CKE</text>
+
+  <rect class="svg-node" x="610" y="70" width="140" height="70" rx="6"/><text class="svg-t" x="680" y="98" text-anchor="middle">Punkty</text><text class="svg-s" x="680" y="118" text-anchor="middle">zakres, feedback</text>
+
+  <path class="svg-line" d="M130 105H150V49H168" marker-end="url(#o1)"/>
+  <path class="svg-line" d="M130 105H150V161H168" marker-end="url(#o1)"/>
+  <path class="svg-line" d="M360 49H380V95H398" marker-end="url(#o1)"/>
+  <path class="svg-line" d="M360 161H380V115H398" marker-end="url(#o1)"/>
+  <path class="svg-line" d="M570 105H608" marker-end="url(#o1)"/>
+</svg>
+<figcaption>Małe, sprawdzalne decyzje AI są bardziej wiarygodne niż jedna ocena globalna. Każda z nich ma cytat z tekstu jako dowód.</figcaption>
+</figure>
+
+<h2>Rubryka jako dane</h2>
+<p>Rubryka każdego egzaminu jest zapisana jako dane, a nie w kodzie ani w promptcie. Dzięki temu nowy przedmiot lub nowa forma wypowiedzi to nowy opis rubryki, a silnik oceny zostaje ten sam.</p>
+<div class="card"><ul>
+  <li><b>Kryteria i podkryteria</b> z maksymalnymi punktami.</li>
+  <li><b>Skale i opisy poziomów</b> przepisane z CKE, przekazywane AI przy każdej klasyfikacji.</li>
+  <li><b>Tabele przeliczeniowe</b> (np. suma elementów treści i formy → punkty za kryterium).</li>
+  <li><b>Reguły kaskadowe</b> i warunki graniczne (minimalna długość, zerowanie kryteriów).</li>
+  <li><b>Reguły liczenia</b> (słów, usterek).</li>
+  <li><b>Formy wypowiedzi</b> z własnymi wariantami opisów (np. rozprawka, artykuł, list).</li>
+</ul></div>
+
+<h2>Analiza rubryki: angielski dwujęzyczny</h2>
+<p>Sprawdzony dokument: zasady oceniania z 8 maja 2025, zadanie 10 (rozprawka, artykuł albo list formalny). Poniżej to, co z niego wynika dla systemu oceny.</p>
+<div class="tablewrap"><table>
+<thead><tr><th>Kryterium</th><th>Jak się je ustala</th><th>Zakres</th></tr></thead>
+<tbody>
+<tr><td><b>Zgodność z poleceniem</b></td><td>6 elementów treści w skali 2-1-0 (wstęp, trzy elementy tematu, zakończenie, brak fragmentów nie na temat) i 4 elementy formy w skali 1-0 (cechy formy, kompozycja, segmentacja, długość). Suma treści i formy przechodzi przez tabelę przeliczeniową.</td><td>0–5</td></tr>
+<tr><td><b>Spójność i logika</b></td><td>Liczba usterek: do 2 usterek daje 2 pkt, 3–5 daje 1 pkt, 6 lub więcej daje 0 pkt. Dłuższy niekomunikatywny fragment obniża do 1 pkt.</td><td>0–2</td></tr>
+<tr><td><b>Zakres środków językowych</b></td><td>Opisy poziomów (rozpiętość leksyki i struktur, poziom B2+, styl). Spełnienie tylko części wymogów kwalifikuje na niższy poziom.</td><td>0–4</td></tr>
+<tr><td><b>Poprawność środków językowych</b></td><td>Tabela dwóch wymiarów: błędy językowe (leksykalno-gramatyczne) i błędy zapisu (ortografia, interpunkcja), każdy od sporadycznych do bardzo licznych, w stosunku do długości tekstu.</td><td>0–4</td></tr>
+</tbody></table></div>
+<p class="note">Z tabel wychodzi maksimum 15 punktów za wypracowanie (5 + 2 + 4 + 4). Do weryfikacji z punktacją całego zadania w arkuszu. Dokładne wartości tabeli przeliczeniowej trzeba przepisać wiernie z PDF, tu ich nie powielam.</p>
+
+<h3 style="margin-top:28px">Reguły kaskadowe, które musi znać agregator</h3>
+<div class="grid">
+  <div class="card"><h3>Za krótko</h3><p>Praca poniżej 240 wyrazów jest oceniana tylko w kryterium zgodności z poleceniem, w pozostałych kryteriach 0 punktów.</p></div>
+  <div class="card"><h3>Zgodność 0 lub 1</h3><p>0 pkt za zgodność daje 0 pkt we wszystkich kryteriach. 1 pkt za zgodność ogranicza każde pozostałe kryterium do maksymalnie 1 pkt.</p></div>
+  <div class="card"><h3>Zero we wszystkim</h3><p>Praca nieczytelna, całkowicie nie na temat, niekomunikatywna, odtworzona z podręcznika albo bez rozwinięcia dostaje 0 w każdym kryterium.</p></div>
+  <div class="card"><h3>Liczenie słów</h3><p>Zasady wprost: wyrazy oddzielone spacją, formy skrócone jako jeden wyraz, wyrazy z dywizem jako jeden, podpis nie liczy się. To robi kod, nie AI.</p></div>
+</div>
+<p class="note" style="margin-top:12px">Uwaga: arkusz podaje uczniowi limit 300–350 wyrazów, a rubryka sprawdza długość w granicach 270–390 i ma osobny próg 240. System musi znać oba i je rozróżniać.</p>
+
+<h2>Co robi kod, a co AI</h2>
+<div class="tablewrap"><table>
+<thead><tr><th>Kod (deterministycznie)</th><th>AI (z cytatem z tekstu)</th></tr></thead>
+<tbody>
+<tr><td>Liczba wyrazów wg zasad CKE</td><td>Czy teza jest jasna, zgodna z tematem i z argumentacją (2-1-0)</td></tr>
+<tr><td>Liczba akapitów, obecność zwrotu początkowego i końcowego (wstępnie)</td><td>Czy wstęp i zakończenie są adekwatne, czy rozwinięcie jest wieloaspektowe czy powierzchowne</td></tr>
+<tr><td>Warunek długości 270–390 i próg 240</td><td>Które fragmenty są nie na temat</td></tr>
+<tr><td>Zliczenie usterek z listy oznaczonych przez AI</td><td>Które miejsca to usterki spójności i logiki</td></tr>
+<tr><td>Tabele przeliczeniowe i reguły kaskadowe</td><td>Które fragmenty zawierają błędy językowe i jakiego rodzaju</td></tr>
+<tr><td>Proporcja błędów do długości tekstu</td><td>Czy zakres środków spełnia opis poziomu B2+</td></tr>
+</tbody></table></div>
+
+<h2>Niepewność i zakres punktów</h2>
+<p>Każda decyzja AI dostaje miarę pewności (np. rozbieżność między dwoma niezależnymi przebiegami). Niepewność przechodzi przez agregator, więc dostajemy dolną i górną granicę końcowego wyniku zamiast jednej liczby udającej dokładność. Przy zadaniach z kluczem i niezmienną punktacją wynik jest jedną liczbą.</p>
+<div class="alert">Decyzja otwarta: czy ocena otwarta jest pokazywana jako zakres (np. „11–13 z 15”), czy jako jedna liczba z oznaczeniem „szacunek”.</div>
+
+<h2>Kalibracja i uczciwość</h2>
+<div class="card"><ul>
+  <li><b>Wzorzec:</b> oficjalne zasady oceniania CKE. W sprawdzonym kluczu są szczegółowe opisy poziomów i przykładowe fragmenty, ale nie widziałem tam kompletnych, ocenionych prac uczniów (do weryfikacji w informatorach i sprawozdaniach CKE).</li>
+  <li><b>Zbiór kontrolny:</b> prace o znanym poziomie z materiałów CKE, uzupełnione własnymi pracami ocenionymi ręcznie według rubryki. Pomiar „zgodność z oceną wg rubryki CKE”, nie „zgodność z żywym egzaminatorem”.</li>
+  <li><b>Mówimy to w aplikacji:</b> ocena AI jest szacunkiem, nie oficjalnym wynikiem.</li>
+  <li><b>Metryki:</b> zgodność punktowa na poziomie elementu i kryterium, zgodność ±1 punkt, zgodność ważona.</li>
+</ul></div>
+
+<h2>Sześć typów błędu i jak je rozpoznajemy</h2>
+<div class="tablewrap"><table>
+<thead><tr><th>Typ</th><th>Zadania zamknięte</th><th>Zadania otwarte</th></tr></thead>
+<tbody>
+<tr><td><b>Luka w wiedzy</b></td><td>Wybrany dystraktor wskazuje brakującą wiedzę</td><td>AI wskazuje brakującą regułę lub słowo z cytatem</td></tr>
+<tr><td><b>Błąd rozumowania</b></td><td>Dystraktor wynikający z błędnego toku</td><td>AI wskazuje krok, w którym tok się łamie</td></tr>
+<tr><td><b>Źle zrozumiane polecenie</b></td><td>Dystraktor odpowiadający na inne pytanie</td><td>Pominięty element polecenia lub temat (widoczny w elementach treści)</td></tr>
+<tr><td><b>Pomyłka techniczna</b></td><td>Szybka odpowiedź przy wiedzy widocznej w innych zadaniach</td><td>Literówka, interpunkcja, drobna składnia</td></tr>
+<tr><td><b>Język i forma</b></td><td>—</td><td>Błędy leksykalno-gramatyczne, rejestr, forma wypowiedzi</td></tr>
+<tr><td><b>Brak czasu</b></td><td>Brak odpowiedzi, bardzo krótki czas w trybie egzaminu</td><td>Niedokończona praca, praca poniżej progu długości</td></tr>
+</tbody></table></div>
+<p class="note">Dystraktory dostają przypisane przyczyny raz, offline, z przeglądem ręcznym. Typ błędu zmienia dobór ćwiczeń i wagę dowodu w mapie umiejętności.</p>
+
+<h2>Informatyka: sprawdzanie kodu</h2>
+<div class="card"><p>Osobny problem do omówienia po rdzeniu. Zadania praktyczne ocenia się po rzeczywistych wynikach (programu, kwerendy, arkusza), według zasad CKE, które wprost mówią, że punkty zależą od wyników, nie od samego kodu. Wymaga odizolowanego uruchamiania i porównania z danymi CKE. Ta sama architektura „kod liczy, AI klasyfikuje” zostaje, ale z innym źródłem sygnałów.</p></div>
+
+<h2>Do ustalenia</h2>
+<div class="card"><ul class="q">
+  <li>Zakres punktów czy jedna liczba przy ocenie otwartej.</li>
+  <li>Skąd wziąć oceniane prace do kalibracji, poza opisami i przykładami w kluczach.</li>
+  <li>Rubryki pozostałych przedmiotów: ta sama struktura, ale każda wymaga własnej analizy.</li>
+  <li>Poziom szczegółowości feedbacku po ocenie w nauce, żeby AI nie naprowadzało za mocno.</li>
+</ul></div>
+</main>
+<footer class="f">Analiza oparta na dokumencie „Zasady oceniania rozwiązań zadań”, język angielski, poziom dwujęzyczny, termin główny 2025 (cke.gov.pl).</footer>
+<script src="nav.js" defer></script>
+</body>
+</html>
