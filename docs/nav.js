@@ -194,6 +194,58 @@
   ]
  },
  {
+  "id": "formaty",
+  "title": "Trzy główne formaty",
+  "group": "Produkt",
+  "desc": "Napraw błąd, uczeń uczy AI, budowanie krok po kroku.",
+  "pages": [
+   {
+    "id": "formaty-przeglad",
+    "title": "Trzy formaty, jedna droga"
+   },
+   {
+    "id": "formaty-blad-przeplyw",
+    "title": "Napraw błąd: przepływ"
+   },
+   {
+    "id": "formaty-blad-mechanika",
+    "title": "Napraw błąd: mechanika i AI"
+   },
+   {
+    "id": "formaty-blad-poziomy",
+    "title": "Napraw błąd: poziomy i dowody"
+   },
+   {
+    "id": "formaty-uczen-przeplyw",
+    "title": "Uczeń uczy AI: przepływ"
+   },
+   {
+    "id": "formaty-uczen-mechanika",
+    "title": "Uczeń uczy AI: mechanika i AI"
+   },
+   {
+    "id": "formaty-uczen-ocena",
+    "title": "Uczeń uczy AI: ocena i dowody"
+   },
+   {
+    "id": "formaty-krok-przeplyw",
+    "title": "Budowanie krok po kroku: przepływ"
+   },
+   {
+    "id": "formaty-krok-mechanika",
+    "title": "Budowanie krok po kroku: mechanika i AI"
+   },
+   {
+    "id": "formaty-krok-wygaszanie",
+    "title": "Budowanie krok po kroku: wygaszanie pomocy"
+   },
+   {
+    "id": "formaty-pytania",
+    "title": "Do ustalenia"
+   }
+  ]
+ },
+ {
   "id": "dashboard",
   "title": "Dashboard i nawigacja",
   "group": "Produkt",
