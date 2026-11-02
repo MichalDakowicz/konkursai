@@ -146,6 +146,86 @@
   ]
  },
  {
+  "id": "nauka",
+  "title": "Interaktywna nauka",
+  "group": "Produkt",
+  "desc": "Siedem formatów nauki: główna wartość aplikacji.",
+  "pages": [
+   {
+    "id": "nauka-teza",
+    "title": "Trening zamiast sprawdzianu"
+   },
+   {
+    "id": "nauka-fundament",
+    "title": "Zakotwiczenie w materiałach CKE"
+   },
+   {
+    "id": "nauka-napraw-blad",
+    "title": "Napraw błąd"
+   },
+   {
+    "id": "nauka-tutor",
+    "title": "Tutor sokratejski"
+   },
+   {
+    "id": "nauka-krok-po-kroku",
+    "title": "Budowanie krok po kroku"
+   },
+   {
+    "id": "nauka-uczen-uczy",
+    "title": "Uczeń uczy AI"
+   },
+   {
+    "id": "nauka-rundy",
+    "title": "Szybkie rundy i powtórki"
+   },
+   {
+    "id": "nauka-wizualizacje",
+    "title": "Wizualizacje per przedmiot"
+   },
+   {
+    "id": "nauka-mapa-wiedzy",
+    "title": "Mapa wiedzy"
+   },
+   {
+    "id": "nauka-pytania",
+    "title": "Do ustalenia"
+   }
+  ]
+ },
+ {
+  "id": "dashboard",
+  "title": "Dashboard i nawigacja",
+  "group": "Produkt",
+  "desc": "Główny panel, widgety, nawigacja i wejścia do nauki.",
+  "pages": [
+   {
+    "id": "dashboard-rola",
+    "title": "Dashboard jako centrum"
+   },
+   {
+    "id": "dashboard-widgety",
+    "title": "Widgety i dostosowanie"
+   },
+   {
+    "id": "dashboard-nawigacja",
+    "title": "Nawigacja i sekcje"
+   },
+   {
+    "id": "dashboard-wejscia",
+    "title": "Wejścia do nauki"
+   },
+   {
+    "id": "dashboard-ustawienia",
+    "title": "Ustawienia"
+   },
+   {
+    "id": "dashboard-pytania",
+    "title": "Do ustalenia"
+   }
+  ]
+ },
+ {
   "id": "ocena",
   "title": "Typ błędu i ocena AI",
   "group": "Produkt",
@@ -183,7 +263,10 @@
     "id": "ocena-kalibracja",
     "title": "Kalibracja i uczciwość"
    },
-    { "id": "ocena-feedback", "title": "Poziom szczegółowości feedbacku" },
+   {
+    "id": "ocena-feedback",
+    "title": "Poziom szczegółowości feedbacku"
+   },
    {
     "id": "ocena-typy",
     "title": "Sześć typów błędu"
@@ -216,7 +299,10 @@
     "id": "cke-mapowanie",
     "title": "Mapowanie w kluczu"
    },
-    { "id": "cke-bledy", "title": "Typowe błędy ze sprawozdań CKE" },
+   {
+    "id": "cke-bledy",
+    "title": "Typowe błędy ze sprawozdań CKE"
+   },
    {
     "id": "cke-prawa",
     "title": "Prawa autorskie"
