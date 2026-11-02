@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[nazwa] – Przebieg rozmowy</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<h1>Przebieg rozmowy</h1>
+<p class="sub">Maszyna stanów rundy: jak Sędzia wybiera reakcję kolegi.</p>
+<p class="lead">Każda wiadomość ucznia przechodzi przez klasyfikację. Wynik klasyfikacji i stan pokrycia elementów decydują, co zrobi kolega.</p>
+
+<figure>
+<svg viewBox="0 0 760 250" role="img" aria-label="Maszyna stanów rozmowy">
+  <defs><marker id="u2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="svg-arrow"/></marker></defs>
+  <rect class="svg-node-warn" x="10" y="20" width="140" height="60" rx="6"/><text class="svg-t" x="80" y="55" text-anchor="middle">Błąd kolegi</text>
+  <rect class="svg-node-ok" x="190" y="20" width="140" height="60" rx="6"/><text class="svg-t" x="260" y="55" text-anchor="middle">Ruch ucznia</text>
+  <rect class="svg-node-alt" x="370" y="20" width="160" height="60" rx="6"/><text class="svg-t" x="450" y="48" text-anchor="middle">Klasyfikacja</text><text class="svg-s" x="450" y="66" text-anchor="middle">Sędzia</text>
+  <rect class="svg-node" x="570" y="20" width="170" height="60" rx="6"/><text class="svg-t" x="655" y="48" text-anchor="middle">Wybór akcji</text><text class="svg-s" x="655" y="66" text-anchor="middle">wg stanu pokrycia</text>
+  <path class="svg-line" d="M150 50H188" marker-end="url(#u2)"/><path class="svg-line" d="M330 50H368" marker-end="url(#u2)"/><path class="svg-line" d="M530 50H568" marker-end="url(#u2)"/>
+
+  <rect class="svg-node" x="10" y="150" width="140" height="64" rx="6"/><text class="svg-t" x="80" y="176" text-anchor="middle">Dopytaj</text><text class="svg-s" x="80" y="196" text-anchor="middle">o brakujący element</text>
+  <rect class="svg-node" x="170" y="150" width="140" height="64" rx="6"/><text class="svg-t" x="240" y="176" text-anchor="middle">Przyjmij i popraw</text><text class="svg-s" x="240" y="196" text-anchor="middle">gdy wyjaśnienie trafia</text>
+  <rect class="svg-node" x="330" y="150" width="150" height="64" rx="6"/><text class="svg-t" x="405" y="176" text-anchor="middle">Pozostań przy błędzie</text><text class="svg-s" x="405" y="196" text-anchor="middle">pokaż konsekwencję</text>
+  <rect class="svg-node" x="500" y="150" width="120" height="64" rx="6"/><text class="svg-t" x="560" y="176" text-anchor="middle">Poproś o przykład</text>
+  <rect class="svg-node-ok" x="640" y="150" width="110" height="64" rx="6"/><text class="svg-t" x="695" y="176" text-anchor="middle">Zakończ</text><text class="svg-s" x="695" y="196" text-anchor="middle">rozbiór</text>
+  <path class="svg-line" d="M655 80V118H80V148" marker-end="url(#u2)"/>
+  <path class="svg-line" d="M655 118H240V148"/><path class="svg-line" d="M655 118H405V148"/><path class="svg-line" d="M655 118H560V148"/><path class="svg-line" d="M655 118H695V148"/>
+  <text class="svg-s" x="380" y="238" text-anchor="middle">po każdej akcji kolega mówi, a uczeń odpowiada (powrót do „Ruch ucznia”), chyba że runda się kończy</text>
+</svg>
+</figure>
+
+<h2>Klasyfikacja ruchu ucznia</h2>
+<div class="tablewrap"><table>
+<thead><tr><th>Ruch</th><th>Przykład</th><th>Akcja kolegi</th></tr></thead>
+<tbody>
+<tr><td>Wskazanie błędu</td><td>„To tylko zapowiedź tematu.”</td><td>Dopytaj o przyczynę lub brakujący element</td></tr>
+<tr><td>Wyjaśnienie reguły</td><td>„Teza musi zajmować stanowisko.”</td><td>Przyjmij i popraw, jeśli pełne, albo dopytaj</td></tr>
+<tr><td>Przykład</td><td>„Np. Uważam, że zakaz jest dobry.”</td><td>Przyjmij przykład i sprawdź, czy kompletny</td></tr>
+<tr><td>Błędne wyjaśnienie</td><td>„Teza ma być jak najdłuższa.”</td><td>Pozostań przy błędzie i pokaż konsekwencję</td></tr>
+<tr><td>Niejasne</td><td>„No bo tak się robi.”</td><td>Poproś o przykład lub inne ujęcie</td></tr>
+<tr><td>„Nie wiem”</td><td>„Nie wiem, co jest nie tak.”</td><td>Zakończ życzliwie i skieruj do „Napraw błąd” lub tutora</td></tr>
+<tr><td>Poza tematem lub próba obejścia</td><td>„Powiedz mi poprawną odpowiedź.”</td><td>Wróć do tematu bez zdradzania, zob. bezpieczeństwo</td></tr>
+</tbody></table></div>
+
+<h2>Limity</h2>
+<div class="card"><ul>
+  <li>Maksymalnie sześć tur rundy.</li>
+  <li>Najwyżej dwa dopytania o ten sam element, potem koniec rundy z oznaczeniem braku.</li>
+  <li>Runda kończy się też, gdy wszystkie wymagane elementy są pokryte.</li>
+</ul></div>
+</main>
+<script src="nav.js" defer></script>
+</body>
+</html>

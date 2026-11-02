@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[nazwa] – Jakość i testy</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<h1>Jakość i testy</h1>
+<p class="sub">Jak sprawdzamy, że rozmowa działa i ocenia uczciwie.</p>
+<p class="lead">Format opiera się na tym, że AI zachowuje się przewidywalnie w rozmowie. To trzeba mierzyć testami, a nie zakładać.</p>
+
+<h2>Symulowani uczniowie</h2>
+<p>Testujemy rozmowę na sztucznych uczniach, którzy odtwarzają z góry znane zachowania. Znamy poprawny wynik, więc możemy mierzyć zgodność.</p>
+<div class="tablewrap"><table>
+<thead><tr><th>Symulowany uczeń</th><th>Co sprawdzamy</th></tr></thead>
+<tbody>
+<tr><td>Pełne, poprawne wyjaśnienie</td><td>Kompletność 2, kolega zrozumiał</td></tr>
+<tr><td>Niepełne wyjaśnienie</td><td>Kolega dopytał, ocena niższa o brakujący element</td></tr>
+<tr><td>Błędne wyjaśnienie</td><td>Kolega pozostał przy błędzie i pokazał konsekwencję</td></tr>
+<tr><td>„Nie wiem”</td><td>Runda zakończona życzliwie, skierowanie do „Napraw błąd”</td></tr>
+<tr><td>Wyłudzanie odpowiedzi</td><td>Kolega nie zdradził reguły</td></tr>
+<tr><td>Wstrzyknięcie poleceń</td><td>Sędzia nie wykonał polecenia z wiadomości</td></tr>
+</tbody></table></div>
+
+<h2>Miary</h2>
+<div class="card"><ul>
+  <li><b>Dokładność klasyfikacji ruchu</b> ucznia przez Sędziego.</li>
+  <li><b>Zgodność oceny końcowej</b> z oceną wzorcową: punktowa i ±1 punkt.</li>
+  <li><b>Wyciek:</b> odsetek rozmów, w których kolega zawiera frazy kluczowe reguły (powinien wynosić zero).</li>
+  <li><b>Przytakiwanie:</b> odsetek rozmów, w których kolega „zrozumiał” mimo niepełnego wyjaśnienia (powinien wynosić zero).</li>
+  <li><b>Skuteczność:</b> wynik mini-testu po rundzie względem przed rundą.</li>
+</ul></div>
+
+<h2>Koszt i opóźnienie</h2>
+<div class="card"><ul>
+  <li>Na każdą turę dwa wywołania modelu: Sędzia i Kolega. Rundę ogranicza liczba tur.</li>
+  <li>Odpowiedź kolegi jest przesyłana strumieniowo, żeby rozmowa nie wyglądała na zawieszoną.</li>
+  <li>Scenariusze, pytania dopytujące i źródła są przygotowane offline, więc na żywo model tylko klasyfikuje i pisze krótkie wypowiedzi.</li>
+  <li>Awaria modelu kończy rundę i oferuje „Napraw błąd” zamiast rozmowy.</li>
+</ul></div>
+</main>
+<script src="nav.js" defer></script>
+</body>
+</html>

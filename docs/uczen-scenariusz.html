@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[nazwa] – Scenariusz rundy</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<h1>Scenariusz rundy</h1>
+<p class="sub">Dane, z których składa się jedna runda. Propozycja.</p>
+<p class="lead">Runda nie jest swobodną rozmową. Powstaje ze scenariusza przygotowanego wcześniej i sprawdzonego, a rozmowa tylko go realizuje.</p>
+
+<h2>Schemat</h2>
+<pre><code>{
+  "id": "eng-teza-0007",
+  "przedmiot": "angielski-dwujezyczny",
+  "pojecie": "Teza w rozprawce",
+  "mikroumiejetnosci": ["eng.zgodnosc.teza"],
+  "wymagania_cke": ["V.8"],
+  "blad_poczatkowy": {
+    "wypowiedz_kolegi": "W tej pracy opiszę, jak telefony wpływają na uczniów.",
+    "przyczyna": "zle_zrozumiane_polecenie"
+  },
+  "elementy_wyjasnienia": [
+    { "id": "E1", "tresc": "To zapowiedź tematu, nie teza", "wymagany": true },
+    { "id": "E2", "tresc": "Teza zajmuje stanowisko wobec tematu", "wymagany": true },
+    { "id": "E3", "tresc": "Teza zapowiada strukturę rozprawki", "wymagany": true },
+    { "id": "E4", "tresc": "Uczeń podaje własny przykład tezy", "wymagany": false }
+  ],
+  "dopytania": { "E2": "Co jeszcze powinno w niej być?", "E3": "Czy czegoś jeszcze brakuje?" },
+  "mylne_wnioski": [
+    { "gdy": "uczeń mówi, że teza ma być długa", "kolega_pisze": "dwuzdaniowy opis tematu" }
+  ],
+  "persona": "kuba",
+  "max_tur": 6,
+  "zrodla": ["rubryka-angielski-dwujezyczny-2025#tabela-a"]
+}</code></pre>
+
+<h2>Pola, które mają znaczenie</h2>
+<div class="tablewrap"><table>
+<thead><tr><th>Pole</th><th>Po co</th></tr></thead>
+<tbody>
+<tr><td><code>blad_poczatkowy</code></td><td>Błąd, z którym kolega zaczyna. Pochodzi z biblioteki typowych błędów</td></tr>
+<tr><td><code>elementy_wyjasnienia</code></td><td>Lista kluczowych punktów dobrego wyjaśnienia. Źródło oceny kompletności</td></tr>
+<tr><td><code>dopytania</code></td><td>Gotowe pytania kolegi dla brakujących elementów, zamiast improwizacji</td></tr>
+<tr><td><code>mylne_wnioski</code></td><td>Co kolega błędnie zrobi, gdy wyjaśnienie ucznia jest błędne</td></tr>
+<tr><td><code>persona</code></td><td>Styl mówienia kolegi</td></tr>
+<tr><td><code>max_tur</code></td><td>Limit rozmowy</td></tr>
+<tr><td><code>zrodla</code></td><td>Odniesienie do materiałów CKE użytych w rozbiorze</td></tr>
+</tbody></table></div>
+</main>
+<script src="nav.js" defer></script>
+</body>
+</html>

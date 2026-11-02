@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[nazwa] – Ekran rozbioru</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<h1>Ekran rozbioru</h1>
+<p class="sub">Co uczeń widzi po rundzie.</p>
+<p class="lead">Rozbiór pokazuje, co uczeń wyjaśnił, czego zabrakło i jak wygląda w pełni poprawne wyjaśnienie. Dopiero tu pojawia się poprawna reguła.</p>
+
+<figure>
+<svg viewBox="0 0 760 330" role="img" aria-label="Szkic ekranu rozbioru rundy Uczeń uczy AI">
+  <rect class="svg-node" x="10" y="10" width="740" height="310" rx="6"/>
+  <text class="svg-s" x="26" y="34">ROZBIÓR · Teza w rozprawce</text>
+  <text class="svg-s" x="620" y="34">wynik: 7 z 8</text>
+  <line x1="10" y1="46" x2="750" y2="46" class="svg-line"/>
+
+  <rect class="svg-node" x="26" y="60" width="350" height="250" rx="4"/>
+  <text class="svg-t" x="42" y="84">Elementy wyjaśnienia</text>
+  <text class="svg-s" x="42" y="110" style="fill:var(--ok)">✓ E1 to zapowiedź tematu, nie teza</text>
+  <text class="svg-s" x="58" y="126" style="fill:var(--muted)">„to tylko zapowiedź tematu”</text>
+  <text class="svg-s" x="42" y="152" style="fill:var(--ok)">✓ E2 stanowisko wobec tematu</text>
+  <text class="svg-s" x="58" y="168" style="fill:var(--muted)">„czy jesteś za zakazem, czy przeciw”</text>
+  <text class="svg-s" x="42" y="194" style="fill:var(--bad)">✗ E3 zapowiedź struktury</text>
+  <text class="svg-s" x="58" y="210" style="fill:var(--muted)">nie padło w rozmowie</text>
+  <text class="svg-s" x="42" y="236" style="fill:var(--ok)">✓ E4 własny przykład</text>
+  <text class="svg-s" x="58" y="252" style="fill:var(--muted)">„Uważam, że zakaz telefonów…”</text>
+
+  <rect class="svg-node" x="394" y="60" width="340" height="250" rx="6"/>
+  <text class="svg-t" x="410" y="84">Poprawne wyjaśnienie</text>
+  <text class="svg-s" x="410" y="108" style="fill:var(--text)">Teza zajmuje stanowisko wobec tematu</text>
+  <text class="svg-s" x="410" y="124" style="fill:var(--text)">i zapowiada strukturę rozprawki.</text>
+  <text class="svg-s" x="410" y="156" style="fill:var(--muted)">Źródło: kryteria CKE, teza</text>
+  <rect class="svg-node-alt" x="410" y="180" width="140" height="28" rx="4"/><text class="svg-s" x="480" y="198" text-anchor="middle">Zobacz rozmowę</text>
+  <rect class="svg-node-ok" x="410" y="220" width="140" height="28" rx="4"/><text class="svg-s" x="480" y="238" text-anchor="middle">Inny błąd kolegi</text>
+  <rect class="svg-node" x="560" y="220" width="160" height="28" rx="4"/><text class="svg-s" x="640" y="238" text-anchor="middle">Mini-test</text>
+</svg>
+<figcaption>Szkic poglądowy, dane wymyślone.</figcaption>
+</figure>
+
+<h2>Co zawiera rozbiór</h2>
+<div class="tablewrap"><table>
+<thead><tr><th>Element</th><th>Źródło</th></tr></thead>
+<tbody>
+<tr><td>Lista elementów z oceną i cytatami</td><td>Przebieg końcowy Sędziego</td></tr>
+<tr><td>Czego zabrakło i jak to powiedzieć</td><td>Pole <code>elementy_wyjasnienia</code> i źródło CKE</td></tr>
+<tr><td>Poprawne wyjaśnienie</td><td>Źródło CKE, przeformułowane</td></tr>
+<tr><td>Przegląd rozmowy</td><td>Zapis z oznaczonymi momentami, np. „tu kolega się zawahał, bo wyjaśnienie było niepełne”</td></tr>
+<tr><td>Kolejny krok</td><td>Inny błąd kolegi, „Napraw błąd” albo mini-test na nowym wariancie</td></tr>
+</tbody></table></div>
+</main>
+<script src="nav.js" defer></script>
+</body>
+</html>

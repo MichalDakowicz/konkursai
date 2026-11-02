@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[nazwa] – Dowody dla mapy umiejętności</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<h1>Dowody dla mapy umiejętności</h1>
+<p class="sub">Co z rundy trafia do mapy i z jaką wagą. Propozycja.</p>
+<p class="lead">Wyjaśnianie wymaga odtworzenia wiedzy, więc jest mocniejszym dowodem niż rozpoznanie błędu. Waga dowodów z tego formatu jest wyższa niż z „Napraw błąd”.</p>
+
+<h2>Sygnały</h2>
+<div class="tablewrap"><table>
+<thead><tr><th>Sygnał</th><th>Jak liczony</th><th>Mówi o</th></tr></thead>
+<tbody>
+<tr><td>Trafność</td><td>punkty za trafność / 2</td><td>czy uczeń rozpoznaje źródło błędu</td></tr>
+<tr><td>Kompletność</td><td>pokryte elementy / wymagane elementy</td><td>które części reguły zna, a które pomija</td></tr>
+<tr><td>Zrozumiałość</td><td>punkty / 2</td><td>czy potrafi powiedzieć to jasno</td></tr>
+<tr><td>Przykład</td><td>punkty / 2</td><td>czy umie zastosować regułę</td></tr>
+<tr><td>Liczba tur</td><td>tury do pokrycia wymaganych elementów</td><td>jak szybko dochodzi do pełnego wyjaśnienia</td></tr>
+<tr><td>„Nie wiem”</td><td>wystąpienie</td><td>luka w wiedzy, nie porażka</td></tr>
+</tbody></table></div>
+
+<h2>Przypisanie do mapy</h2>
+<div class="card"><ul>
+  <li>Dowód trafia do mikroumiejętności i kodu CKE z pola <code>wymagania_cke</code> scenariusza.</li>
+  <li>Brakujące elementy wskazują konkretne pod-umiejętności (np. „zapowiedź struktury tezy”).</li>
+  <li>Runda przerwana przez „Nie wiem” daje dowód o luce i zasila sygnał „luka w wiedzy”.</li>
+  <li>Waga niższa niż dowód z egzaminu, wyższa niż z samego rozpoznania błędu.</li>
+</ul></div>
+
+<h2>Wagi (do dostrojenia)</h2>
+<div class="tablewrap"><table>
+<thead><tr><th>Składnik</th><th>Waga startowa</th></tr></thead>
+<tbody>
+<tr><td>Kompletność</td><td>0,4</td></tr>
+<tr><td>Trafność</td><td>0,25</td></tr>
+<tr><td>Przykład</td><td>0,2</td></tr>
+<tr><td>Zrozumiałość</td><td>0,15</td></tr>
+</tbody></table></div>
+<p class="note">Wartości są wyjściowe i mają być dostrojone na danych.</p>
+</main>
+<script src="nav.js" defer></script>
+</body>
+</html>
