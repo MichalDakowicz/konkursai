@@ -246,6 +246,62 @@
   ]
  },
  {
+  "id": "blad",
+  "title": "Napraw błąd: projekt",
+  "group": "Produkt",
+  "desc": "Szczegółowy projekt formatu: dane, generowanie, ocena, rozbiór.",
+  "pages": [
+   {
+    "id": "blad-przyklad",
+    "title": "Pełny przykład pracy"
+   },
+   {
+    "id": "blad-model",
+    "title": "Model danych pracy"
+   },
+   {
+    "id": "blad-generator",
+    "title": "Generowanie i weryfikacja prac"
+   },
+   {
+    "id": "blad-zaznaczanie",
+    "title": "Zaznaczanie i nazywanie"
+   },
+   {
+    "id": "blad-poprawka",
+    "title": "Poprawki i ich ocena"
+   },
+   {
+    "id": "blad-dopasowanie",
+    "title": "Dopasowanie i wynik"
+   },
+   {
+    "id": "blad-rozbior",
+    "title": "Ekran rozbioru"
+   },
+   {
+    "id": "blad-dobor",
+    "title": "Dobór prac i poziomów"
+   },
+   {
+    "id": "blad-dowody",
+    "title": "Dowody dla mapy umiejętności"
+   },
+   {
+    "id": "blad-przedmioty",
+    "title": "Odmiany per przedmiot"
+   },
+   {
+    "id": "blad-jakosc",
+    "title": "Jakość i testy"
+   },
+   {
+    "id": "blad-pytania",
+    "title": "Do ustalenia"
+   }
+  ]
+ },
+ {
   "id": "dashboard",
   "title": "Dashboard i nawigacja",
   "group": "Produkt",
