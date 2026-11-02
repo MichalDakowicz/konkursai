@@ -11,7 +11,8 @@ Myślenie o aplikacji (pomysły, decyzje, kierunek, funkcje, UX) dzieje się w r
 - Gdy powstanie kod, dokumentacja od strony kodu (architektura, API, schematy danych, instrukcje uruchomienia) jest w `.md` i może być używana przez samą aplikację. To dokumentacja implementacji, nie teoria.
 - Inne pliki `.md` w repo: `CLAUDE.md`, `README.md`, `docs/konkurs.md` (dane o konkursie).
 - Dokument wizualny = samodzielny plik `.html` (inline CSS/JS, bez builda), czytelny na telefonie, jasny i ciemny motyw. Diagramy jako inline SVG.
-- `docs/index.html` to główny zarys pomysłu. Kolejne dokumenty (np. architektura, makiety, plan) jako osobne pliki w `docs/` linkowane z `index.html`.
+- `docs/index.html` to okładka z spisem rozdziałów. Każdy rozdział to osobna strona w `docs/`. Pasek boczny, numeracja, spis treści strony i przyciski „wstecz / dalej” generuje `docs/nav.js` z jednej listy `PAGES`. Nowa strona: dodaj ją do `PAGES` w `nav.js` i do spisu na okładce, a w pliku strony dołącz `style.css` i `<script src="nav.js" defer></script>`, bez własnej nawigacji.
+- Styl: tło zawsze czarne (`#000`), sekcje rozdzielają linie, nie kolory ani wypełnienia. Kolor tylko jako akcent tekstu lub obrysu.
 - Gdy decyzja z rozmowy zmienia zarys, zaktualizuj odpowiedni HTML w tym samym PR.
 - Nie zgaduj faktów o CKE, arkusze.pl itp. Rzeczy niezweryfikowane oznaczaj w dokumentach jako „do weryfikacji”.
 
