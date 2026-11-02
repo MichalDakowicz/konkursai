@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[nazwa] – koncepcja</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="index.html">[nazwa]</a>
+  <nav>
+    <a href="index.html">Przegląd</a>
+    <a href="koncepcja.html" aria-current="page">Koncepcja</a>
+    <a href="mapa-umiejetnosci.html">Mapa umiejętności</a>
+    <a href="dane-cke.html">Dane CKE</a>
+    <a href="przedmioty.html">Przedmioty</a>
+    <a href="konkurs.html">Konkurs</a>
+    <a href="pytania.html">Do ustalenia</a>
+  </nav>
+</header>
+<main>
+<h1>Koncepcja</h1>
+<p class="sub">Co ta aplikacja robi inaczej niż zwykły sprawdzacz arkuszy</p>
+
+<h2>Problem</h2>
+<p>Arkusze z kluczem są dostępne wszędzie. Uczeń dostaje „masz 23/50” i nie wie, <i>czego</i> nie umie ani <i>co zrobić dalej</i>. Ogólne chatboty tłumaczą zadania, ale nie znają wymagań CKE i nie pamiętają ucznia.</p>
+
+<p class="lead"><b>Teza:</b> aplikacja jest diagnostą luk. Każde zadanie jest podpięte pod konkretne wymagania CKE, a każda akcja ucznia (błąd, podpowiedź, czas) aktualizuje mapę jego umiejętności.</p>
+
+<h2>Pętla główna</h2>
+<figure>
+<svg viewBox="0 0 760 230" role="img" aria-label="Pętla: rozwiąż, diagnoza, celowane ćwiczenie, mierzalny wzrost, powrót do rozwiązywania">
+  <defs><marker id="a1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="svg-arrow"/></marker></defs>
+  <rect class="svg-node" x="20" y="40" width="150" height="70" rx="10"/>
+  <text class="svg-t" x="95" y="70" text-anchor="middle">Rozwiąż</text>
+  <text class="svg-s" x="95" y="90" text-anchor="middle">arkusz lub zadanie</text>
+
+  <rect class="svg-node" x="210" y="40" width="150" height="70" rx="10"/>
+  <text class="svg-t" x="285" y="70" text-anchor="middle">Diagnoza</text>
+  <text class="svg-s" x="285" y="90" text-anchor="middle">umiejętność + typ błędu</text>
+
+  <rect class="svg-node" x="400" y="40" width="150" height="70" rx="10"/>
+  <text class="svg-t" x="475" y="70" text-anchor="middle">Celowane ćwiczenie</text>
+  <text class="svg-s" x="475" y="90" text-anchor="middle">słabe miejsca</text>
+
+  <rect class="svg-node-ok" x="590" y="40" width="150" height="70" rx="10"/>
+  <text class="svg-t" x="665" y="70" text-anchor="middle">Mierzalny wzrost</text>
+  <text class="svg-s" x="665" y="90" text-anchor="middle">opanowanie przed / po</text>
+
+  <path class="svg-line" d="M170 75H208" marker-end="url(#a1)"/>
+  <path class="svg-line" d="M360 75H398" marker-end="url(#a1)"/>
+  <path class="svg-line" d="M550 75H588" marker-end="url(#a1)"/>
+  <path class="svg-line" d="M665 110V170H95V112" marker-end="url(#a1)"/>
+  <text class="svg-s" x="380" y="190" text-anchor="middle">kolejne zadania dobrane do słabych umiejętności</text>
+</svg>
+<figcaption>Wzrost opanowania jest widoczny jako liczba, co daje mocną scenę do filmu konkursowego.</figcaption>
+</figure>
+
+<h2>Pięć filarów wyróżnienia</h2>
+<div class="grid">
+  <div class="card"><span class="tag t-p">1</span><h3>Mapa umiejętności z wymagań CKE</h3><p>Zadania mapowane na kody wymagań. Opanowanie liczone na poziomie umiejętności, nie arkuszy. Szczegóły: <a href="mapa-umiejetnosci.html">Mapa umiejętności</a>.</p></div>
+  <div class="card"><span class="tag t-p">2</span><h3>Podpowiedzi jako pomiar</h3><p>Drabina: wskazówka → kierunek → krok → rozwiązanie. Poziom użytej podpowiedzi wchodzi do wyniku opanowania.</p></div>
+  <div class="card"><span class="tag t-p">3</span><h3>Typ błędu, nie tylko błąd</h3><p>AI klasyfikuje przyczynę: luka w wiedzy, źle zrozumiane polecenie, pomyłka techniczna, język/forma, brak czasu.</p></div>
+  <div class="card"><span class="tag t-p">4</span><h3>Ocena wg kryteriów CKE z dowodami</h3><p>Punkty osobno za kryterium, z cytatem z odpowiedzi ucznia. Liczba zgodności z oceną egzaminatora na próbce.</p></div>
+  <div class="card"><span class="tag t-p">5</span><h3>Celowane ćwiczenie</h3><p>Sesja ułożona ze słabych umiejętności: zadania z innych arkuszy i warianty od AI. Powtórki na umiejętnościach.</p></div>
+</div>
+
+<h2>Ścieżka użytkownika</h2>
+<div class="flow">
+  <div class="step"><b>1. Wybór</b><span>przedmiot, rok, poziom, termin</span></div>
+  <div class="step"><b>2. Rozwiązywanie</b><span>zadania, timer, nagrania</span></div>
+  <div class="step"><b>3. Sprawdzanie</b><span>klucz CKE + ocena AI</span></div>
+  <div class="step"><b>4. Pomoc</b><span>podpowiedź, wyjaśnienie, pytanie</span></div>
+  <div class="step"><b>5. Postęp</b><span>mapa, błędy, powtórki</span></div>
+</div>
+
+<h2>Funkcje</h2>
+<div class="grid">
+  <div class="card"><span class="tag t-p">PRIORYTET</span><h3>Wybór arkusza</h3>
+    <ul><li>przedmiot, rok, poziom, termin</li><li>źródło: CKE (arkusze, klucze, nagrania, pliki danych)</li><li>klucze CKE podają kody wymagań dla każdego zadania</li></ul></div>
+  <div class="card"><span class="tag t-p">PRIORYTET</span><h3>Rozwiązywanie</h3>
+    <ul><li>zadanie po zadaniu lub cały arkusz</li><li>zamknięte jako A/B/C/D, otwarte jako pole tekstowe</li><li>odtwarzacz listeningu, opcjonalny timer</li></ul></div>
+  <div class="card"><span class="tag t-p">PRIORYTET</span><h3>Sprawdzanie</h3>
+    <ul><li>porównanie z kluczem jednym przyciskiem</li><li>AI ocenia odpowiedzi otwarte wg kryteriów CKE</li><li>wynik punktowy po arkuszu</li></ul></div>
+  <div class="card"><span class="tag t-p">PRIORYTET</span><h3>Pomoc</h3>
+    <ul><li>podpowiedź bez zdradzania odpowiedzi</li><li>wyjaśnienie po sprawdzeniu</li><li>pytanie do AI o konkretne zadanie</li></ul></div>
+  <div class="card"><span class="tag t-p">PRIORYTET</span><h3>Postęp</h3>
+    <ul><li>historia arkuszy i wyników</li><li>„co muszę powtórzyć”: błędy i zadania z podpowiedziami</li><li>poziom opanowania wymagań CKE</li></ul></div>
+  <div class="card"><span class="tag t-q">DO USTALENIA</span><h3>Baza wektorowa</h3>
+    <ul><li>nie osobna funkcja, tylko narzędzie dla filarów 1 i 5</li><li>osadzanie zadań i odpowiedzi do mapowania na umiejętności i szukania podobnych zadań</li></ul></div>
+</div>
+
+<h2>Gdzie AI robi różnicę</h2>
+<div class="grid">
+  <div class="card"><h3>Ocena otwartych odpowiedzi</h3><p>Wypowiedzi pisemne oceniane wg kryteriów CKE z uzasadnieniem punktów.</p></div>
+  <div class="card"><h3>Podpowiedzi stopniowane</h3><p>Od lekkiej wskazówki do rozwiązania. Liczba użytych podpowiedzi to sygnał słabego miejsca.</p></div>
+  <div class="card"><h3>Diagnoza luk</h3><p>Powiązanie błędów i podpowiedzi z wymaganiami CKE, żeby wiedzieć, co powtórzyć.</p></div>
+  <div class="card"><h3>Przygotowanie danych</h3><p>Otagowanie zadań mikroumiejętnościami i zamiana PDF-ów na ustrukturyzowane zadania.</p></div>
+</div>
+</main>
+<div class="pager"><a href="index.html"><small>Wstecz</small>← Przegląd</a><a class="next" href="mapa-umiejetnosci.html"><small>Dalej</small>Mapa umiejętności →</a></div>
+<footer class="f">Decyzja zespołu: wszystkie pięć filarów wchodzi do projektu, im bardziej rozbudowana aplikacja, tym lepiej. Kolejność wdrażania zależy od terminu.</footer>
+</body>
+</html>
