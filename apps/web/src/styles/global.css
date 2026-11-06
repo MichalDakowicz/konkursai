@@ -1,4 +1,4 @@
-@import "@nazwa/ui/tokens.css";
+@import "@sedno/ui/tokens.css";
 
 *,
 *::before,
@@ -191,6 +191,35 @@ textarea {
 
 .link:hover {
   border-color: var(--primary);
+}
+
+/* Element, który właśnie komentuje tutor. */
+/* Pierścień jest osobną warstwą z własnym zaokrągleniem, więc nie zmienia kształtu samego elementu. */
+.tutor-focus {
+  position: relative;
+}
+
+.tutor-focus::after {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: 28px;
+  box-shadow: 0 0 0 2px rgba(255, 116, 72, 0.55);
+  pointer-events: none;
+  animation: tutor-ring 1.6s ease-out infinite;
+}
+
+@keyframes tutor-ring {
+  0% {
+    box-shadow:
+      0 0 0 2px rgba(255, 116, 72, 0.55),
+      0 0 0 0 rgba(255, 116, 72, 0.35);
+  }
+  100% {
+    box-shadow:
+      0 0 0 2px rgba(255, 116, 72, 0.55),
+      0 0 0 10px rgba(255, 116, 72, 0);
+  }
 }
 
 /* Pola */

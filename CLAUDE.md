@@ -1,6 +1,6 @@
-# [nazwa]
+# Sedno
 
-Aplikacja edukacyjna z AI na konkurs „Sztuczna inteligencja wśród nas” (Wydział Informatyki UwB). Szczegóły konkursu: `docs/konkurs.md`. Nazwa projektu jeszcze nie istnieje, wszędzie używaj `[nazwa]`.
+Aplikacja edukacyjna z AI na konkurs „Sztuczna inteligencja wśród nas” (Wydział Informatyki UwB). Szczegóły konkursu: `docs/konkurs.md`. Aplikacja nazywa się **Sedno**. Starsze strony w `docs/` mają jeszcze roboczy znacznik `[nazwa]`.
 
 ## Jak pracujemy
 

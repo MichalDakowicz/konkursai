@@ -24,7 +24,7 @@ export function Login() {
   return (
     <div className={styles.page}>
       <header className={`container ${styles.top}`}>
-        <span className={styles.logo}>[nazwa]</span>
+        <span className={styles.logo}>Sedno</span>
       </header>
 
       <main className={`container ${styles.main}`}>

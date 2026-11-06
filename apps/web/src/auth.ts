@@ -1,6 +1,6 @@
 // Logowanie na niby, dopóki nie ma backendu. Pamięć przeglądarki bywa zablokowana,
 // więc trzymamy też flagę w pamięci, żeby logowanie działało przynajmniej do przeładowania.
-const KEY = "nazwa.session";
+const KEY = "sedno.session";
 let inMemory = false;
 
 export function isLoggedIn(): boolean {
