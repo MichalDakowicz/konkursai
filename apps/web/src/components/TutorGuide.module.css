@@ -1,15 +1,38 @@
-/* Wędrujący tutor: pozycja w układzie dokumentu, więc przewija się razem ze stroną. */
+/* Pestka jest zawsze na ekranie: przy elemencie, który komentuje, albo na spoczynku w rogu.
+   Pozycja względem okna; za przewijaną stroną podąża bez animacji, skacze tylko przy zmianie celu. */
 .guide {
-  position: absolute;
+  position: fixed;
+  left: 0;
+  top: 0;
   z-index: 45;
   width: 48px;
   height: 48px;
-  transition:
-    left 0.7s cubic-bezier(0.45, 0, 0.25, 1),
-    top 0.7s cubic-bezier(0.45, 0, 0.25, 1);
+}
+
+.moving {
+  transition: transform 0.7s cubic-bezier(0.45, 0, 0.25, 1);
+}
+
+.badge {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 14px;
+  height: 14px;
+  border: 2px solid var(--bg);
+  border-radius: 50%;
+  background: var(--secondary-fg);
+  animation: badge-pulse 1.8s ease-in-out infinite;
+}
+
+@keyframes badge-pulse {
+  50% {
+    transform: scale(1.2);
+  }
 }
 
 .avatar {
+  position: relative;
   display: block;
   padding: 0;
   border: 0;
@@ -67,6 +90,15 @@
 
 .enter ~ .bubble {
   animation-delay: 0.3s;
+}
+
+.closing {
+  animation: none;
+  opacity: 0;
+  transform: translateY(4px) scale(0.97);
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
 }
 
 @keyframes bubble-in {
