@@ -4,6 +4,7 @@ import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import "@fontsource-variable/inter";
 import "./styles/global.css";
 import { AppLayout } from "./components/AppLayout";
+import { ScrollBar } from "./components/ScrollBar";
 import { Login } from "./views/Login";
 import { Dashboard } from "./views/Dashboard";
 import { Tutor } from "./views/Tutor";
@@ -27,6 +28,7 @@ createRoot(document.getElementById("root")!).render(
         </Route>
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
+      <ScrollBar />
     </BrowserRouter>
   </StrictMode>,
 );
