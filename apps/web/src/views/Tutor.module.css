@@ -1,0 +1,77 @@
+.page {
+  display: grid;
+  grid-template-columns: minmax(0, 4fr) minmax(0, 7fr);
+  gap: 64px;
+  align-items: start;
+  padding-top: 56px;
+  padding-bottom: 32px;
+}
+
+.intro {
+  position: sticky;
+  top: 120px;
+  display: grid;
+  gap: 16px;
+  justify-items: start;
+}
+
+.avatar {
+  margin-bottom: 8px;
+}
+
+.context {
+  width: 100%;
+  margin: 16px 0 0;
+  border-top: 1px solid var(--line);
+}
+
+.context div {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 14px;
+}
+
+.context dt {
+  color: var(--muted);
+}
+
+.context dd {
+  margin: 0;
+  font-weight: 500;
+  text-align: right;
+}
+
+/* Rozmowa potrzebuje własnej, wyraźnie odciętej powierzchni, więc tu karta ma sens. */
+.chat {
+  height: calc(100vh - 152px);
+  min-height: 480px;
+  border-radius: var(--r-lg);
+  background: var(--surface);
+  box-shadow: var(--shadow-float);
+  overflow: hidden;
+}
+
+@media (max-width: 900px) {
+  .page {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+    padding-top: 40px;
+  }
+
+  .intro {
+    position: static;
+  }
+
+  .chat {
+    height: 70vh;
+  }
+}
+
+@media (max-width: 640px) {
+  .chat {
+    border-radius: var(--r-md);
+  }
+}
