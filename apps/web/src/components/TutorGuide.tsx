@@ -14,8 +14,8 @@ type Point = { x: number; y: number };
 type Placement = "right" | "left" | "below" | "above";
 type Mode = "rest" | "perch";
 
-// Szerokość bez pionowego paska przewijania, żeby avatar ani dymek nie wypychały strony w bok.
-const viewW = () => document.documentElement.clientWidth;
+// Liczymy od samych krawędzi okna: natywny pasek przewijania jest ukryty, a własny (ScrollBar) to nakładka.
+const viewW = () => window.innerWidth;
 const edge = () => (viewW() < 640 ? 16 : 24);
 
 function findTarget(target: Hint["target"]): HTMLElement | null {
