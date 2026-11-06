@@ -31,7 +31,9 @@ Myślenie o aplikacji (pomysły, decyzje, kierunek, funkcje, UX) dzieje się w r
 ## Kod
 
 - Przed zmianą przeczytaj otoczenie i dopasuj się do istniejącego stylu, nazw i poziomu komentarzy. Komentarze tylko tam, gdzie „dlaczego” nie jest oczywiste.
-- Stack nie jest jeszcze wybrany. Gdy zapadnie decyzja, dopisz tu komendy: instalacja, uruchomienie, testy, lint.
+- Monorepo na workspace'ach npm: `apps/web` (React + TypeScript + Vite), `packages/ui` (wspólne tokeny wizualne dla web i mobile), `apps/mobile` (miejsce na Expo, osobny projekt), `services/` (backend).
+- Komendy z katalogu głównego: `npm install`, `npm run dev` (http://localhost:5173), `npm run typecheck`, `npm run build`. Testów i lintu jeszcze nie ma.
+- Aplikacja ma własny styl (jasne kremowe tło, pomarańczowy akcent), inny niż czarne dokumenty w `docs/`. Zasady w `apps/web/README.md`.
 - Weryfikuj zmianę uruchomieniem lub testem, zanim uznasz ją za gotową. Jeśli czegoś nie dało się sprawdzić, powiedz o tym wprost.
 - Dane z zewnątrz (arkusze, nagrania, klucze odpowiedzi) mają prawa autorskie. Nie wrzucaj ich do repo, dopóki nie ustalimy warunków użycia.
 
