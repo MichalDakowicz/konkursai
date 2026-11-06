@@ -1,0 +1,13 @@
+{
+  "name": "nazwa",
+  "private": true,
+  "workspaces": [
+    "apps/web",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w @nazwa/web",
+    "build": "npm run build -w @nazwa/web",
+    "typecheck": "npm run typecheck -w @nazwa/web"
+  }
+}
