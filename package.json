@@ -1,0 +1,13 @@
+{
+  "name": "sedno",
+  "private": true,
+  "workspaces": [
+    "apps/web",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w @sedno/web",
+    "build": "npm run build -w @sedno/web",
+    "typecheck": "npm run typecheck -w @sedno/web"
+  }
+}

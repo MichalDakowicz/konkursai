@@ -1,0 +1,36 @@
+.badge {
+  display: inline-grid;
+  place-items: center;
+  flex-shrink: 0;
+  border-radius: 50%;
+}
+
+.sm {
+  width: 28px;
+  height: 28px;
+}
+
+.md {
+  width: 36px;
+  height: 36px;
+}
+
+.lg {
+  width: 48px;
+  height: 48px;
+}
+
+.badge[data-tone="orange"] {
+  background: var(--tone-orange-bg);
+  color: var(--tone-orange-fg);
+}
+
+.badge[data-tone="blue"] {
+  background: var(--tone-blue-bg);
+  color: var(--tone-blue-fg);
+}
+
+.badge[data-tone="yellow"] {
+  background: var(--tone-yellow-bg);
+  color: var(--tone-yellow-fg);
+}

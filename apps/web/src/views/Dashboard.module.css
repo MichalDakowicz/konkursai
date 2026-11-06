@@ -1,0 +1,445 @@
+.page {
+  display: grid;
+  gap: 56px;
+  padding-top: 8px;
+  padding-bottom: 96px;
+}
+
+/* Pasek przedmiotów */
+
+.subjectBar {
+  display: flex;
+  gap: 8px;
+  width: fit-content;
+  max-width: calc(100% + 16px);
+  overflow-x: auto;
+  /* miejsce na cień aktywnego przycisku, żeby nie był ucięty */
+  margin: -8px -8px 0;
+  padding: 8px;
+  scrollbar-width: none;
+}
+
+.subjectBar::-webkit-scrollbar {
+  display: none;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  min-height: 48px;
+  padding: 6px 18px 6px 8px;
+  border: 1px solid var(--line);
+  border-radius: var(--r-pill);
+  background: transparent;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--muted);
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    color 0.15s ease,
+    background-color 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.chip:hover {
+  color: var(--fg);
+  background: var(--surface);
+}
+
+.chipActive {
+  color: var(--fg);
+  background: var(--surface);
+  border-color: transparent;
+  box-shadow: var(--shadow-float);
+}
+
+.chipIcon {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--fg);
+  color: var(--bg);
+}
+
+.chipAdd {
+  padding-left: 16px;
+  border-style: dashed;
+}
+
+/* Powitanie */
+
+.hero {
+  display: grid;
+  gap: 16px;
+  justify-items: start;
+}
+
+.line {
+  display: block;
+  /* szerokość tekstu, żeby Pestka siadała przy słowach, a nie na krawędzi ekranu */
+  width: fit-content;
+}
+
+.kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--subtle);
+}
+
+.kicker svg {
+  color: var(--primary);
+}
+
+/* Rekomendacja + boczna kolumna */
+
+.top {
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+  gap: 48px;
+  align-items: start;
+}
+
+.today {
+  display: grid;
+  gap: 20px;
+  justify-items: start;
+  padding: 40px;
+  border-radius: var(--r-lg);
+  background: var(--surface);
+  box-shadow: var(--shadow-float);
+}
+
+.todayHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.todayHead .kicker {
+  color: var(--primary);
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 2px 12px 2px 2px;
+  border-radius: var(--r-pill);
+  background: var(--bg);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.reason {
+  max-width: 52ch;
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-top: 8px;
+}
+
+.alternatives {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--line);
+}
+
+.alternatives button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 14px 0;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  background: none;
+  text-align: left;
+  cursor: pointer;
+}
+
+.altIcon {
+  flex-shrink: 0;
+  color: var(--primary);
+}
+
+.altName {
+  flex: 1;
+}
+
+.alternatives button:hover .altName {
+  color: var(--primary);
+}
+
+.side {
+  display: grid;
+}
+
+.block {
+  display: grid;
+  gap: 10px;
+  justify-items: start;
+  padding: 28px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.block:first-child {
+  padding-top: 8px;
+}
+
+.block:last-child {
+  border-bottom: 0;
+}
+
+.block :global(.btn),
+.block :global(.link) {
+  margin-top: 8px;
+}
+
+.progress {
+  width: 100%;
+  height: 6px;
+  border-radius: var(--r-pill);
+  background: var(--line);
+  overflow: hidden;
+}
+
+.progress span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--primary);
+}
+
+/* Listy: umiejętności i przedmioty */
+
+.section {
+  display: grid;
+  gap: 24px;
+}
+
+.sectionHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+}
+
+.rows {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--line);
+}
+
+.rows > li {
+  border-bottom: 1px solid var(--line);
+}
+
+.skill {
+  display: grid;
+  grid-template-columns: minmax(160px, 1.2fr) minmax(120px, 2fr) 48px minmax(0, 1.6fr);
+  gap: 24px;
+  align-items: center;
+  padding: 18px 0;
+}
+
+.skillName {
+  font-weight: 500;
+}
+
+.bar {
+  display: block;
+  height: 6px;
+  border-radius: var(--r-pill);
+  background: var(--line);
+  overflow: hidden;
+}
+
+.bar span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+}
+
+.bar span[data-level="low"] {
+  background: var(--primary);
+}
+
+.bar span[data-level="mid"] {
+  background: #ffa88d;
+}
+
+.bar span[data-level="high"] {
+  background: var(--success);
+}
+
+.pct {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  font-weight: 500;
+}
+
+.note {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.subjectRow {
+  display: grid;
+  grid-template-columns: 48px minmax(160px, 1.2fr) minmax(160px, 1.4fr) minmax(0, 1.2fr) 20px;
+  gap: 24px;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.subjectName {
+  display: grid;
+  gap: 2px;
+}
+
+.subjectMastery {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 48px;
+  gap: 16px;
+  align-items: center;
+}
+
+.chevron {
+  color: var(--subtle);
+  transition:
+    transform 0.15s ease,
+    color 0.15s ease;
+}
+
+.subjectRow:hover .chevron {
+  color: var(--primary);
+  transform: translateX(3px);
+}
+
+/* Dolne kolumny */
+
+.columns {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 48px;
+}
+
+.column {
+  display: grid;
+  gap: 10px;
+  align-content: start;
+  justify-items: start;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+
+.column :global(.link) {
+  margin-top: 8px;
+}
+
+.search {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.search svg {
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--subtle);
+  pointer-events: none;
+}
+
+.search :global(.input) {
+  padding-left: 48px;
+}
+
+.stat {
+  font-size: 48px;
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.stat span {
+  color: var(--subtle);
+  font-size: 28px;
+}
+
+@media (max-width: 900px) {
+  .page {
+    gap: 48px;
+  }
+
+  .top {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+
+  .skill {
+    grid-template-columns: minmax(0, 1fr) 48px;
+    gap: 8px 16px;
+  }
+
+  .skill .bar {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  .skill .note {
+    grid-column: 1 / -1;
+  }
+
+  .subjectRow {
+    grid-template-columns: 48px minmax(0, 1fr) 20px;
+    gap: 8px 16px;
+  }
+
+  .subjectMastery,
+  .subjectRow .note {
+    grid-column: 2;
+  }
+
+  .chevron {
+    grid-column: 3;
+    grid-row: 1;
+  }
+
+  .columns {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+  }
+}
+
+@media (max-width: 640px) {
+  .today {
+    padding: 28px 24px;
+  }
+
+  .actions,
+  .actions :global(.btn) {
+    width: 100%;
+  }
+}

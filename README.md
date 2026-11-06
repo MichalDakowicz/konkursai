@@ -1,4 +1,4 @@
-# [nazwa]
+# Sedno
 
 Aplikacja do rozwiązywania arkuszy maturalnych z pomocą AI. Projekt na konkurs „Sztuczna inteligencja wśród nas” (Wydział Informatyki UwB).
 

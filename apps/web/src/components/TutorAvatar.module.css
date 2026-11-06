@@ -1,0 +1,71 @@
+.avatar {
+  display: block;
+  flex-shrink: 0;
+  overflow: visible;
+}
+
+.body {
+  transform-origin: 32px 58px;
+  animation: breathe 4s ease-in-out infinite;
+}
+
+.eye {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: blink 5s infinite;
+}
+
+.eyes {
+  transition: transform 0.3s ease;
+}
+
+.mouth {
+  display: none;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+/* Myśli: patrzy w górę i oddycha szybciej. */
+.thinking .eyes {
+  transform: translate(2px, -3px);
+}
+
+.thinking .body {
+  animation-duration: 1.4s;
+}
+
+/* Mówi: uśmiech zamienia się w poruszające się usta. */
+.talking .smile {
+  display: none;
+}
+
+.talking .mouth {
+  display: block;
+  animation: talk 0.32s ease-in-out infinite alternate;
+}
+
+@keyframes breathe {
+  50% {
+    transform: scale(1.035, 0.975);
+  }
+}
+
+@keyframes blink {
+  0%,
+  92%,
+  100% {
+    transform: scaleY(1);
+  }
+  95% {
+    transform: scaleY(0.1);
+  }
+}
+
+@keyframes talk {
+  from {
+    transform: scaleY(0.35);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
