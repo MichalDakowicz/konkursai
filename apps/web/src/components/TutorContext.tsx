@@ -1,8 +1,20 @@
 import { createContext, useCallback, useContext, useMemo, useRef, useState, type ReactNode } from "react";
 import type { AvatarState } from "./TutorAvatar";
-import { recommendation } from "../data/demo";
+import { topPick } from "../data/demo";
 
 export type Message = { id: number; from: "tutor" | "student"; text: string };
+
+// Wskazówka tutora przypięta do elementu z atrybutem data-tutor. Lista celów: pierwszy widoczny wygrywa,
+// np. linki w pasku na desktopie, a przycisk menu na telefonie.
+export type Hint = {
+  target: string | string[];
+  text: string;
+  waitFor?: "summon";
+};
+
+export type Guide = { key: string; kind: "tour" | "hint"; hints: Hint[]; index: number };
+
+export type Summon = { x: number; y: number; about: string | null };
 
 type TutorValue = {
   messages: Message[];
@@ -12,13 +24,81 @@ type TutorValue = {
   close: () => void;
   send: (text: string) => void;
   suggestions: string[];
+
+  guide: Guide | null;
+  summon: Summon | null;
+  showHints: (key: string, hints: Hint[]) => void;
+  startTour: () => void;
+  next: () => void;
+  dismiss: () => void;
+  summonAt: (s: Summon) => void;
 };
 
 const TutorContext = createContext<TutorValue | null>(null);
 
-const greeting =
-  `Cześć! Widzę, że ${recommendation.skill.toLowerCase()} to dziś twoja najsłabsza umiejętność. ` +
-  "Zanim cokolwiek wyjaśnię: jak myślisz, po czym czytelnik poznaje, że akapity w rozprawce łączą się logicznie?";
+const TOUR_KEY = "sedno.tour-done";
+
+export function isTourDone(): boolean {
+  try {
+    return localStorage.getItem(TOUR_KEY) === "1";
+  } catch {
+    return tourDoneInMemory;
+  }
+}
+
+let tourDoneInMemory = false;
+
+function markTourDone(done: boolean) {
+  tourDoneInMemory = done;
+  try {
+    if (done) localStorage.setItem(TOUR_KEY, "1");
+    else localStorage.removeItem(TOUR_KEY);
+  } catch {
+    // zostaje flaga w pamięci
+  }
+}
+
+export function resetTour() {
+  markTourDone(false);
+}
+
+export const tourHints: Hint[] = [
+  {
+    target: "hero",
+    text: "Cześć, jestem Pestka, twój tutor. Nie mam stałego miejsca: pojawiam się tam, gdzie mam ci coś do powiedzenia. Pokażę ci, jak tu działam.",
+  },
+  {
+    target: ["nav-links", "nav-menu"],
+    text: "Tu przechodzisz między sekcjami: nauka, arkusze, mapa umiejętności i powtórki.",
+  },
+  {
+    target: "subjects",
+    text: "To twoje przedmioty. Pulpit pokazuje wszystko naraz, a kliknięcie przedmiotu zawęża go tylko do niego.",
+  },
+  {
+    target: "today-cta",
+    text: "Tak wyglądają moje sugestie: przychodzę do przycisku, który polecam, i mówię dlaczego. Ty decydujesz, czy w niego klikasz.",
+  },
+  {
+    target: "reviews",
+    text: "Przypominam też o powtórkach, zanim coś zacznie ci uciekać.",
+  },
+  {
+    target: "hero",
+    text: "Każdy dymek zamkniesz krzyżykiem. A gdy będę potrzebny, kliknij prawym przyciskiem w dowolnym miejscu (na telefonie przytrzymaj palec). Spróbuj teraz.",
+    waitFor: "summon",
+  },
+];
+
+const shownHints = new Set<string>();
+
+function greeting() {
+  const s = topPick();
+  return (
+    `Cześć, tu Pestka! Widzę, że ${s.recommendation.skill.toLowerCase()} (${s.name.toLowerCase()}) to dziś twój najsłabszy punkt. ` +
+    "Zanim cokolwiek wyjaśnię: jak myślisz, skąd biorą się twoje błędy w tym temacie?"
+  );
+}
 
 // Sokratejskie odpowiedzi na sztywno, dopóki nie ma backendu z modelem.
 const scripted = [
@@ -30,9 +110,11 @@ const scripted = [
 const fallback = "Dobrze. Pokażę ci to na zadaniu, zamiast tłumaczyć regułę. Otwórz „Napraw błąd” z pulpitu, a ja będę obok.";
 
 export function TutorProvider({ children }: { children: ReactNode }) {
-  const [messages, setMessages] = useState<Message[]>([{ id: 0, from: "tutor", text: greeting }]);
+  const [messages, setMessages] = useState<Message[]>(() => [{ id: 0, from: "tutor", text: greeting() }]);
   const [state, setState] = useState<AvatarState>("idle");
   const [isOpen, setOpen] = useState(false);
+  const [guide, setGuide] = useState<Guide | null>(null);
+  const [summon, setSummon] = useState<Summon | null>(null);
   const turn = useRef(0);
   const nextId = useRef(1);
 
@@ -52,20 +134,73 @@ export function TutorProvider({ children }: { children: ReactNode }) {
     }, 900);
   }, []);
 
+  const showHints = useCallback((key: string, hints: Hint[]) => {
+    if (shownHints.has(key) || hints.length === 0) return;
+    shownHints.add(key);
+    setSummon(null);
+    setGuide({ key, kind: "hint", hints, index: 0 });
+  }, []);
+
+  const startTour = useCallback(() => {
+    setSummon(null);
+    setGuide({ key: "tour", kind: "tour", hints: tourHints, index: 0 });
+  }, []);
+
+  const next = useCallback(() => {
+    setGuide((g) => {
+      if (!g) return g;
+      if (g.index + 1 >= g.hints.length) {
+        if (g.kind === "tour") markTourDone(true);
+        return null;
+      }
+      return { ...g, index: g.index + 1 };
+    });
+  }, []);
+
+  // Zamknięcie przewodnika krzyżykiem też liczy się jako jego zakończenie, żeby nie wracał przy każdym wejściu.
+  const dismiss = useCallback(() => {
+    if (guide?.kind === "tour") markTourDone(true);
+    setSummon(null);
+    setGuide(null);
+  }, [guide]);
+
+  // Przywołanie zastępuje bieżącą wskazówkę. Ostatni krok przewodnika właśnie o nie prosi, więc wtedy go kończy.
+  const summonAt = useCallback(
+    (s: Summon) => {
+      if (guide?.kind === "tour" && guide.hints[guide.index]?.waitFor === "summon") markTourDone(true);
+      setGuide(null);
+      setSummon(s);
+    },
+    [guide],
+  );
+
+  const open = useCallback(() => {
+    setGuide(null);
+    setSummon(null);
+    setOpen(true);
+  }, []);
+
   const value = useMemo<TutorValue>(
     () => ({
       messages,
       state,
       isOpen,
-      open: () => setOpen(true),
+      open,
       close: () => setOpen(false),
       send,
       suggestions:
         messages.length <= 1
-          ? ["Po słowach łączących?", "Nie wiem, podpowiedz", "Pokaż mi przykład"]
+          ? ["Nie wiem, podpowiedz", "Pokaż mi przykład", "Chyba z pośpiechu"]
           : ["Spróbuję przeredagować", "Daj wskazówkę", "Gotowa"],
+      guide,
+      summon,
+      showHints,
+      startTour,
+      next,
+      dismiss,
+      summonAt,
     }),
-    [messages, state, isOpen, send],
+    [messages, state, isOpen, open, send, guide, summon, showHints, startTour, next, dismiss, summonAt],
   );
 
   return <TutorContext.Provider value={value}>{children}</TutorContext.Provider>;

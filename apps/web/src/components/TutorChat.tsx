@@ -36,7 +36,7 @@ export function TutorChat() {
         {state === "thinking" && (
           <div className={styles.tutorRow}>
             <TutorAvatar size={28} state="thinking" />
-            <span className={styles.typing} aria-label="Tutor pisze">
+            <span className={styles.typing} aria-label="Pestka pisze">
               <i />
               <i />
               <i />
@@ -55,7 +55,7 @@ export function TutorChat() {
         </div>
         <form className={styles.form} onSubmit={submit}>
           <label htmlFor="tutor-input" className="visually-hidden">
-            Wiadomość do tutora
+            Wiadomość do Pestki
           </label>
           <input
             id="tutor-input"
@@ -71,7 +71,7 @@ export function TutorChat() {
             </svg>
           </button>
         </form>
-        <p className={styles.note}>Tutor pyta, zamiast podawać odpowiedź. W trybie egzaminu jest wyłączony.</p>
+        <p className={styles.note}>Pestka pyta, zamiast podawać odpowiedź. W trybie egzaminu milczy.</p>
       </div>
     </div>
   );

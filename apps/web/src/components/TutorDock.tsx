@@ -3,12 +3,13 @@ import { Link } from "react-router-dom";
 import { TutorAvatar } from "./TutorAvatar";
 import { TutorChat } from "./TutorChat";
 import { useTutor } from "./TutorContext";
-import { recommendation, student } from "../data/demo";
+import { topPick } from "../data/demo";
 import styles from "./TutorDock.module.css";
 
-// Wysuwany panel rozmowy z tutorem. Otwiera go avatar w pasku nawigacji, więc nic nie pływa nad treścią.
+// Wysuwany panel rozmowy z Pestką. Otwiera się kliknięciem w wędrującego avatara albo z jego dymka.
 export function TutorDock() {
   const { isOpen, close, state } = useTutor();
+  const pick = topPick();
 
   useEffect(() => {
     if (!isOpen) return;
@@ -22,13 +23,13 @@ export function TutorDock() {
       {isOpen && (
         <>
           <div className={styles.scrim} onClick={close} aria-hidden="true" />
-          <aside className={styles.panel} aria-label="Tutor">
+          <aside className={styles.panel} aria-label="Pestka">
             <header className={styles.header}>
               <TutorAvatar size={40} state={state} />
               <div className={styles.headerText}>
-                <p className={styles.title}>Tutor</p>
+                <p className={styles.title}>Pestka</p>
                 <p className={styles.context}>
-                  {student.subject} · {recommendation.skill}
+                  tutor · {pick.name} · {pick.recommendation.skill}
                 </p>
               </div>
               <Link to="/tutor" className={styles.iconBtn} onClick={close} aria-label="Otwórz na pełnym ekranie">

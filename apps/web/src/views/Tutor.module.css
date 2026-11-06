@@ -3,7 +3,7 @@
   grid-template-columns: minmax(0, 4fr) minmax(0, 7fr);
   gap: 64px;
   align-items: start;
-  padding-top: 56px;
+  padding-top: 16px;
   padding-bottom: 32px;
 }
 
@@ -42,6 +42,16 @@
   margin: 0;
   font-weight: 500;
   text-align: right;
+}
+
+.context dd.subject {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.context div:has(.subject) {
+  align-items: center;
 }
 
 /* Rozmowa potrzebuje własnej, wyraźnie odciętej powierzchni, więc tu karta ma sens. */
