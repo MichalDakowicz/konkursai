@@ -22,12 +22,14 @@ npm run build
 
 ## Pestka (tutor AI)
 
-Pestka nie ma stałego miejsca na stronie (`TutorGuide.tsx`, stan w `TutorContext.tsx`):
+Pestka jest zawsze widoczna, ale nie ma stałego miejsca w treści (`TutorGuide.tsx`, stan w `TutorContext.tsx`):
 
-- **Wskazówki:** strona wywołuje `showHints(klucz, wskazówki)`. Pestka skacze do elementu z `data-tutor="…"`, siada na jego rogu, podświetla go i pokazuje dymek. Zwykła wskazówka nie przewija strony: czeka, aż element wjedzie w ekran.
+- **Spoczynek:** gdy nie ma nic do powiedzenia, siedzi w prawym dolnym rogu ekranu, w całości widoczna. Kropka oznacza czekającą wskazówkę; kliknięcie przewija do niej.
+- **Wskazówki:** strona wywołuje `showHints(klucz, wskazówki)`. Pestka skacze do elementu z `data-tutor="…"`, siada na jego rogu, podświetla go i pokazuje dymek. Zwykła wskazówka nie przewija strony: Pestka czeka na spoczynku, aż element wjedzie w ekran.
+- **Przewijanie:** podąża za elementem. Gdy element wyjedzie z ekranu, wraca na spoczynek, a przy powrocie elementu skacze do niego z powrotem.
 - **Przewodnik:** przy pierwszym wejściu na pulpit (`tourHints`). Ostatni krok czeka na przywołanie. Ponownie z `/profil`.
 - **Przywołanie:** prawy przycisk (na telefonie przytrzymanie) w dowolnym miejscu poza polami tekstowymi. Jeśli element pod kursorem ma `data-tutor-about="…"`, Pestka wyjaśnia go w dymku.
-- **Odprawienie:** krzyżyk w dymku albo Escape. Kliknięcie w avatar otwiera rozmowę w panelu bocznym (`TutorDock.tsx`).
+- **Odprawienie:** krzyżyk w dymku albo Escape: dymek gaśnie, Pestka skacze na spoczynek. Kliknięcie w avatar otwiera rozmowę w panelu bocznym (`TutorDock.tsx`).
 
 Logowanie i odpowiedzi Pestki są na niby (`src/auth.ts`, `TutorContext.tsx`), dane w `src/data/demo.ts`.
 
