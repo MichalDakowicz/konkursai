@@ -729,7 +729,7 @@
 
   var side = el('aside', 'side');
   side.id = 'side';
-  var brand = el('a', 'brand', '[nazwa]<small>zarys projektu</small>');
+  var brand = el('a', 'brand', 'Sedno<small>zarys projektu</small>');
   brand.href = 'index.html';
   side.appendChild(brand);
 
@@ -764,7 +764,7 @@
   var btn = el('button', null, '<span></span><span></span><span></span>');
   btn.setAttribute('aria-label', 'Menu');
   bar.appendChild(btn);
-  bar.appendChild(el('b', null, '[nazwa]'));
+  bar.appendChild(el('b', null, 'Sedno'));
   bar.appendChild(el('span', 'mt', page ? page.title : 'Okładka'));
   var shade = el('div', 'shade');
 
