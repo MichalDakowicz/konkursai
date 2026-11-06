@@ -150,7 +150,7 @@ export function Dashboard() {
     const hints: Hint[] = [
       {
         target: "today-cta",
-        text: `Na dziś polecam ${pick.recommendation.skill.toLowerCase()}${subject ? "" : ` z przedmiotu ${pick.name.toLowerCase()}`}. ${pick.recommendation.minutes} minut w twoim najsłabszym miejscu.`,
+        text: `Na dziś polecam: ${pick.recommendation.skill.toLowerCase()}${subject ? "" : ` (${pick.name.toLowerCase()})`}. ${pick.recommendation.minutes} minut w twoim najsłabszym miejscu.`,
       },
     ];
     if (subject) {
