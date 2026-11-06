@@ -1,6 +1,6 @@
 # Sedno
 
-Aplikacja edukacyjna z AI na konkurs „Sztuczna inteligencja wśród nas” (Wydział Informatyki UwB). Szczegóły konkursu: `docs/konkurs.md`. Aplikacja nazywa się **Sedno**. Starsze strony w `docs/` mają jeszcze roboczy znacznik `[nazwa]`.
+Aplikacja edukacyjna z AI na konkurs „Sztuczna inteligencja wśród nas” (Wydział Informatyki UwB). Szczegóły konkursu: `docs/konkurs.md`. Aplikacja nazywa się **Sedno**, a jej tutor AI to **Pestka**.
 
 ## Jak pracujemy
 
@@ -18,7 +18,7 @@ Myślenie o aplikacji (pomysły, decyzje, kierunek, funkcje, UX) dzieje się w r
 
 ## Git
 
-- Repo: https://github.com/MichalDakowicz/konkursai (publiczne). Gałąź domyślna: `main`.
+- Repo: https://github.com/MichalDakowicz/sedno (publiczne). Gałąź domyślna: `main`.
 - Dopóki zmieniamy tylko dokumentację (`docs/`, `notes/`, `CLAUDE.md`, `README.md`), pracuj bezpośrednio na `main`: bez gałęzi i PR, commity wprost na `main` z pushem.
 - Gdy zacznie się kod aplikacji, zmiany w kodzie idą na osobnych gałęziach scalanych przez PR. Nie pracuj wtedy bezpośrednio na `main`.
 - Nazwy gałęzi zwykłe i opisowe, np. `zarys-pomyslu`, `logowanie`, `parser-arkuszy`. Bez prefiksów narzędzi (`claude/`, `codex/` itp.). Prefiksy typu `feature/` też zbędne.
