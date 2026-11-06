@@ -1,0 +1,273 @@
+.page {
+  display: grid;
+  gap: 72px;
+  padding-bottom: 96px;
+}
+
+.hero {
+  display: grid;
+  gap: 20px;
+  padding-top: 56px;
+}
+
+.line {
+  display: block;
+}
+
+/* Rekomendacja + boczna kolumna */
+
+.top {
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+  gap: 48px;
+  align-items: start;
+}
+
+.today {
+  display: grid;
+  gap: 20px;
+  justify-items: start;
+  padding: 40px;
+  border-radius: var(--r-lg);
+  background: var(--surface);
+  box-shadow: var(--shadow-float);
+}
+
+.todayLabel {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+
+.reason {
+  max-width: 52ch;
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-top: 8px;
+}
+
+.alternatives {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--line);
+}
+
+.alternatives button {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  width: 100%;
+  padding: 14px 0;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  background: none;
+  text-align: left;
+  cursor: pointer;
+}
+
+.alternatives button:hover > span:first-child {
+  color: var(--primary);
+}
+
+.side {
+  display: grid;
+}
+
+.block {
+  display: grid;
+  gap: 10px;
+  justify-items: start;
+  padding: 28px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.block:first-child {
+  padding-top: 8px;
+}
+
+.block:last-child {
+  border-bottom: 0;
+}
+
+.block :global(.btn),
+.block :global(.link) {
+  margin-top: 8px;
+}
+
+.progress {
+  width: 100%;
+  height: 6px;
+  border-radius: var(--r-pill);
+  background: var(--line);
+  overflow: hidden;
+}
+
+.progress span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--primary);
+}
+
+/* Mapa umiejętności */
+
+.section {
+  display: grid;
+  gap: 24px;
+}
+
+.sectionHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+}
+
+.skills {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--line);
+}
+
+.skill {
+  display: grid;
+  grid-template-columns: minmax(160px, 1.2fr) minmax(120px, 2fr) 48px minmax(0, 1.6fr);
+  gap: 24px;
+  align-items: center;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.skillName {
+  font-weight: 500;
+}
+
+.bar {
+  height: 6px;
+  border-radius: var(--r-pill);
+  background: var(--line);
+  overflow: hidden;
+}
+
+.bar span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+}
+
+.bar span[data-level="low"] {
+  background: var(--primary);
+}
+
+.bar span[data-level="mid"] {
+  background: #ffa88d;
+}
+
+.bar span[data-level="high"] {
+  background: var(--success);
+}
+
+.pct {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  font-weight: 500;
+}
+
+.note {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* Dolne kolumny */
+
+.columns {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 48px;
+}
+
+.column {
+  display: grid;
+  gap: 10px;
+  align-content: start;
+  justify-items: start;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+
+.column :global(.input) {
+  margin-top: 8px;
+}
+
+.column :global(.link) {
+  margin-top: 8px;
+}
+
+.stat {
+  font-size: 48px;
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.stat span {
+  color: var(--subtle);
+  font-size: 28px;
+}
+
+@media (max-width: 900px) {
+  .page {
+    gap: 56px;
+  }
+
+  .top {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+
+  .skill {
+    grid-template-columns: minmax(0, 1fr) 48px;
+    gap: 8px 16px;
+  }
+
+  .bar {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  .note {
+    grid-column: 1 / -1;
+  }
+
+  .columns {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding-top: 48px;
+  }
+
+  .today {
+    padding: 28px 24px;
+  }
+
+  .actions,
+  .actions :global(.btn) {
+    width: 100%;
+  }
+}
