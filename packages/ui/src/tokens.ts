@@ -20,6 +20,13 @@ export const color = {
   dark: "#1b232e",
 } as const;
 
+// Kolory przedmiotów: tło ikony i sama ikona.
+export const tone = {
+  orange: { bg: "#ffe6dc", fg: "#d94a1f" },
+  blue: { bg: "#d3e1ff", fg: "#2f55b4" },
+  yellow: { bg: "#fdf0c4", fg: "#8a5a00" },
+} as const;
+
 export const gradient = {
   accent: ["#ff5e3a", "#ff8a3d", "#ff6f52"],
 } as const;

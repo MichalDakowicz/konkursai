@@ -17,6 +17,14 @@
   --danger: #e40014;
   --dark: #1b232e;
 
+  /* Kolory przedmiotów: tło ikony i sama ikona. */
+  --tone-orange-bg: #ffe6dc;
+  --tone-orange-fg: #d94a1f;
+  --tone-blue-bg: #d3e1ff;
+  --tone-blue-fg: #2f55b4;
+  --tone-yellow-bg: #fdf0c4;
+  --tone-yellow-fg: #8a5a00;
+
   --gradient-accent: linear-gradient(100deg, #ff5e3a 0%, #ff8a3d 26%, #ff6f52 50%, #ff8a3d 74%, #ff5e3a 100%);
 
   --r-sm: 12px;
