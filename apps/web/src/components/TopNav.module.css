@@ -41,7 +41,9 @@
 }
 
 .link {
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 8px;
   padding: 10px 14px;
   border-radius: var(--r-pill);
   font-size: 15px;
@@ -61,59 +63,14 @@
   background: var(--bg);
 }
 
+.active svg {
+  color: var(--primary);
+}
+
 .right {
   display: flex;
   align-items: center;
   gap: 8px;
-}
-
-.subject {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
-.subject select {
-  appearance: none;
-  min-height: 48px;
-  padding: 0 36px 0 18px;
-  border: 0;
-  border-radius: var(--r-pill);
-  background: var(--secondary);
-  color: var(--secondary-fg);
-  font-size: 14px;
-  font-weight: 500;
-  cursor: pointer;
-}
-
-.subject svg {
-  position: absolute;
-  right: 16px;
-  pointer-events: none;
-  color: var(--secondary-fg);
-}
-
-.tutor {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  min-height: 48px;
-  padding: 6px 16px 6px 6px;
-  border: 0;
-  border-radius: var(--r-pill);
-  background: var(--primary-soft);
-  font-size: 14px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: background-color 0.15s ease;
-}
-
-button.tutor:hover {
-  background: #ffd9ca;
-}
-
-.tutorActive {
-  cursor: default;
 }
 
 .profile {
@@ -157,7 +114,9 @@ button.tutor:hover {
 }
 
 .mobileMenu li a {
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 12px;
   padding: 12px 0;
   border-bottom: 1px solid var(--line);
   font-size: 18px;
@@ -169,28 +128,12 @@ button.tutor:hover {
   color: var(--fg);
 }
 
-.mobileSubject {
-  display: grid;
-  gap: 8px;
+.mobileMenu li a.mobileActive svg {
+  color: var(--primary);
 }
 
-.mobileSubject select {
-  appearance: auto;
-}
-
-@media (max-width: 1180px) {
-  .tutorText {
-    display: none;
-  }
-
-  .tutor {
-    padding-right: 6px;
-  }
-}
-
-@media (max-width: 1040px) {
+@media (max-width: 960px) {
   .links,
-  .subject,
   .profile {
     display: none;
   }

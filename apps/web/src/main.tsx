@@ -8,6 +8,7 @@ import { Login } from "./views/Login";
 import { Dashboard } from "./views/Dashboard";
 import { Tutor } from "./views/Tutor";
 import { Placeholder } from "./views/Placeholder";
+import { Profile } from "./views/Profile";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -16,12 +17,13 @@ createRoot(document.getElementById("root")!).render(
         <Route path="/logowanie" element={<Login />} />
         <Route element={<AppLayout />}>
           <Route index element={<Dashboard />} />
+          <Route path="przedmiot/:id" element={<Dashboard />} />
           <Route path="tutor" element={<Tutor />} />
           <Route path="nauka" element={<Placeholder title="Nauka" sub="Ścieżki umiejętności, formaty nauki i wolny wybór tematu." />} />
           <Route path="arkusze" element={<Placeholder title="Arkusze" sub="Lista arkuszy CKE i tryb egzaminu." />} />
           <Route path="umiejetnosci" element={<Placeholder title="Mapa umiejętności" sub="Pełna mapa opanowania z kodami wymagań w drugim planie." />} />
           <Route path="powtorki" element={<Placeholder title="Powtórki" sub="Umiejętności, które zaczynają zanikać, i błędy do przećwiczenia." />} />
-          <Route path="profil" element={<Placeholder title="Profil" sub="Przedmioty, data matury, poziom feedbacku i układ pulpitu." showLogout />} />
+          <Route path="profil" element={<Profile />} />
         </Route>
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
