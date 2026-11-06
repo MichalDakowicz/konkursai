@@ -1,0 +1,124 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.top {
+  padding-top: 32px;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+
+.main {
+  flex: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 400px);
+  gap: 96px;
+  align-items: center;
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+.hero {
+  display: grid;
+  gap: 28px;
+  justify-items: start;
+  max-width: 560px;
+}
+
+.line {
+  display: block;
+}
+
+.form {
+  display: grid;
+  gap: 20px;
+}
+
+.google {
+  width: 100%;
+  background: var(--surface);
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 13px;
+  color: var(--subtle);
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--line);
+}
+
+.labelRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.forgot {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.forgot:hover {
+  color: var(--fg);
+}
+
+.footer {
+  font-size: 14px;
+  color: var(--muted);
+  text-align: center;
+}
+
+.footer a {
+  color: var(--fg);
+  font-weight: 500;
+  border-bottom: 1px solid var(--line);
+}
+
+.demo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: 24px;
+  padding-bottom: 32px;
+  border-top: 1px solid var(--line);
+  font-size: 14px;
+}
+
+@media (max-width: 900px) {
+  .main {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 48px;
+    padding-top: 40px;
+    align-items: start;
+  }
+
+  .hero {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .top {
+    padding-top: 20px;
+  }
+
+  .demo {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
